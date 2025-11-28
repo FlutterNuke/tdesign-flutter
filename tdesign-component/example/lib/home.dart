@@ -11,7 +11,7 @@ import 'l10n/app_localizations.dart';
 var _kShowTodoComponent = false;
 
 /// 切换主题的回调
-typedef OnThemeChange = Function(TDThemeData themeData, bool isDark);
+typedef OnThemeChange = Function(TThemeData themeData, bool isDark);
 
 /// 切换语言的回调
 typedef OnLocaleChange = Function(Locale locale);
@@ -46,8 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    TDExampleRoute.init();
-    sideBarExamplePage.forEach(TDExampleRoute.add);
+    TExampleRoute.init();
+    sideBarExamplePage.forEach(TExampleRoute.add);
   }
 
   @override
@@ -63,10 +63,10 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        backgroundColor: TDTheme.of(context).brandNormalColor,
+        backgroundColor: TTheme.of(context).brandNormalColor,
         titleTextStyle: TextStyle(
-            color: TDTheme.of(context).whiteColor1,
-            fontSize: TDTheme.of(context).fontTitleLarge?.size),
+            color: TTheme.of(context).whiteColor1,
+            fontSize: TTheme.of(context).fontTitleLarge?.size),
         title: Text(widget.title),
         actions: ScreenUtil.isWebLargeScreen(context)
             ? null
@@ -77,9 +77,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.only(
                       right: 16,
                     ),
-                    child: TDText(
+                    child: TText(
                       widget.locale?.languageCode == 'en' ? '中文' : 'English',
-                      textColor: TDTheme.of(context).whiteColor1,
+                      textColor: TTheme.of(context).whiteColor1,
                     ),
                   ),
                   onTap: () {
@@ -96,14 +96,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.only(
                       right: 16,
                     ),
-                    child: TDText(
+                    child: TText(
                       AppLocalizations.of(context)?.about,
-                      textColor: TDTheme.of(context).whiteColor1,
+                      textColor: TTheme.of(context).whiteColor1,
                     ),
                   ),
                   onTap: () {
                     focusNode.unfocus();
-                    Navigator.pushNamed(context, TDExampleRoute.aboutPath);
+                    Navigator.pushNamed(context, TExampleRoute.aboutPath);
                   },
                 )
               ],
@@ -141,62 +141,62 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 8, right: 4),
-                child: TDTheme(
-                    data: TDThemeData.defaultData(),
-                    child: TDButton(
+                child: TTheme(
+                    data: TThemeData.defaultData(),
+                    child: TButton(
                       text: AppLocalizations.of(context)?.defaultTheme,
-                      theme: TDButtonTheme.primary,
+                      theme: TButtonTheme.primary,
                       onTap: () {
                         widget.onThemeChange
-                            ?.call(TDTheme.defaultData(), false);
+                            ?.call(TTheme.defaultData(), false);
                       },
                     )),
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: TDTheme(
-                      data: TDThemeData.fromJson('green', greenThemeConfig) ??
-                          TDThemeData.defaultData(),
-                      child: TDButton(
+                  child: TTheme(
+                      data: TThemeData.fromJson('green', greenThemeConfig) ??
+                          TThemeData.defaultData(),
+                      child: TButton(
                           text: AppLocalizations.of(context)?.greenTheme,
-                          theme: TDButtonTheme.primary,
+                          theme: TButtonTheme.primary,
                           onTap: () async {
                             var jsonString = await rootBundle
                                 .loadString('assets/theme.json');
                             var newData =
-                                TDThemeData.fromJson('green', jsonString);
+                                TThemeData.fromJson('green', jsonString);
                             widget.onThemeChange
-                                ?.call(newData ?? TDTheme.defaultData(), false);
+                                ?.call(newData ?? TTheme.defaultData(), false);
                           }))),
               Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: TDTheme(
-                      data: TDThemeData.fromJson('red', greenThemeConfig) ??
-                          TDThemeData.defaultData(),
-                      child: TDButton(
+                  child: TTheme(
+                      data: TThemeData.fromJson('red', greenThemeConfig) ??
+                          TThemeData.defaultData(),
+                      child: TButton(
                           text: AppLocalizations.of(context)?.redTheme,
-                          theme: TDButtonTheme.danger,
+                          theme: TButtonTheme.danger,
                           onTap: () async {
                             var jsonString = await rootBundle
                                 .loadString('assets/theme.json');
                             var newData =
-                                TDThemeData.fromJson('red', jsonString);
+                                TThemeData.fromJson('red', jsonString);
                             widget.onThemeChange
-                                ?.call(newData ?? TDTheme.defaultData(), false);
+                                ?.call(newData ?? TTheme.defaultData(), false);
                           }))),
               Padding(
                   padding: const EdgeInsets.only(left: 4, right: 8),
-                  child: TDButton(
+                  child: TButton(
                       text: AppLocalizations.of(context)?.darkTheme,
-                      style: TDButtonStyle(
+                      style: TButtonStyle(
                           backgroundColor: Colors.black,
                           textColor: Colors.white),
                       onTap: () async {
                         var jsonString =
                             await rootBundle.loadString('assets/theme.json');
-                        var newData = TDThemeData.fromJson('dark', jsonString);
+                        var newData = TThemeData.fromJson('dark', jsonString);
                         widget.onThemeChange
-                            ?.call(newData ?? TDTheme.defaultData(), true);
+                            ?.call(newData ?? TTheme.defaultData(), true);
                       })),
             ],
           ),
@@ -204,7 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     ));
 
-    children.add(TDSearchBar(
+    children.add(TSearchBar(
       placeHolder: '请输入组件名称',
       focusNode: focusNode,
       onTextChanged: (value) {
@@ -228,12 +228,12 @@ class _MyHomePageState extends State<MyHomePage> {
             children.add(Padding(
               padding:
                   const EdgeInsets.only(left: 40, right: 40, top: 8, bottom: 8),
-              child: TDButton(
-                  size: TDButtonSize.medium,
-                  type: TDButtonType.outline,
-                  shape: TDButtonShape.filled,
-                  theme: TDButtonTheme.defaultTheme,
-                  textStyle: TextStyle(color: TDTheme.of(context).fontGyColor4),
+              child: TButton(
+                  size: TButtonSize.medium,
+                  type: TButtonType.outline,
+                  shape: TButtonShape.filled,
+                  theme: TButtonTheme.defaultTheme,
+                  textStyle: TextStyle(color: TTheme.of(context).fontGyColor4),
                   onTap: () {
                     Navigator.pushNamed(context, '${model.name}?showAction=1');
                   },
@@ -244,11 +244,11 @@ class _MyHomePageState extends State<MyHomePage> {
           subList.add(Padding(
             padding:
                 const EdgeInsets.only(left: 40, right: 40, top: 8, bottom: 8),
-            child: TDButton(
-                size: TDButtonSize.medium,
-                type: TDButtonType.outline,
-                shape: TDButtonShape.filled,
-                theme: TDButtonTheme.primary,
+            child: TButton(
+                size: TButtonSize.medium,
+                type: TButtonType.outline,
+                shape: TButtonShape.filled,
+                theme: TButtonTheme.primary,
                 onTap: () {
                   focusNode.unfocus();
                   Navigator.pushNamed(context, '${model.name}?showAction=1');
@@ -262,12 +262,12 @@ class _MyHomePageState extends State<MyHomePage> {
         margin: const EdgeInsets.only(left: 16, right: 16, top: 16),
         padding: const EdgeInsets.only(left: 12),
         decoration: BoxDecoration(
-            color: TDTheme.of(context).brandHoverColor,
+            color: TTheme.of(context).brandHoverColor,
             borderRadius: BorderRadius.only(
-                topRight: Radius.circular(TDTheme.of(context).radiusLarge))),
-        child: TDText(
+                topRight: Radius.circular(TTheme.of(context).radiusLarge))),
+        child: TText(
           '$key(${subList.length})',
-          textColor: TDTheme.of(context).whiteColor1,
+          textColor: TTheme.of(context).whiteColor1,
         ),
       ));
       children.addAll(subList);

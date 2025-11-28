@@ -4,71 +4,71 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 import '../annotation/demo.dart';
 import '../base/example_widget.dart';
 
-class TDUploadPage extends StatefulWidget {
-  const TDUploadPage({Key? key}) : super(key: key);
+class TUploadPage extends StatefulWidget {
+  const TUploadPage({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => TDUploadState();
+  State<StatefulWidget> createState() => TUploadState();
 }
 
-class TDUploadState extends State<TDUploadPage> {
-  final List<TDUploadFile> files1 = [];
-  final List<TDUploadFile> files2 = [
-    TDUploadFile(
+class TUploadState extends State<TUploadPage> {
+  final List<TUploadFile> files1 = [];
+  final List<TUploadFile> files2 = [
+    TUploadFile(
         key: 1,
         remotePath: 'https://tdesign.gtimg.com/demo/images/example1.png'),
-    TDUploadFile(
+    TUploadFile(
         key: 2,
         remotePath: 'https://tdesign.gtimg.com/demo/images/example2.png'),
-    TDUploadFile(
+    TUploadFile(
         key: 3,
         remotePath: 'https://tdesign.gtimg.com/demo/images/example3.png'),
-    TDUploadFile(
+    TUploadFile(
         key: 4,
         remotePath: 'https://tdesign.gtimg.com/demo/images/example4.png'),
   ];
-  final List<TDUploadFile> files3 = [
-    TDUploadFile(
+  final List<TUploadFile> files3 = [
+    TUploadFile(
         key: 1,
-        status: TDUploadFileStatus.loading,
+        status: TUploadFileStatus.loading,
         loadingText: '上传中...',
         remotePath: 'https://tdesign.gtimg.com/demo/images/example1.png'),
-    TDUploadFile(
+    TUploadFile(
         key: 2,
-        status: TDUploadFileStatus.loading,
+        status: TUploadFileStatus.loading,
         progress: 68,
         remotePath: 'https://tdesign.gtimg.com/demo/images/example1.png'),
   ];
-  final List<TDUploadFile> files4 = [
-    TDUploadFile(
+  final List<TUploadFile> files4 = [
+    TUploadFile(
         key: 1,
-        status: TDUploadFileStatus.retry,
+        status: TUploadFileStatus.retry,
         retryText: '重新上传',
         remotePath: 'https://tdesign.gtimg.com/demo/images/example1.png'),
   ];
-  final List<TDUploadFile> files5 = [
-    TDUploadFile(
+  final List<TUploadFile> files5 = [
+    TUploadFile(
         key: 1,
-        status: TDUploadFileStatus.error,
+        status: TUploadFileStatus.error,
         errorText: '上传失败',
         remotePath: 'https://tdesign.gtimg.com/demo/images/example4.png'),
   ];
-  final List<TDUploadFile> files6 = [];
+  final List<TUploadFile> files6 = [];
 
-  void onValueChanged(List<TDUploadFile> fileList, List<TDUploadFile> value,
-      TDUploadType event) {
+  void onValueChanged(List<TUploadFile> fileList, List<TUploadFile> value,
+      TUploadType event) {
     switch (event) {
-      case TDUploadType.add:
+      case TUploadType.add:
         setState(() {
           fileList.addAll(value);
         });
         break;
-      case TDUploadType.remove:
+      case TUploadType.remove:
         setState(() {
           fileList.removeWhere((element) => element.key == value[0].key);
         });
         break;
-      case TDUploadType.replace:
+      case TUploadType.replace:
         setState(() {
           final firstReplaceFile = value.first;
           final index =
@@ -128,11 +128,11 @@ class TDUploadState extends State<TDUploadPage> {
   Widget wrapDemoContainer(String title, {required Widget child}) {
     return Container(
       padding: const EdgeInsets.all(16),
-      color: TDTheme.of(context).bgColorContainer,
+      color: TTheme.of(context).bgColorContainer,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TDText(
+          TText(
             title,
             style: const TextStyle(fontSize: 16),
           ),
@@ -148,7 +148,7 @@ class TDUploadState extends State<TDUploadPage> {
   @Demo(group: 'upload')
   Widget _uploadSingle(BuildContext context) {
     return wrapDemoContainer('单选上传',
-        child: TDUpload(
+        child: TUpload(
           files: files1,
           onClick: onClick,
           onCancel: onCancel,
@@ -161,11 +161,11 @@ class TDUploadState extends State<TDUploadPage> {
   @Demo(group: 'upload')
   Widget _uploadSingleWithReplace(BuildContext context) {
     return wrapDemoContainer('单选上传(替换)',
-        child: TDUpload(
+        child: TUpload(
           files: files6,
           width: 60,
           height: 60,
-          type: TDUploadBoxType.circle,
+          type: TUploadBoxType.circle,
           enabledReplaceType: true,
           onClick: onClick,
           onCancel: onCancel,
@@ -178,7 +178,7 @@ class TDUploadState extends State<TDUploadPage> {
   @Demo(group: 'upload')
   Widget _uploadMultiple(BuildContext context) {
     return wrapDemoContainer('多选上传',
-        child: TDUpload(
+        child: TUpload(
           files: files2,
           multiple: true,
           max: 9,
@@ -193,7 +193,7 @@ class TDUploadState extends State<TDUploadPage> {
   @Demo(group: 'upload')
   Widget _uploadLoading(BuildContext context) {
     return wrapDemoContainer('上传图片',
-        child: TDUpload(
+        child: TUpload(
           files: files3,
           multiple: true,
           max: 9,
@@ -208,7 +208,7 @@ class TDUploadState extends State<TDUploadPage> {
   @Demo(group: 'upload')
   Widget _uploadRetry(BuildContext context) {
     return wrapDemoContainer('上传图片',
-        child: TDUpload(
+        child: TUpload(
           files: files4,
           multiple: true,
           max: 9,
@@ -223,7 +223,7 @@ class TDUploadState extends State<TDUploadPage> {
   @Demo(group: 'upload')
   Widget _uploadError(BuildContext context) {
     return wrapDemoContainer('上传图片',
-        child: TDUpload(
+        child: TUpload(
           files: files5,
           multiple: true,
           max: 9,
@@ -238,7 +238,7 @@ class TDUploadState extends State<TDUploadPage> {
   @Demo(group: 'upload')
   Widget _uploadSizeLimit(BuildContext context) {
     return wrapDemoContainer('限制10KB',
-        child: TDUpload(
+        child: TUpload(
           files: files1,
           onClick: onClick,
           onCancel: onCancel,

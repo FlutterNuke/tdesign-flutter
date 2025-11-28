@@ -8,32 +8,32 @@ Widget? _selectedIcon;
 
 Widget? _unSelectedIcon;
 
-class TDBottomTabBarPage extends StatefulWidget {
-  const TDBottomTabBarPage({Key? key}) : super(key: key);
+class TBottomTabBarPage extends StatefulWidget {
+  const TBottomTabBarPage({Key? key}) : super(key: key);
 
   @override
-  State<TDBottomTabBarPage> createState() => _TDBottomTabBarPageState();
+  State<TBottomTabBarPage> createState() => _TBottomTabBarPageState();
 }
 
-class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
+class _TBottomTabBarPageState extends State<TBottomTabBarPage> {
   void onTapTab(
     BuildContext context,
     String tabName,
   ) {
-    TDToast.showText('点击了 $tabName', context: context);
+    TToast.showText('点击了 $tabName', context: context);
   }
 
   @override
   Widget build(BuildContext context) {
     _selectedIcon = Icon(
-      TDIcons.app,
+      TIcons.app,
       size: 20,
-      color: TDTheme.of(context).brandNormalColor,
+      color: TTheme.of(context).brandNormalColor,
     );
     _unSelectedIcon = Icon(
-      TDIcons.app,
+      TIcons.app,
       size: 20,
-      color: TDTheme.of(context).textColorPrimary,
+      color: TTheme.of(context).textColorPrimary,
     );
     return ExamplePage(
       title: tdTitle(),
@@ -82,12 +82,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _textTypeTabBar(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.text,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.text,
       useVerticalDivider: false,
       navigationTabs: List.generate(2, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
           tabText: label,
           onTap: () {
             onTapTab(context, label);
@@ -99,12 +99,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _textTypeTabBar3tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.text,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.text,
       useVerticalDivider: false,
       navigationTabs: List.generate(3, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
           tabText: label,
           onTap: () {
             onTapTab(context, label);
@@ -116,12 +116,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _textTypeTabBar4tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.text,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.text,
       useVerticalDivider: false,
       navigationTabs: List.generate(4, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
           tabText: label,
           onTap: () {
             onTapTab(context, label);
@@ -133,12 +133,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _textTypeTabBar5tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.text,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.text,
       useVerticalDivider: false,
       navigationTabs: List.generate(5, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
           tabText: label,
           onTap: () {
             onTapTab(context, label);
@@ -150,12 +150,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _iconTextTypeTabBar(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.iconText,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.iconText,
       useVerticalDivider: false,
       navigationTabs: List.generate(2, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
           tabText: label,
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
@@ -169,12 +169,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _iconTextTypeTabBar3tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.iconText,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.iconText,
       useVerticalDivider: false,
       navigationTabs: List.generate(3, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
           tabText: label,
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
@@ -188,12 +188,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _iconTextTypeTabBar4tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.iconText,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.iconText,
       useVerticalDivider: false,
       navigationTabs: List.generate(4, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
           tabText: label,
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
@@ -207,12 +207,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _iconTextTypeTabBar5tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.iconText,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.iconText,
       useVerticalDivider: false,
       navigationTabs: List.generate(5, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
           tabText: label,
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
@@ -226,12 +226,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _iconTypeTabBar(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.icon,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.icon,
       useVerticalDivider: true,
       navigationTabs: List.generate(2, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
             onTap: () {
@@ -243,12 +243,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _iconTypeTabBar3tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.icon,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.icon,
       useVerticalDivider: true,
       navigationTabs: List.generate(3, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
             onTap: () {
@@ -260,12 +260,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _iconTypeTabBar4tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.icon,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.icon,
       useVerticalDivider: true,
       navigationTabs: List.generate(4, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
             onTap: () {
@@ -277,12 +277,12 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _iconTypeTabBar5tabs(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.icon,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.icon,
       useVerticalDivider: true,
       navigationTabs: List.generate(5, (index) {
         final label = '标签${index + 1}';
-        return TDBottomTabBarTabConfig(
+        return TBottomTabBarTabConfig(
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
             onTap: () {
@@ -294,30 +294,30 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _expansionPanelTypeTabBar(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.expansionPanel,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.expansionPanel,
       useVerticalDivider: true,
       navigationTabs: [
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           tabText: '标签',
           onTap: () {
             onTapTab(context, '标签1');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           tabText: '标签',
           onTap: () {
             onTapTab(context, '标签2');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
             tabText: '展开项',
             onTap: () {
               // 不触发点击事件
               onTapTab(context, '展开项');
             },
-            popUpButtonConfig: TDBottomTabBarPopUpBtnConfig(
-                popUpDialogConfig: TDBottomTabBarPopUpShapeConfig(
+            popUpButtonConfig: TBottomTabBarPopUpBtnConfig(
+                popUpDialogConfig: TBottomTabBarPopUpShapeConfig(
                   radius: 10,
                   arrowWidth: 16,
                   arrowHeight: 8,
@@ -329,13 +329,13 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
                           itemWidget: Text(
                             e,
                             style: TextStyle(
-                                color: TDTheme.of(context).textColorPrimary,
+                                color: TTheme.of(context).textColorPrimary,
                                 fontSize: 16),
                           ),
                         ))
                     .toList(),
                 onChanged: (v) {
-                  TDToast.showText('点击了 $v', context: context);
+                  TToast.showText('点击了 $v', context: context);
                 })),
       ],
     );
@@ -343,15 +343,15 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _weakSelectTextTabBar(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.text,
-      componentType: TDBottomTabBarComponentType.normal,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.text,
+      componentType: TBottomTabBarComponentType.normal,
       useVerticalDivider: true,
       navigationTabs: [
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           badgeConfig: BadgeConfig(
             showBadge: true,
-            tdBadge: const TDBadge(TDBadgeType.redPoint),
+            tdBadge: const TBadge(TBadgeType.redPoint),
             badgeTopOffset: -2,
             badgeRightOffset: -10,
           ),
@@ -360,13 +360,13 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
             onTapTab(context, '标签1');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           tabText: '标签',
           onTap: () {
             onTapTab(context, '标签2');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           tabText: '标签',
           onTap: () {
             onTapTab(context, '标签3');
@@ -378,17 +378,17 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _weakSelectIconTabBar(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.icon,
-      componentType: TDBottomTabBarComponentType.normal,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.icon,
+      componentType: TBottomTabBarComponentType.normal,
       useVerticalDivider: false,
       navigationTabs: [
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           badgeConfig: BadgeConfig(
             showBadge: true,
-            tdBadge: const TDBadge(TDBadgeType.redPoint),
+            tdBadge: const TBadge(TBadgeType.redPoint),
             badgeTopOffset: -2,
             badgeRightOffset: -10,
           ),
@@ -397,7 +397,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
             onTapTab(context, '标签1');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -405,7 +405,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
             onTapTab(context, '标签2');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -419,17 +419,17 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _weakSelectIconTextTabBar(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.iconText,
-      componentType: TDBottomTabBarComponentType.normal,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.iconText,
+      componentType: TBottomTabBarComponentType.normal,
       useVerticalDivider: false,
       navigationTabs: [
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           badgeConfig: BadgeConfig(
             showBadge: true,
-            tdBadge: const TDBadge(TDBadgeType.redPoint),
+            tdBadge: const TBadge(TBadgeType.redPoint),
             badgeTopOffset: -2,
             badgeRightOffset: -10,
           ),
@@ -438,7 +438,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
             onTapTab(context, '标签1');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -446,7 +446,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
             onTapTab(context, '标签2');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -460,13 +460,13 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _capsuleTabBar(BuildContext context) {
-    return TDBottomTabBar(TDBottomTabBarBasicType.iconText,
-        componentType: TDBottomTabBarComponentType.label,
-        outlineType: TDBottomTabBarOutlineType.capsule,
+    return TBottomTabBar(TBottomTabBarBasicType.iconText,
+        componentType: TBottomTabBarComponentType.label,
+        outlineType: TBottomTabBarOutlineType.capsule,
         useVerticalDivider: true,
         navigationTabs: List.generate(3, (index) {
           final label = '标签${index + 1}';
-          return TDBottomTabBarTabConfig(
+          return TBottomTabBarTabConfig(
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
             tabText: label,
@@ -479,13 +479,13 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _capsuleTabBarOnLongPress(BuildContext context) {
-    return TDBottomTabBar(TDBottomTabBarBasicType.iconText,
-        componentType: TDBottomTabBarComponentType.label,
-        outlineType: TDBottomTabBarOutlineType.capsule,
+    return TBottomTabBar(TBottomTabBarBasicType.iconText,
+        componentType: TBottomTabBarComponentType.label,
+        outlineType: TBottomTabBarOutlineType.capsule,
         useVerticalDivider: true,
         navigationTabs: List.generate(3, (index) {
           final label = '标签${index + 1}';
-          return TDBottomTabBarTabConfig(
+          return TBottomTabBarTabConfig(
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
             tabText: label,
@@ -494,7 +494,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
             },
             onLongPress: () {
               print('长按了${label}');
-              TDToast.showText('长按了 $label', context: context);
+              TToast.showText('长按了 $label', context: context);
             },
           );
         }));
@@ -502,19 +502,19 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _buildCustomTopStyle(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.iconText,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.iconText,
       topBorder: const BorderSide(color: Colors.red, width: 5),
       barHeight: 61,
-      componentType: TDBottomTabBarComponentType.normal,
+      componentType: TBottomTabBarComponentType.normal,
       useVerticalDivider: false,
       navigationTabs: [
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           badgeConfig: BadgeConfig(
             showBadge: true,
-            tdBadge: const TDBadge(TDBadgeType.redPoint),
+            tdBadge: const TBadge(TBadgeType.redPoint),
             badgeTopOffset: -2,
             badgeRightOffset: -10,
           ),
@@ -523,7 +523,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
             onTapTab(context, '标签1');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -531,7 +531,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
             onTapTab(context, '标签2');
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -545,13 +545,13 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _customBgColor(BuildContext context) {
-    return TDBottomTabBar(TDBottomTabBarBasicType.iconText,
+    return TBottomTabBar(TBottomTabBarBasicType.iconText,
         useVerticalDivider: false,
-        selectedBgColor: TDTheme.of(context).errorColor3,
-        unselectedBgColor: TDTheme.of(context).bgColorSecondaryContainer,
+        selectedBgColor: TTheme.of(context).errorColor3,
+        unselectedBgColor: TTheme.of(context).bgColorSecondaryContainer,
         navigationTabs: List.generate(5, (index) {
           final label = '标签${index + 1}';
-          return TDBottomTabBarTabConfig(
+          return TBottomTabBarTabConfig(
             tabText: label,
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
@@ -564,22 +564,22 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _customBgTypeTabBar(BuildContext context) {
-    return TDBottomTabBar(TDBottomTabBarBasicType.text,
-        backgroundColor: TDTheme.of(context).successNormalColor,
-        selectedBgColor: TDTheme.of(context).errorLightColor,
-        unselectedBgColor: TDTheme.of(context).brandLightColor,
+    return TBottomTabBar(TBottomTabBarBasicType.text,
+        backgroundColor: TTheme.of(context).successNormalColor,
+        selectedBgColor: TTheme.of(context).errorLightColor,
+        unselectedBgColor: TTheme.of(context).brandLightColor,
         useVerticalDivider: false,
         navigationTabs: [
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签1',
             onTap: () {
               onTapTab(context, '标签1');
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签2',
             unselectTabTextStyle:
-                TextStyle(color: TDTheme.of(context).textColorBrand),
+                TextStyle(color: TTheme.of(context).textColorBrand),
             onTap: () {
               onTapTab(context, '标签2');
             },
@@ -599,8 +599,8 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
           Expanded(
               child: PageView(
             children: const [
-              Center(child: TDText('页面1，手指左滑查看页面2')),
-              Center(child: TDText('页面2，手指右滑查看页面1')),
+              Center(child: TText('页面1，手指左滑查看页面2')),
+              Center(child: TText('页面2，手指右滑查看页面1')),
             ],
             onPageChanged: (index) {
               setState(() {
@@ -608,14 +608,14 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
               });
             },
           )),
-          TDBottomTabBar(
+          TBottomTabBar(
               // 设置选择index
               currentIndex: currentIndex,
-              TDBottomTabBarBasicType.icon,
+              TBottomTabBarBasicType.icon,
               useVerticalDivider: true,
               navigationTabs: List.generate(2, (index) {
                 final label = '标签${index + 1}';
-                return TDBottomTabBarTabConfig(
+                return TBottomTabBarTabConfig(
                     selectedIcon: _selectedIcon,
                     unselectedIcon: _unSelectedIcon,
                     onTap: () {
@@ -629,17 +629,17 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _allowMultipleTaps(BuildContext context) {
-    return TDBottomTabBar(TDBottomTabBarBasicType.text,
+    return TBottomTabBar(TBottomTabBarBasicType.text,
         useVerticalDivider: false,
         navigationTabs: [
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             allowMultipleTaps: true,
             tabText: '支持重复点击',
             onTap: () {
               onTapTab(context, '标签1');
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '不支持重复点击',
             onTap: () {
               onTapTab(context, '标签2');
@@ -650,10 +650,10 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
 
   @Demo(group: 'bottomTabBar')
   Widget _needInkWellTabBar(BuildContext context) {
-    return TDBottomTabBar(TDBottomTabBarBasicType.iconText,
+    return TBottomTabBar(TBottomTabBarBasicType.iconText,
         needInkWell: true,
         navigationTabs: [
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
@@ -661,7 +661,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
               onTapTab(context, '标签1');
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '',
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
@@ -669,7 +669,7 @@ class _TDBottomTabBarPageState extends State<TDBottomTabBarPage> {
               onTapTab(context, '标签2');
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,

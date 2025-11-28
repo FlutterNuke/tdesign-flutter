@@ -7,8 +7,8 @@ import '../../util/context_extension.dart';
 typedef PopupClick = Function();
 
 /// 弹窗基类
-abstract class TDPopupBasePanel extends StatefulWidget {
-  const TDPopupBasePanel({
+abstract class TPopupBasePanel extends StatefulWidget {
+  const TPopupBasePanel({
     Key? key,
     required this.child,
     this.title,
@@ -45,10 +45,10 @@ abstract class TDPopupBasePanel extends StatefulWidget {
   final double minHeightRatio;
 
   @override
-  State<TDPopupBasePanel> createState();
+  State<TPopupBasePanel> createState();
 }
 
-abstract class _TDPopupBaseState<T extends TDPopupBasePanel> extends State<T>
+abstract class _TDPopupBaseState<T extends TPopupBasePanel> extends State<T>
     with SingleTickerProviderStateMixin {
   final GlobalKey _childKey = GlobalKey();
   static const _dragHandleHeight = 24.0;
@@ -166,7 +166,7 @@ abstract class _TDPopupBaseState<T extends TDPopupBasePanel> extends State<T>
           width: 48,
           height: 4,
           decoration: BoxDecoration(
-            color: TDTheme.of(context).componentStrokeColor,
+            color: TTheme.of(context).componentStrokeColor,
             borderRadius: BorderRadius.circular(2),
           ),
         ),
@@ -189,11 +189,11 @@ abstract class _TDPopupBaseState<T extends TDPopupBasePanel> extends State<T>
         child: Container(
           height: _currentHeight,
           decoration: BoxDecoration(
-            color: widget.backgroundColor ?? TDTheme.of(context).bgColorContainer,
+            color: widget.backgroundColor ?? TTheme.of(context).bgColorContainer,
             borderRadius: _isFullscreen
                 ? null
                 : BorderRadius.vertical(
-                    top: Radius.circular(widget.radius ?? TDTheme.of(context).radiusExtraLarge)),
+                    top: Radius.circular(widget.radius ?? TTheme.of(context).radiusExtraLarge)),
           ),
           child: Column(children: [
             _buildDragHandle(),
@@ -256,8 +256,8 @@ abstract class _TDPopupBaseState<T extends TDPopupBasePanel> extends State<T>
 }
 
 /// 右上角带关闭的底部浮层面板
-class TDPopupBottomDisplayPanel extends TDPopupBasePanel {
-  const TDPopupBottomDisplayPanel({
+class TPopupBottomDisplayPanel extends TPopupBasePanel {
+  const TPopupBottomDisplayPanel({
     super.key,
     required super.child,
     super.title,
@@ -294,20 +294,20 @@ class TDPopupBottomDisplayPanel extends TDPopupBasePanel {
   final PopupClick? closeClick;
 
   @override
-  State<TDPopupBasePanel> createState() => _TDPopupBottomDisplayPanelState();
+  State<TPopupBasePanel> createState() => _TDPopupBottomDisplayPanelState();
 }
 
-class _TDPopupBottomDisplayPanelState extends _TDPopupBaseState<TDPopupBottomDisplayPanel> {
+class _TDPopupBottomDisplayPanelState extends _TDPopupBaseState<TPopupBottomDisplayPanel> {
   @override
   Widget buildHeader(BuildContext context) {
     Widget header = Container(
       alignment: widget.titleLeft ? Alignment.centerLeft : Alignment.center,
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: TDText(
+      child: TText(
         widget.title ?? '',
-        textColor: widget.titleColor ?? TDTheme.of(context).textColorPrimary,
-        font: TDTheme.of(context).fontTitleLarge?.withSize(
-            widget.titleFontSize?.toInt() ?? TDTheme.of(context).fontTitleLarge!.size.toInt()),
+        textColor: widget.titleColor ?? TTheme.of(context).textColorPrimary,
+        font: TTheme.of(context).fontTitleLarge?.withSize(
+            widget.titleFontSize?.toInt() ?? TTheme.of(context).fontTitleLarge!.size.toInt()),
         fontWeight: FontWeight.w700,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
@@ -326,7 +326,7 @@ class _TDPopupBottomDisplayPanelState extends _TDPopupBaseState<TDPopupBottomDis
             right: 0,
             child: IconButton(
               icon: Icon(
-                TDIcons.close,
+                TIcons.close,
                 color: widget.closeColor,
                 size: widget.closeSize,
               ),
@@ -362,8 +362,8 @@ class _TDPopupBottomDisplayPanelState extends _TDPopupBaseState<TDPopupBottomDis
 }
 
 /// 带确认的底部浮层面板
-class TDPopupBottomConfirmPanel extends TDPopupBasePanel {
-  const TDPopupBottomConfirmPanel({
+class TPopupBottomConfirmPanel extends TPopupBasePanel {
+  const TPopupBottomConfirmPanel({
     super.key,
     required super.child,
     super.title,
@@ -412,10 +412,10 @@ class TDPopupBottomConfirmPanel extends TDPopupBasePanel {
   final PopupClick? rightClick;
 
   @override
-  State<TDPopupBasePanel> createState() => _TDPopupBottomConfirmPanelState();
+  State<TPopupBasePanel> createState() => _TDPopupBottomConfirmPanelState();
 }
 
-class _TDPopupBottomConfirmPanelState extends _TDPopupBaseState<TDPopupBottomConfirmPanel> {
+class _TDPopupBottomConfirmPanelState extends _TDPopupBaseState<TPopupBottomConfirmPanel> {
   @override
   Widget buildHeader(BuildContext context) {
     return SizedBox(
@@ -427,17 +427,17 @@ class _TDPopupBottomConfirmPanelState extends _TDPopupBaseState<TDPopupBottomCon
         children: [
           _buildActionButton(
             text: widget.leftText ?? context.resource.cancel,
-            color: widget.leftTextColor ?? TDTheme.of(context).textColorSecondary,
+            color: widget.leftTextColor ?? TTheme.of(context).textColorSecondary,
             onTap: widget.leftClick,
             left: true,
           ),
           Expanded(
             child: Center(
-              child: TDText(
+              child: TText(
                 widget.title ?? '',
-                textColor: widget.titleColor ?? TDTheme.of(context).textColorPrimary,
-                font: TDTheme.of(context).fontTitleLarge?.withSize(widget.titleFontSize?.toInt() ??
-                    TDTheme.of(context).fontTitleLarge!.size.toInt()),
+                textColor: widget.titleColor ?? TTheme.of(context).textColorPrimary,
+                font: TTheme.of(context).fontTitleLarge?.withSize(widget.titleFontSize?.toInt() ??
+                    TTheme.of(context).fontTitleLarge!.size.toInt()),
                 fontWeight: FontWeight.w700,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
@@ -446,7 +446,7 @@ class _TDPopupBottomConfirmPanelState extends _TDPopupBaseState<TDPopupBottomCon
           ),
           _buildActionButton(
             text: widget.rightText ?? context.resource.confirm,
-            color: widget.rightTextColor ?? TDTheme.of(context).brandNormalColor,
+            color: widget.rightTextColor ?? TTheme.of(context).brandNormalColor,
             onTap: widget.rightClick,
             left: false,
           ),
@@ -468,15 +468,15 @@ class _TDPopupBottomConfirmPanelState extends _TDPopupBaseState<TDPopupBottomCon
             left: left ? 16 : 0,
             right: left ? 0 : 16,
           ),
-          child: TDText(
+          child: TText(
             text,
             textColor: color,
-            font: (left ? TDTheme.of(context).fontBodyLarge : TDTheme.of(context).fontTitleMedium)
+            font: (left ? TTheme.of(context).fontBodyLarge : TTheme.of(context).fontTitleMedium)
                 ?.withSize(left
                     ? widget.leftTextFontSize?.toInt() ??
-                        TDTheme.of(context).fontBodyLarge!.size.toInt()
+                        TTheme.of(context).fontBodyLarge!.size.toInt()
                     : widget.rightTextFontSize?.toInt() ??
-                        TDTheme.of(context).fontTitleMedium!.size.toInt()),
+                        TTheme.of(context).fontTitleMedium!.size.toInt()),
             fontWeight: left ? FontWeight.w400 : FontWeight.w600,
           ),
         ),
@@ -500,8 +500,8 @@ class _TDPopupBottomConfirmPanelState extends _TDPopupBaseState<TDPopupBottomCon
 }
 
 /// 居中浮层面板
-class TDPopupCenterPanel extends StatelessWidget {
-  const TDPopupCenterPanel({
+class TPopupCenterPanel extends StatelessWidget {
+  const TPopupCenterPanel({
     super.key,
     required this.child,
     this.closeUnderBottom = false,
@@ -543,15 +543,15 @@ class TDPopupCenterPanel extends StatelessWidget {
           Container(
             margin: const EdgeInsets.symmetric(vertical: 24),
             decoration: BoxDecoration(
-              color: backgroundColor ?? TDTheme.of(context).bgColorContainer,
-              borderRadius: BorderRadius.circular(radius ?? TDTheme.of(context).radiusExtraLarge),
+              color: backgroundColor ?? TTheme.of(context).bgColorContainer,
+              borderRadius: BorderRadius.circular(radius ?? TTheme.of(context).radiusExtraLarge),
             ),
             child: child,
           ),
           IconButton(
             icon: Icon(
-              TDIcons.close_circle,
-              color: closeColor ?? TDTheme.of(context).fontWhColor1,
+              TIcons.close_circle,
+              color: closeColor ?? TTheme.of(context).fontWhColor1,
               size: closeSize ?? 32,
             ),
             onPressed: closeClick,
@@ -562,18 +562,18 @@ class TDPopupCenterPanel extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: backgroundColor ?? TDTheme.of(context).bgColorContainer,
-        borderRadius: BorderRadius.circular(radius ?? TDTheme.of(context).radiusExtraLarge),
+        color: backgroundColor ?? TTheme.of(context).bgColorContainer,
+        borderRadius: BorderRadius.circular(radius ?? TTheme.of(context).radiusExtraLarge),
       ),
       child: Stack(
         children: [
           child,
           Positioned(
-            top: TDTheme.of(context).spacer8,
-            right: TDTheme.of(context).spacer8,
+            top: TTheme.of(context).spacer8,
+            right: TTheme.of(context).spacer8,
             child: IconButton(
               icon: Icon(
-                TDIcons.close,
+                TIcons.close,
                 color: closeColor,
                 size: closeSize,
               ),

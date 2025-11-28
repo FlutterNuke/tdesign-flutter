@@ -10,15 +10,15 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   var jsonString = await rootBundle.loadString('assets/theme.json');
   print('jsonString:$jsonString');
-  TDTheme.needMultiTheme(true);
-  TDTheme.defaultData();
-  var themeData = TDThemeData.fromJson('green', jsonString);
-  await TDFontLoader.load(
+  TTheme.needMultiTheme(true);
+  TTheme.defaultData();
+  var themeData = TThemeData.fromJson('green', jsonString);
+  await TFontLoader.load(
       name: 'test1',
       fontFamilyUrl:
           'https://xinyue.qq.com/m/flutter_web/assets/packages/flutter_component/fonts/FZLanTingHeiS-EB-GB.ttf');
   runApp(MaterialApp(
-    home: TDTextConfiguration(
+    home: TTextConfiguration(
       globalFontFamily: FontFamily(
         fontFamily: 'test1',
       ),
@@ -48,15 +48,15 @@ Padding body(BuildContext context) {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
 
-                    TDButton(text: 'ixanshi ',onTap: (){
-                      TDLoadingController.show(context);
+                    TButton(text: 'ixanshi ',onTap: (){
+                      TLoadingController.show(context);
 
-                      TDLoadingController.dismiss();
+                      TLoadingController.dismiss();
                     },),
                     // 先显示再加载
-                    TDText(
+                    TText(
                       '测试文案',
-                      textColor: TDTheme.of(context).brandNormalColor,
+                      textColor: TTheme.of(context).brandNormalColor,
                       fontFamilyUrl:
                           'https://xinyue.qq.com/m/flutter_web/assets/packages/flutter_component/fonts/FZLanTingHeiS-EB-GB.ttf',
                       fontFamily: FontFamily(fontFamily: 'test'),
@@ -67,17 +67,17 @@ Padding body(BuildContext context) {
                     //   initialData: false,
                     //   builder: (_,data)=>TDText(
                     //     (data.data ?? false) ? '测试文案' : '',
-                    //     textColor: TDTheme.of(context).brandNormalColor,
+                    //     textColor: TTheme.of(context).brandNormalColor,
                     //     fontFamilyUrl: 'https://xinyue.qq.com/m/flutter_web/assets/packages/flutter_component/fonts/FZLanTingHeiS-EB-GB.ttf',
                     //     fontFamily: FontFamily(fontFamily: 'test1'),
                     //   ),
                     // ),
-                    TDInput(
+                    TInput(
                       // leftLabel: '标签文字',
                       // controller: controller[0],
-                      type: TDInputType.cardStyle,
+                      type: TInputType.cardStyle,
                       backgroundColor: Colors.white,
-                      cardStyle: TDCardStyle.topTextWithBlueBorder,
+                      cardStyle: TCardStyle.topTextWithBlueBorder,
                       hintText: '请输入文字',
                       cardStyleTopText: '标签文字',
                       // onChanged: (text) {
@@ -91,7 +91,7 @@ Padding body(BuildContext context) {
                     const SizedBox(
                       height: 16,
                     ),
-                    const TDTextarea(
+                    const TTextarea(
                       label: '标签文字',
                       hintText: '请输入文字',
                       maxLines: 4,
@@ -101,7 +101,7 @@ Padding body(BuildContext context) {
                       indicator: true,
                       // backgroundColor: Colors.white,
                       // textInputBackgroundColor: Colors.white,
-                      layout: TDTextareaLayout.vertical,
+                      layout: TTextareaLayout.vertical,
                       bordered: true,
                     )
                   ],
@@ -110,7 +110,7 @@ Padding body(BuildContext context) {
 }
 
 PreferredSizeWidget _buildAppBar(BuildContext context) {
-  return TDNavBar(
+  return TNavBar(
       useDefaultBack: false,
       // screenAdaptation: false,
       flexibleSpace: Container(
@@ -126,36 +126,36 @@ PreferredSizeWidget _buildAppBar(BuildContext context) {
       backgroundColor: Colors.red,
       centerTitle: false,
       titleMargin: 0,
-      titleWidget: TDSearchBar(
+      titleWidget: TSearchBar(
         needCancel: false,
         autoHeight: true,
         backgroundColor: Colors.transparent,
         padding: const EdgeInsets.fromLTRB(0, 2, 0, 2),
         placeHolder: '搜索预设文案',
         mediumStyle: true,
-        style: TDSearchStyle.round,
+        style: TSearchStyle.round,
         onTextChanged: (String text) {
           print('input：$text');
         },
       ),
       rightBarItems: [
-        TDNavBarItem(icon: TDIcons.home, iconSize: 24),
-        TDNavBarItem(icon: TDIcons.ellipsis, iconSize: 24)
+        TNavBarItem(icon: TIcons.home, iconSize: 24),
+        TNavBarItem(icon: TIcons.ellipsis, iconSize: 24)
       ]);
 }
 
-TDBottomTabBar _buildBottomTabBar() {
+TBottomTabBar _buildBottomTabBar() {
   var iconSize = 39 * 60 / 98;
   var textSize = 8.0;
-  return TDBottomTabBar(
-    TDBottomTabBarBasicType.iconText,
-    componentType: TDBottomTabBarComponentType.normal,
+  return TBottomTabBar(
+    TBottomTabBarBasicType.iconText,
+    componentType: TBottomTabBarComponentType.normal,
     useVerticalDivider: false,
     barHeight: 98 * 60 / 98,
     navigationTabs: [
-      TDBottomTabBarTabConfig(
-        selectedIcon: Icon(TDIcons.home, size: iconSize, color: Colors.red),
-        unselectedIcon: Icon(TDIcons.home, size: iconSize, color: const Color(0xFF383838)),
+      TBottomTabBarTabConfig(
+        selectedIcon: Icon(TIcons.home, size: iconSize, color: Colors.red),
+        unselectedIcon: Icon(TIcons.home, size: iconSize, color: const Color(0xFF383838)),
         tabText: '首页',
         selectTabTextStyle: TextStyle(fontSize: textSize, color: Colors.red),
         unselectTabTextStyle: TextStyle(fontSize: textSize, color: Colors.black),
@@ -163,9 +163,9 @@ TDBottomTabBar _buildBottomTabBar() {
           // context.read<CurrentIndexProvider>().changeIndex(0);
         },
       ),
-      TDBottomTabBarTabConfig(
-        selectedIcon: Icon(TDIcons.app, size: iconSize, color: Colors.red),
-        unselectedIcon: Icon(TDIcons.app, size: iconSize, color: const Color(0xFF383838)),
+      TBottomTabBarTabConfig(
+        selectedIcon: Icon(TIcons.app, size: iconSize, color: Colors.red),
+        unselectedIcon: Icon(TIcons.app, size: iconSize, color: const Color(0xFF383838)),
         tabText: '办事',
         selectTabTextStyle: TextStyle(fontSize: textSize, color: Colors.red),
         unselectTabTextStyle: TextStyle(fontSize: textSize, color: Colors.black),
@@ -173,9 +173,9 @@ TDBottomTabBar _buildBottomTabBar() {
           // context.read<CurrentIndexProvider>().changeIndex(1);
         },
       ),
-      TDBottomTabBarTabConfig(
-        selectedIcon: Icon(TDIcons.user, size: iconSize, color: Colors.red),
-        unselectedIcon: Icon(TDIcons.user, size: iconSize, color: const Color(0xFF383838)),
+      TBottomTabBarTabConfig(
+        selectedIcon: Icon(TIcons.user, size: iconSize, color: Colors.red),
+        unselectedIcon: Icon(TIcons.user, size: iconSize, color: const Color(0xFF383838)),
         tabText: '我的',
         selectTabTextStyle: TextStyle(fontSize: textSize, color: Colors.red),
         unselectTabTextStyle: TextStyle(fontSize: textSize, color: Colors.black),

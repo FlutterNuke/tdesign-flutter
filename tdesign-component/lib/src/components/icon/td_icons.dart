@@ -16,10 +16,10 @@ class _TDIconsData extends IconData {
 }
 
 
-class TDIcons {
+class TIcons {
 
   /// 私有构造方法，不支持外部创建，仅提供静态常量给外部使用
-  const TDIcons._();
+  const TIcons._();
   static const accessibility_filled = _TDIconsData(0xE001, 'accessibility_filled');
   static const accessibility = _TDIconsData(0xE002, 'accessibility');
   static const activity_filled = _TDIconsData(0xE003, 'activity_filled');

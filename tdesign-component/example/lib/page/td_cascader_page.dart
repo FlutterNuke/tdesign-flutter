@@ -6,14 +6,14 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 import '../../annotation/demo.dart';
 import '../../base/example_widget.dart';
 
-class TDCascaderPage extends StatefulWidget {
-  const TDCascaderPage({super.key});
+class TCascaderPage extends StatefulWidget {
+  const TCascaderPage({super.key});
 
   @override
-  State<TDCascaderPage> createState() => _TDCascaderPageState();
+  State<TCascaderPage> createState() => _TDCascaderPageState();
 }
 
-class _TDCascaderPageState extends State<TDCascaderPage> {
+class _TDCascaderPageState extends State<TCascaderPage> {
   String? _initData;
   String _selected_1 = '';
   final List<Map> _data = [
@@ -293,7 +293,7 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: TDTheme.of(context).whiteColor1,
+      color: TTheme.of(context).whiteColor1,
       child: ExamplePage(
         title: tdTitle(),
         exampleCodeGroup: 'cascader',
@@ -321,12 +321,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildVerticalCascader(BuildContext context) {
     const title = '选择地址';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_1,
         arrow: true,
         onClick: (click) {
-          TDCascader.showMultiCascader(context,
+          TCascader.showMultiCascader(context,
               title: title,
               data: _data,
               initialData: _initData,
@@ -349,12 +349,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildVerticalLetterCascader(BuildContext context) {
     const title = '选择地址';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_2,
         arrow: true,
         onClick: (click) {
-          TDCascader.showMultiCascader(context,
+          TCascader.showMultiCascader(context,
               title: title,
               data: _data_2,
               initialData: _initData_2,
@@ -377,12 +377,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildHorizontalCascader(BuildContext context) {
     const title = '选择地址';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_1,
         arrow: true,
         onClick: (click) {
-          TDCascader.showMultiCascader(context,
+          TCascader.showMultiCascader(context,
               title: title,
               subTitles: ['请选择省份', '请选择城市', '请选择区/县'],
               data: _data,
@@ -406,12 +406,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildHorizontalLetterCascader(BuildContext context) {
     const title = '选择地址';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_2,
         arrow: true,
         onClick: (click) {
-          TDCascader.showMultiCascader(context,
+          TCascader.showMultiCascader(context,
               title: title,
               data: _data_2,
               initialData: _initData_2,
@@ -435,12 +435,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildHorizontalCompanyCascader(BuildContext context) {
     const title = '选择部门人员';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_3,
         arrow: true,
         onClick: (click) {
-          TDCascader.showMultiCascader(context,
+          TCascader.showMultiCascader(context,
               title: title,
               data: _data_3,
               isLetterSort: true,
@@ -464,12 +464,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildVerticalCompanyCascader(BuildContext context) {
     const title = '选择部门人员';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_3,
         arrow: true,
         onClick: (click) {
-          TDCascader.showMultiCascader(context,
+          TCascader.showMultiCascader(context,
               title: title,
               data: _data_3,
               isLetterSort: true,
@@ -493,12 +493,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildVerticalSubTitleCascader(BuildContext context) {
     const title = '选择地址';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_1,
         arrow: true,
         onClick: (click) {
-          TDCascader.showMultiCascader(context,
+          TCascader.showMultiCascader(context,
               title: title,
               subTitles: ['请选择省份', '请选择城市', '请选择区/县'],
               data: _data,
@@ -522,12 +522,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildTestVerticalCompanyCascader(BuildContext context) {
     const title = '选择部门人员';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_4,
         arrow: true,
         onClick: (click) {
-          TDCascader.showMultiCascader(context,
+          TCascader.showMultiCascader(context,
               title: title,
               data: _data_4,
               initialData: _initData_5,
@@ -550,14 +550,14 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
   @Demo(group: 'cascader')
   Widget _buildSelectAnyItemCascader(BuildContext context) {
     const title = '请选择数据';
-    return TDCell(
+    return TCell(
         title: title,
         note: _selected_1,
         arrow: true,
         onClick: (click) {
           var action = (List<MultiCascaderListModel> selectData) {
             if (selectData.isEmpty) {
-              TDToast.showText(title, context: context);
+              TToast.showText(title, context: context);
               return;
             }
             setState(() {
@@ -570,12 +570,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
               _selected_1 = result.join('/');
             });
           };
-          TDCascader.showMultiCascader(
+          TCascader.showMultiCascader(
             context,
             title: '选择地址',
             data: _data,
             initialData: _initData_6,
-            action: TDCascaderAction(onConfirm: action),
+            action: TCascaderAction(onConfirm: action),
             onChange: action,
           );
         });
@@ -583,12 +583,12 @@ class _TDCascaderPageState extends State<TDCascaderPage> {
 
   @Demo(group: 'cascader')
   Widget _buildWithInitialIndexes(BuildContext context) {
-    return TDCell(
+    return TCell(
       title: '选择地区',
       note: _selected_1.isEmpty ? '请选择' : _selected_1,
       arrow: true,
       onClick: (click) {
-        TDCascader.showMultiCascader(
+        TCascader.showMultiCascader(
           context,
           title: '选择地址',
           data: _data,

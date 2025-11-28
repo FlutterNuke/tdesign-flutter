@@ -16,7 +16,7 @@ var kTextNeedGlobalFontFamily = true;
 
 /// 文本控件
 /// 设计原则：
-/// 1. 为了使用更方便，所以对系统组件进行的扩展，需兼容系统控件所有功能，不能让用户使用 TDesign 时，因不能满足系统功能而弃用。
+/// 1. 为了使用更方便，所以对系统组件进行的扩展，需兼容系统控件所有功能，不能让用户使用 Tesign 时，因不能满足系统功能而弃用。
 /// 2. 非系统已有属性，尽量添加注释
 ///
 /// 需求：把一部分在 TextStyle 中的属性扁平化，放到外层。
@@ -37,8 +37,8 @@ var kTextNeedGlobalFontFamily = true;
 /// 匹配(前半有默认值，后半无默认值)：this\.([a-z|A-Z]+)[ ]*[\=]+[ ]*[a-z|A-Z]+\,|this\.([a-z|A-Z]+)\,
 /// 替换：$1$2: this.$1$2,
 ///
-class TDText extends StatelessWidget {
-  const TDText(
+class TText extends StatelessWidget {
+  const TText(
     this.data, {
     this.font,
     this.fontWeight,
@@ -68,7 +68,7 @@ class TDText extends StatelessWidget {
         super(key: key);
 
   /// 富文本构造方法
-  const TDText.rich(
+  const TText.rich(
     this.textSpan, {
     this.font,
     this.fontWeight,
@@ -164,7 +164,7 @@ class TDText extends StatelessWidget {
   Widget build(BuildContext context) {
     if (fontFamilyUrl?.isNotEmpty ?? false) {
       // 如果设置了 Url，则使用 TGFontLoader
-      return TDFontLoaderWidget(
+      return TFontLoaderWidget(
         textWidget: this,
         fontFamilyUrl: fontFamilyUrl!,
       );
@@ -174,12 +174,12 @@ class TDText extends StatelessWidget {
       var paddingConfig = config?.paddingConfig;
 
       var textFont = font ??
-          TDTheme.of(context).fontBodyLarge ??
+          TTheme.of(context).fontBodyLarge ??
           Font(size: 16, lineHeight: 24);
       var fontSize = style?.fontSize ?? textFont.size;
       var height = style?.height ?? textFont.height;
 
-      paddingConfig ??= TDTextPaddingConfig.getDefaultConfig();
+      paddingConfig ??= TTextPaddingConfig.getDefaultConfig();
       var showHeight = min(paddingConfig.heightRate, height);
       return Container(
         color: style?.backgroundColor ?? backgroundColor,
@@ -200,15 +200,15 @@ class TDText extends StatelessWidget {
     );
   }
 
-  /// 提取成方法，允许业务定义自己的 TDTextConfiguration
-  TDTextConfiguration? getConfiguration(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<TDTextConfiguration>();
+  /// 提取成方法，允许业务定义自己的 TTextConfiguration
+  TTextConfiguration? getConfiguration(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<TTextConfiguration>();
   }
 
   TextStyle? getTextStyle(BuildContext context,
       {double? height, Color? backgroundColor}) {
     var textFont = font ??
-        TDTheme.of(context).fontBodyLarge ??
+        TTheme.of(context).fontBodyLarge ??
         Font(size: 16, lineHeight: 24);
 
     var stylePackage = package ?? fontFamily?.package;
@@ -228,7 +228,7 @@ class TDText extends StatelessWidget {
       styleFontFamily = 'PingFang SC';
     }
     var color =
-        style?.color ?? textColor ?? TDTheme.of(context).textColorPrimary;
+        style?.color ?? textColor ?? TTheme.of(context).textColorPrimary;
     return TextStyle(
       inherit: style?.inherit ?? true,
       color: color,
@@ -308,10 +308,10 @@ class TDText extends StatelessWidget {
   }
 }
 
-/// TextSpan 的 TDesign 扩展，将部分 TextStyle 中的参数扁平化。
-class TDTextSpan extends TextSpan {
-  /// 构造参数，扩展参数释义可参考[TDText]中字段注释
-  TDTextSpan({
+/// TextSpan 的 Tesign 扩展，将部分 TextStyle 中的参数扁平化。
+class TTextSpan extends TextSpan {
+  /// 构造参数，扩展参数释义可参考[TText]中字段注释
+  TTextSpan({
     BuildContext?
         context, // 如果未设置font，且不想使用默认的 fontBodyLarge 尺寸时，需设置context，否则可省略
     Font? font,
@@ -353,10 +353,10 @@ class TDTextSpan extends TextSpan {
     String? package,
   ) {
     var textFont = font ??
-        TDTheme.of(context).fontBodyLarge ??
+        TTheme.of(context).fontBodyLarge ??
         Font(size: 16, lineHeight: 24);
     var color =
-        style?.color ?? textColor ?? TDTheme.of(context).textColorPrimary;
+        style?.color ?? textColor ?? TTheme.of(context).textColorPrimary;
     return TextStyle(
       inherit: style?.inherit ?? true,
       color: color,
@@ -387,15 +387,15 @@ class TDTextSpan extends TextSpan {
   }
 }
 
-/// 存储可以自定义 TDText 居中算法数据的内部控件
-class TDTextConfiguration extends InheritedWidget {
+/// 存储可以自定义 TText 居中算法数据的内部控件
+class TTextConfiguration extends InheritedWidget {
   /// forceVerticalCenter=true 时，内置 padding 配置
-  final TDTextPaddingConfig? paddingConfig;
+  final TTextPaddingConfig? paddingConfig;
 
   /// 全局字体，kTextNeedGlobalFontFamily=true 时生效
   final FontFamily? globalFontFamily;
 
-  const TDTextConfiguration(
+  const TTextConfiguration(
       {Key? key,
       required Widget child,
       this.paddingConfig,
@@ -403,19 +403,19 @@ class TDTextConfiguration extends InheritedWidget {
       : super(key: key, child: child);
 
   @override
-  bool updateShouldNotify(covariant TDTextConfiguration oldWidget) {
+  bool updateShouldNotify(covariant TTextConfiguration oldWidget) {
     return paddingConfig != oldWidget.paddingConfig;
   }
 }
 
-/// 通过 Padding 自定义 TDText 居中算法
-class TDTextPaddingConfig {
-  static TDTextPaddingConfig? _defaultConfig;
+/// 通过 Padding 自定义 TText 居中算法
+class TTextPaddingConfig {
+  static TTextPaddingConfig? _defaultConfig;
   static final Map<double, Map<double, EdgeInsetsGeometry>> _cacheMap = {};
 
   /// 获取默认配置
-  static TDTextPaddingConfig getDefaultConfig() {
-    _defaultConfig ??= TDTextPaddingConfig();
+  static TTextPaddingConfig getDefaultConfig() {
+    _defaultConfig ??= TTextPaddingConfig();
     return _defaultConfig!;
   }
 

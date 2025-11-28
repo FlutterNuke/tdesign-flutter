@@ -23,7 +23,7 @@ const double _kDefaultTabBarHeight = 56;
 /// 展开项弹窗弹出动画时间
 const Duration _kPopupMenuDuration = Duration(milliseconds: 10);
 
-enum TDBottomTabBarBasicType {
+enum TBottomTabBarBasicType {
   /// 单层级纯文本标签栏
   text,
 
@@ -37,7 +37,7 @@ enum TDBottomTabBarBasicType {
   expansionPanel,
 }
 
-enum TDBottomTabBarComponentType {
+enum TBottomTabBarComponentType {
   /// 普通样式
   normal,
 
@@ -45,7 +45,7 @@ enum TDBottomTabBarComponentType {
   label
 }
 
-enum TDBottomTabBarOutlineType {
+enum TBottomTabBarOutlineType {
   /// 填充样式
   filled,
 
@@ -57,16 +57,16 @@ enum TDBottomTabBarOutlineType {
 class BadgeConfig {
   BadgeConfig({
     required this.showBadge,
-    TDBadge? tdBadge,
+    TBadge? tdBadge,
     this.badgeTopOffset,
     this.badgeRightOffset,
-  }) : tdBadge = tdBadge ?? const TDBadge(TDBadgeType.redPoint);
+  }) : tdBadge = tdBadge ?? const TBadge(TBadgeType.redPoint);
 
   /// 是否展示消息
   final bool showBadge;
 
   /// 消息样式（未设置但 showBadge 为 true，则默认使用红点）
-  final TDBadge? tdBadge;
+  final TBadge? tdBadge;
 
   /// 消息顶部偏移量
   final double? badgeTopOffset;
@@ -76,8 +76,8 @@ class BadgeConfig {
 }
 
 /// 单个 tab 配置
-class TDBottomTabBarTabConfig {
-  TDBottomTabBarTabConfig(
+class TBottomTabBarTabConfig {
+  TBottomTabBarTabConfig(
       {required this.onTap,
       this.selectedIcon,
       this.unselectedIcon,
@@ -120,7 +120,7 @@ class TDBottomTabBarTabConfig {
   final BadgeConfig? badgeConfig;
 
   /// 弹窗配置
-  final TDBottomTabBarPopUpBtnConfig? popUpButtonConfig;
+  final TBottomTabBarPopUpBtnConfig? popUpButtonConfig;
 
   /// onTap 方法允许点击多次
   final bool allowMultipleTaps;
@@ -129,12 +129,12 @@ class TDBottomTabBarTabConfig {
   final GestureLongPressCallback? onLongPress;
 }
 
-class TDBottomTabBar extends StatefulWidget {
-  TDBottomTabBar(
+class TBottomTabBar extends StatefulWidget {
+  TBottomTabBar(
     this.basicType, {
     Key? key,
-    this.componentType = TDBottomTabBarComponentType.label,
-    this.outlineType = TDBottomTabBarOutlineType.filled,
+    this.componentType = TBottomTabBarComponentType.label,
+    this.outlineType = TBottomTabBarOutlineType.filled,
     required this.navigationTabs,
     this.barHeight = _kDefaultTabBarHeight,
     this.useVerticalDivider,
@@ -152,32 +152,32 @@ class TDBottomTabBar extends StatefulWidget {
     this.needInkWell = false,
   })  : assert(() {
           if (navigationTabs.isEmpty) {
-            throw FlutterError('[TDBottomTabBar] please set at least one tab!');
+            throw FlutterError('[TBottomTabBar] please set at least one tab!');
           }
-          if (basicType == TDBottomTabBarBasicType.text) {
+          if (basicType == TBottomTabBarBasicType.text) {
             for (final item in navigationTabs) {
               if (item.tabText == null) {
                 throw FlutterError(
-                    '[TDBottomTabBar] type is TDBottomBarType.text, but not set tabText.');
+                    '[TBottomTabBar] type is TBottomBarType.text, but not set tabText.');
               }
             }
           }
-          if (basicType == TDBottomTabBarBasicType.icon) {
+          if (basicType == TBottomTabBarBasicType.icon) {
             for (final item in navigationTabs) {
               if (item.selectedIcon == null || item.unselectedIcon == null) {
                 throw FlutterError(
-                    '[TDBottomTabBar] type is TDBottomBarType.icon,'
+                    '[TBottomTabBar] type is TBottomBarType.icon,'
                     'but has no set icon.');
               }
             }
           }
-          if (basicType == TDBottomTabBarBasicType.iconText) {
+          if (basicType == TBottomTabBarBasicType.iconText) {
             for (final item in navigationTabs) {
               if (item.tabText == null ||
                   item.selectedIcon == null ||
                   item.unselectedIcon == null) {
                 throw FlutterError(
-                    '[TDBottomTabBar] type is TDBottomBarType.iconText,'
+                    '[TBottomTabBar] type is TBottomBarType.iconText,'
                     'but not set tabText or icon.');
               }
             }
@@ -185,23 +185,23 @@ class TDBottomTabBar extends StatefulWidget {
           if (currentIndex != null &&
               (currentIndex < 0 || currentIndex >= navigationTabs.length)) {
             throw FlutterError(
-                '[TDBottomTabBar] currentIndex must in [0,navigationTabs.length)');
+                '[TBottomTabBar] currentIndex must in [0,navigationTabs.length)');
           }
           return true;
         }()),
         super(key: key);
 
   /// 基本样式（纯文本、纯图标、图标+文本）
-  final TDBottomTabBarBasicType basicType;
+  final TBottomTabBarBasicType basicType;
 
   /// 选项样式 默认label
-  final TDBottomTabBarComponentType? componentType;
+  final TBottomTabBarComponentType? componentType;
 
   /// 标签栏样式 默认filled
-  final TDBottomTabBarOutlineType? outlineType;
+  final TBottomTabBarOutlineType? outlineType;
 
   /// tabs配置
-  final List<TDBottomTabBarTabConfig> navigationTabs;
+  final List<TBottomTabBarTabConfig> navigationTabs;
 
   /// tab高度
   final double? barHeight;
@@ -246,10 +246,10 @@ class TDBottomTabBar extends StatefulWidget {
   final bool needInkWell;
 
   @override
-  State<TDBottomTabBar> createState() => _TDBottomTabBarState();
+  State<TBottomTabBar> createState() => _TBottomTabBarState();
 }
 
-class _TDBottomTabBarState extends State<TDBottomTabBar> {
+class _TBottomTabBarState extends State<TBottomTabBar> {
   int _selectedIndex = 0;
 
   @override
@@ -259,7 +259,7 @@ class _TDBottomTabBarState extends State<TDBottomTabBar> {
   }
 
   @override
-  void didUpdateWidget(covariant TDBottomTabBar oldWidget) {
+  void didUpdateWidget(covariant TBottomTabBar oldWidget) {
     super.didUpdateWidget(oldWidget);
     _selectedIndex = widget.currentIndex ?? _selectedIndex;
   }
@@ -267,7 +267,7 @@ class _TDBottomTabBarState extends State<TDBottomTabBar> {
   @override
   Widget build(BuildContext context) {
     var isCapsuleOutlineType =
-        widget.outlineType == TDBottomTabBarOutlineType.capsule;
+        widget.outlineType == TBottomTabBarOutlineType.capsule;
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         /// -2 是为了增加边框
@@ -288,19 +288,19 @@ class _TDBottomTabBarState extends State<TDBottomTabBar> {
                 : null,
             decoration: BoxDecoration(
                 color: widget.backgroundColor ??
-                    TDTheme.of(context).bgColorContainer,
+                    TTheme.of(context).bgColorContainer,
                 borderRadius: isCapsuleOutlineType
-                    ? BorderRadius.circular(TDTheme.of(context).radiusCircle)
+                    ? BorderRadius.circular(TTheme.of(context).radiusCircle)
                     : null,
                 border: widget.showTopBorder! && !isCapsuleOutlineType
                     ? Border(
                         top: widget.topBorder ??
                             BorderSide(
-                                color: TDTheme.of(context).componentStrokeColor,
+                                color: TTheme.of(context).componentStrokeColor,
                                 width: 0.5))
                     : null,
                 boxShadow: isCapsuleOutlineType
-                    ? TDTheme.of(context).shadowsTop
+                    ? TTheme.of(context).shadowsTop
                     : null),
             child: Stack(alignment: Alignment.center, children: [
               Row(
@@ -340,12 +340,12 @@ class _TDBottomTabBarState extends State<TDBottomTabBar> {
         padding: EdgeInsets.only(
             top: 7,
             bottom:
-                widget.basicType == TDBottomTabBarBasicType.iconText ? 5 : 7),
-        child: TDBottomTabBarItemWithBadge(
+                widget.basicType == TBottomTabBarBasicType.iconText ? 5 : 7),
+        child: TBottomTabBarItemWithBadge(
           basicType: widget.basicType,
           componentType:
-              widget.componentType ?? TDBottomTabBarComponentType.label,
-          outlineType: widget.outlineType ?? TDBottomTabBarOutlineType.filled,
+              widget.componentType ?? TBottomTabBarComponentType.label,
+          outlineType: widget.outlineType ?? TBottomTabBarOutlineType.filled,
           itemConfig: tabItemConfig,
           isSelected: index == _selectedIndex,
           itemHeight: widget.barHeight ?? _kDefaultTabBarHeight,
@@ -366,7 +366,7 @@ class _TDBottomTabBarState extends State<TDBottomTabBar> {
 
   Widget _verticalDivider() {
     return Visibility(
-      visible: widget.componentType != TDBottomTabBarComponentType.label &&
+      visible: widget.componentType != TBottomTabBarComponentType.label &&
           (widget.useVerticalDivider ?? false),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -376,7 +376,7 @@ class _TDBottomTabBarState extends State<TDBottomTabBar> {
             height: widget.dividerHeight ?? 32,
             child: VerticalDivider(
               color: widget.dividerColor ??
-                  TDTheme.of(context).componentStrokeColor,
+                  TTheme.of(context).componentStrokeColor,
               thickness: widget.dividerThickness ?? 0.5,
             ),
           );
@@ -386,8 +386,8 @@ class _TDBottomTabBarState extends State<TDBottomTabBar> {
   }
 }
 
-class TDBottomTabBarItemWithBadge extends StatelessWidget {
-  const TDBottomTabBarItemWithBadge({
+class TBottomTabBarItemWithBadge extends StatelessWidget {
+  const TBottomTabBarItemWithBadge({
     Key? key,
     required this.basicType,
     required this.componentType,
@@ -406,16 +406,16 @@ class TDBottomTabBarItemWithBadge extends StatelessWidget {
   }) : super(key: key);
 
   /// tab基本类型
-  final TDBottomTabBarBasicType basicType;
+  final TBottomTabBarBasicType basicType;
 
   /// tab选中背景类型
-  final TDBottomTabBarComponentType componentType;
+  final TBottomTabBarComponentType componentType;
 
   //
-  final TDBottomTabBarOutlineType outlineType;
+  final TBottomTabBarOutlineType outlineType;
 
   /// 单个tab的属性配置
-  final TDBottomTabBarTabConfig itemConfig;
+  final TBottomTabBarTabConfig itemConfig;
 
   /// 选中状态
   final bool isSelected;
@@ -464,17 +464,17 @@ class TDBottomTabBarItemWithBadge extends StatelessWidget {
           children: [
             if (isSelected || unselectedBgColor != null)
               Visibility(
-                visible: componentType == TDBottomTabBarComponentType.label,
+                visible: componentType == TBottomTabBarComponentType.label,
                 child: Container(
                   /// 设计稿上 tab个数大于3时，左右边距为8，小于等于3时，左右边距为12
                   width: itemWidth - (tabsLength > 3 ? 16 : 24),
-                  height: basicType == TDBottomTabBarBasicType.text ||
-                          basicType == TDBottomTabBarBasicType.expansionPanel
+                  height: basicType == TBottomTabBarBasicType.text ||
+                          basicType == TBottomTabBarBasicType.expansionPanel
                       ? 32
                       : null,
                   decoration: BoxDecoration(
                     color: isSelected
-                        ? selectedBgColor ?? TDTheme.of(context).brandLightColor
+                        ? selectedBgColor ?? TTheme.of(context).brandLightColor
                         : unselectedBgColor,
                     borderRadius: const BorderRadius.all(Radius.circular(24)),
                   ),
@@ -499,39 +499,39 @@ class TDBottomTabBarItemWithBadge extends StatelessWidget {
   Widget _constructItem(
       BuildContext context, BadgeConfig? badgeConfig, bool isInOrOutCapsule) {
     Widget child = Container();
-    if (basicType == TDBottomTabBarBasicType.text) {
+    if (basicType == TBottomTabBarBasicType.text) {
       child = _textItem(context, itemConfig, isSelected,
-          TDTheme.of(context).fontTitleMedium!);
+          TTheme.of(context).fontTitleMedium!);
     }
-    if (basicType == TDBottomTabBarBasicType.expansionPanel) {
+    if (basicType == TBottomTabBarBasicType.expansionPanel) {
       if (itemConfig.popUpButtonConfig != null) {
         child = Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
-              TDIcons.view_list,
+              TIcons.view_list,
               size: 16.0,
               color: isSelected
-                  ? TDTheme.of(context).brandNormalColor
-                  : TDTheme.of(context).textColorPrimary,
+                  ? TTheme.of(context).brandNormalColor
+                  : TTheme.of(context).textColorPrimary,
             ),
             const SizedBox(width: 5),
             _textItem(context, itemConfig, isSelected,
-                TDTheme.of(context).fontTitleMedium!)
+                TTheme.of(context).fontTitleMedium!)
           ],
         );
       } else {
         child = _textItem(context, itemConfig, isSelected,
-            TDTheme.of(context).fontTitleMedium!);
+            TTheme.of(context).fontTitleMedium!);
       }
     }
-    if (basicType == TDBottomTabBarBasicType.icon) {
+    if (basicType == TBottomTabBarBasicType.icon) {
       var selectedIcon = itemConfig.selectedIcon;
       var unSelectedIcon = itemConfig.unselectedIcon;
       child = isSelected ? selectedIcon! : unSelectedIcon!;
     }
 
-    if (basicType == TDBottomTabBarBasicType.iconText) {
+    if (basicType == TBottomTabBarBasicType.iconText) {
       var selectedIcon = itemConfig.selectedIcon;
       var unSelectedIcon = itemConfig.unselectedIcon;
       child = Column(
@@ -548,7 +548,7 @@ class TDBottomTabBarItemWithBadge extends StatelessWidget {
                   context,
                   itemConfig,
                   isSelected,
-                  TDTheme.of(context).fontBodyExtraSmall!,
+                  TTheme.of(context).fontBodyExtraSmall!,
                 )
               : Container()
         ],
@@ -569,32 +569,32 @@ class TDBottomTabBarItemWithBadge extends StatelessWidget {
     );
   }
 
-  Widget _textItem(BuildContext context, TDBottomTabBarTabConfig config,
+  Widget _textItem(BuildContext context, TBottomTabBarTabConfig config,
       bool isSelected, Font font) {
-    return TDText(
+    return TText(
       config.tabText,
       font: font,
       fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
       style:
           isSelected ? config.selectTabTextStyle : config.unselectTabTextStyle,
       textColor: isSelected
-          ? TDTheme.of(context).brandNormalColor
-          : TDTheme.of(context).textColorPrimary,
+          ? TTheme.of(context).brandNormalColor
+          : TTheme.of(context).textColorPrimary,
       forceVerticalCenter: true,
     );
   }
 
   _buildItem(BuildContext context) {
     var badgeConfig = itemConfig.badgeConfig;
-    var isInOrOutCapsule = componentType == TDBottomTabBarComponentType.label ||
-        outlineType == TDBottomTabBarOutlineType.capsule;
+    var isInOrOutCapsule = componentType == TBottomTabBarComponentType.label ||
+        outlineType == TBottomTabBarOutlineType.capsule;
 
     var child = Container(
       alignment: Alignment.center,
       padding: EdgeInsets.only(
         top: isInOrOutCapsule ? 3.0 : 2.0,
         bottom: isInOrOutCapsule
-            ? (basicType == TDBottomTabBarBasicType.iconText ? 0.0 : 1.0)
+            ? (basicType == TBottomTabBarBasicType.iconText ? 0.0 : 1.0)
             : 0.0,
       ),
       color: Colors.transparent,
@@ -610,8 +610,8 @@ class TDBottomTabBarItemWithBadge extends StatelessWidget {
       child: InkWell(
         borderRadius: isInOrOutCapsule ? BorderRadius.circular(24) : null,
         splashFactory: InkRipple.splashFactory,
-        splashColor: selectedBgColor ?? TDTheme.of(context).brandLightColor,
-        highlightColor: selectedBgColor ?? TDTheme.of(context).brandLightColor,
+        splashColor: selectedBgColor ?? TTheme.of(context).brandLightColor,
+        highlightColor: selectedBgColor ?? TTheme.of(context).brandLightColor,
         onTap: () => handleTap(context),
         child: child,
       ),
@@ -641,8 +641,8 @@ class TDBottomTabBarItemWithBadge extends StatelessWidget {
 }
 
 /// 展开项配置
-class TDBottomTabBarPopUpBtnConfig {
-  TDBottomTabBarPopUpBtnConfig(
+class TBottomTabBarPopUpBtnConfig {
+  TBottomTabBarPopUpBtnConfig(
       {required this.items, required this.onChanged, this.popUpDialogConfig})
       : assert(() {
           if (popUpDialogConfig != null) {
@@ -651,7 +651,7 @@ class TDBottomTabBarPopUpBtnConfig {
                 (popUpDialogConfig.arrowWidth != null &&
                     popUpDialogConfig.arrowWidth! <= 0.0)) {
               throw FlutterError(
-                  '[TDBottomTabBarPopUpBtnConfig] arrowHeight or arrowHeight can '
+                  '[TBottomTabBarPopUpBtnConfig] arrowHeight or arrowHeight can '
                   'not set less than or equal to zero');
             }
           }
@@ -665,12 +665,12 @@ class TDBottomTabBarPopUpBtnConfig {
   final ValueChanged<String> onChanged;
 
   /// 弹窗UI配置
-  final TDBottomTabBarPopUpShapeConfig? popUpDialogConfig;
+  final TBottomTabBarPopUpShapeConfig? popUpDialogConfig;
 }
 
 /// 弹窗UI配置
-class TDBottomTabBarPopUpShapeConfig {
-  TDBottomTabBarPopUpShapeConfig(
+class TBottomTabBarPopUpShapeConfig {
+  TBottomTabBarPopUpShapeConfig(
       {this.popUpWidth,
       this.popUpItemHeight = _kDefaultMenuItemHeight,
       this.backgroundColor,
@@ -720,12 +720,12 @@ class PopUpMenuItem extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(minHeight: _kMenuItemMinHeight),
       decoration: BoxDecoration(
-        color: TDTheme.of(context).bgColorContainer,
-        borderRadius: BorderRadius.circular(TDTheme.of(context).radiusDefault),
+        color: TTheme.of(context).bgColorContainer,
+        borderRadius: BorderRadius.circular(TTheme.of(context).radiusDefault),
       ),
       alignment: alignment,
       child: itemWidget ??
-          TDText(
+          TText(
             value,
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
           ),
@@ -768,7 +768,7 @@ class PopupDialog extends StatefulWidget {
   final List<PopUpMenuItem> items;
 
   /// 弹窗配置
-  final TDBottomTabBarPopUpShapeConfig? config;
+  final TBottomTabBarPopUpShapeConfig? config;
 
   /// 默认弹窗宽度
   final double defaultPopUpWidth;
@@ -838,7 +838,7 @@ class PopupDialogState extends State<PopupDialog> {
             ),
             Positioned(
 
-                /// 这里 -8 是因为widget.btnContext是TDBottomTabBarItemWithBadge的，它在父widget内有8dp的padding
+                /// 这里 -8 是因为widget.btnContext是TBottomTabBarItemWithBadge的，它在父widget内有8dp的padding
                 /// -4 是设计稿上箭头和tab有4dp的距离
                 top: position!.top -
                     (popUpItemHeight * widget.items.length +
@@ -851,12 +851,12 @@ class PopupDialogState extends State<PopupDialog> {
                   height: popUpItemHeight * widget.items.length +
                       (widget.config?.arrowHeight ?? _kArrowHeight),
                   decoration:
-                      BoxDecoration(boxShadow: TDTheme.of(context).shadowsTop),
+                      BoxDecoration(boxShadow: TTheme.of(context).shadowsTop),
                   child: CustomPaint(
                     painter: PanelWithDownArrow(
                         config: widget.config,
                         backgroundColor: widget.config?.backgroundColor ??
-                            TDTheme.of(context).bgColorContainer),
+                            TTheme.of(context).bgColorContainer),
                     child: Container(
                       alignment: Alignment.topCenter,
                       height: popUpItemHeight * widget.items.length,
@@ -876,7 +876,7 @@ class PopupDialogState extends State<PopupDialog> {
                                         child: Divider(
                                           thickness: 0.5,
                                           height: 0.5,
-                                          color: TDTheme.of(context)
+                                          color: TTheme.of(context)
                                               .componentStrokeColor,
                                         ),
                                       )),
@@ -896,7 +896,7 @@ class PopupDialogState extends State<PopupDialog> {
 
 /// 带下箭头的展开panel
 class PanelWithDownArrow extends CustomPainter {
-  TDBottomTabBarPopUpShapeConfig? config;
+  TBottomTabBarPopUpShapeConfig? config;
   Color backgroundColor;
 
   PanelWithDownArrow({this.config, required this.backgroundColor});

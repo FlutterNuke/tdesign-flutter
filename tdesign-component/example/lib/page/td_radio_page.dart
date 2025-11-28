@@ -5,18 +5,18 @@ import '../annotation/demo.dart';
 import '../base/example_widget.dart';
 
 ///
-/// TDRadio演示
+/// TRadio演示
 ///
-class TDRadioPage extends StatefulWidget {
-  const TDRadioPage({Key? key}) : super(key: key);
+class TRadioPage extends StatefulWidget {
+  const TRadioPage({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return TDRadioPageState();
+    return TRadioPageState();
   }
 }
 
-class TDRadioPageState extends State<TDRadioPage> {
+class TRadioPageState extends State<TRadioPage> {
   @override
   void initState() {
     super.initState();
@@ -58,20 +58,20 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _verticalRadios(BuildContext context) {
-    return TDCell(
+    return TCell(
       title: '单选标题',
       hover: false,
       required: true,
-      descriptionWidget: TDRadioGroup(
+      descriptionWidget: TRadioGroup(
         selectId: '0',
         direction: Axis.horizontal,
         directionalTdRadios: const [
-          TDRadio(
+          TRadio(
             id: '0',
             title: '单选标题0',
             showDivider: false,
           ),
-          TDRadio(
+          TRadio(
             id: '1',
             title: '单选标题1',
             showDivider: false,
@@ -83,26 +83,26 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _horizontalRadios(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       direction: Axis.horizontal,
       directionalTdRadios: const [
-        TDRadio(
+        TRadio(
           id: '0',
           title: '单选标题',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
-        TDRadio(
+        TRadio(
           id: '1',
           title: '单选标题',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
-        TDRadio(
+        TRadio(
           id: '2',
           title: '上限四字',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
       ],
@@ -111,21 +111,21 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _radioStatus(BuildContext context) {
-    return TDRadioGroup(
-      contentDirection: TDContentDirection.right,
+    return TRadioGroup(
+      contentDirection: TContentDirection.right,
       selectId: '0',
       child: const Column(
         children: [
-          TDRadio(
+          TRadio(
             id: '0',
             title: '选项禁用-已选',
-            radioStyle: TDRadioStyle.circle,
+            radioStyle: TRadioStyle.circle,
             enable: false,
           ),
-          TDRadio(
+          TRadio(
             id: '1',
             title: '选项禁用-默认',
-            radioStyle: TDRadioStyle.circle,
+            radioStyle: TRadioStyle.circle,
             enable: false,
           ),
         ],
@@ -137,10 +137,10 @@ class TDRadioPageState extends State<TDRadioPage> {
   Widget _checkStyle(BuildContext context) {
     return Column(
       children: [
-        TDRadioGroup(
-          radioCheckStyle: TDRadioStyle.check,
+        TRadioGroup(
+          radioCheckStyle: TRadioStyle.check,
           selectId: 'index:0',
-          child: const TDRadio(
+          child: const TRadio(
             id: 'index:0',
             title: '单选',
           ),
@@ -148,10 +148,10 @@ class TDRadioPageState extends State<TDRadioPage> {
         const SizedBox(
           height: 17,
         ),
-        TDRadioGroup(
-          radioCheckStyle: TDRadioStyle.hollowCircle,
+        TRadioGroup(
+          radioCheckStyle: TRadioStyle.hollowCircle,
           selectId: 'index:0',
-          child: const TDRadio(
+          child: const TRadio(
             id: 'index:0',
             title: '单选',
           ),
@@ -164,18 +164,18 @@ class TDRadioPageState extends State<TDRadioPage> {
   Widget _checkPosition(BuildContext context) {
     return Column(
       children: [
-        TDRadioGroup(
-          contentDirection: TDContentDirection.right,
+        TRadioGroup(
+          contentDirection: TContentDirection.right,
           selectId: 'index:0',
-          child: const TDRadio(
+          child: const TRadio(
             id: 'index:0',
             title: '单选',
           ),
         ),
-        TDRadioGroup(
-          contentDirection: TDContentDirection.left,
+        TRadioGroup(
+          contentDirection: TContentDirection.left,
           selectId: 'index:0',
-          child: const TDRadio(
+          child: const TRadio(
             id: 'index:0',
             title: '单选',
             showDivider: false,
@@ -187,7 +187,7 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _passThroughStyle(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:0',
       passThrough: true,
       child: ListView.builder(
@@ -196,10 +196,10 @@ class TDRadioPageState extends State<TDRadioPage> {
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           var title = '单选';
-          return TDRadio(
+          return TRadio(
             id: 'index:$index',
             title: title,
-            size: TDCheckBoxSize.large,
+            size: TCheckBoxSize.large,
           );
         },
         itemCount: 4,
@@ -209,12 +209,12 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _verticalCardStyle(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       cardMode: true,
       direction: Axis.vertical,
       directionalTdRadios: const [
-        TDRadio(
+        TRadio(
           id: 'index:0',
           title: '单选',
           titleMaxLine: 2,
@@ -222,7 +222,7 @@ class TDRadioPageState extends State<TDRadioPage> {
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:1',
           title: '单选',
           titleMaxLine: 2,
@@ -230,7 +230,7 @@ class TDRadioPageState extends State<TDRadioPage> {
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:2',
           title: '单选',
           titleMaxLine: 2,
@@ -238,7 +238,7 @@ class TDRadioPageState extends State<TDRadioPage> {
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:3',
           title: '单选',
           titleMaxLine: 2,
@@ -252,28 +252,28 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _horizontalCardStyle(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       cardMode: true,
       direction: Axis.horizontal,
       rowCount: 2,
       directionalTdRadios: const [
-        TDRadio(
+        TRadio(
           id: 'index:0',
           title: '单选',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:1',
           title: '单选',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:2',
           title: '单选',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:3',
           title: '单选',
           cardMode: true,
@@ -284,27 +284,27 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _showBottomLine(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       direction: Axis.horizontal,
       showDivider: true,
       directionalTdRadios: const [
-        TDRadio(
+        TRadio(
           id: '0',
           title: '单选标题',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
-        TDRadio(
+        TRadio(
           id: '1',
           title: '单选标题',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
-        TDRadio(
+        TRadio(
           id: '2',
           title: '上限四字',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
       ],
@@ -313,31 +313,31 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _customBottomLine(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       direction: Axis.horizontal,
       showDivider: true,
-      divider: const TDDivider(
+      divider: const TDivider(
         height: 20,
         color: Colors.red,
       ),
       directionalTdRadios: const [
-        TDRadio(
+        TRadio(
           id: '0',
           title: '单选标题',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
-        TDRadio(
+        TRadio(
           id: '1',
           title: '单选标题',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
-        TDRadio(
+        TRadio(
           id: '2',
           title: '上限四字',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
       ],
@@ -346,54 +346,54 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _customColorAndFont(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       child: ListView(
         padding: const EdgeInsets.all(0),
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         children: [
-          TDRadio(
+          TRadio(
             id: 'index:1',
             title: '单选',
             titleMaxLine: 2,
             subTitleMaxLine: 2,
-            selectColor: TDTheme.of(context).errorColor3,
-            titleFont: TDTheme.of(context).fontBodySmall,
-            subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
+            selectColor: TTheme.of(context).errorColor3,
+            titleFont: TTheme.of(context).fontBodySmall,
+            subTitleFont: TTheme.of(context).fontBodyExtraSmall,
           ),
-          TDRadio(
+          TRadio(
             id: 'index:2',
             title: '单选',
             titleMaxLine: 2,
             subTitleMaxLine: 2,
             subTitle: '单选标题多行单选标题多行单选标题多行单选标题多行单选标题多行单选标题多行',
-            selectColor: TDTheme.of(context).errorColor3,
-            titleFont: TDTheme.of(context).fontBodySmall,
-            subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
+            selectColor: TTheme.of(context).errorColor3,
+            titleFont: TTheme.of(context).fontBodySmall,
+            subTitleFont: TTheme.of(context).fontBodyExtraSmall,
           ),
-          TDRadio(
+          TRadio(
             id: 'index:3',
             title: '单选',
             titleMaxLine: 2,
             subTitleMaxLine: 2,
             subTitle: '描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息',
-            selectColor: TDTheme.of(context).errorColor3,
-            titleFont: TDTheme.of(context).fontBodySmall,
-            subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
+            selectColor: TTheme.of(context).errorColor3,
+            titleFont: TTheme.of(context).fontBodySmall,
+            subTitleFont: TTheme.of(context).fontBodyExtraSmall,
           ),
-          TDRadio(
+          TRadio(
             id: 'index:4',
             title: '单选',
             titleMaxLine: 2,
             subTitleMaxLine: 2,
             subTitle: '单选标题多行单选标题多行单选标题多行单选标题多行单选标题多行单选标题多行',
-            selectColor: TDTheme.of(context).errorColor3,
-            titleFont: TDTheme.of(context).fontBodySmall,
-            subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
-            radioStyle: TDRadioStyle.hollowCircle,
+            selectColor: TTheme.of(context).errorColor3,
+            titleFont: TTheme.of(context).fontBodySmall,
+            subTitleFont: TTheme.of(context).fontBodyExtraSmall,
+            radioStyle: TRadioStyle.hollowCircle,
           ),
-          TDRadio(
+          TRadio(
             id: 'index:6',
             title: '绿色',
             titleColor: Colors.green,
@@ -401,20 +401,20 @@ class TDRadioPageState extends State<TDRadioPage> {
             subTitleMaxLine: 2,
             subTitle: '我是蓝色并且有灰色背景',
             subTitleColor: Colors.blue,
-            selectColor: TDTheme.of(context).errorColor3,
-            titleFont: TDTheme.of(context).fontBodySmall,
-            subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
-            backgroundColor: TDTheme.of(context).grayColor2,
+            selectColor: TTheme.of(context).errorColor3,
+            titleFont: TTheme.of(context).fontBodySmall,
+            subTitleFont: TTheme.of(context).fontBodyExtraSmall,
+            backgroundColor: TTheme.of(context).grayColor2,
           ),
-          TDRadio(
+          TRadio(
             id: 'index:5',
             title: '单选',
             titleMaxLine: 2,
             subTitleMaxLine: 2,
             subTitle: '描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息',
-            selectColor: TDTheme.of(context).errorColor3,
-            titleFont: TDTheme.of(context).fontBodySmall,
-            subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
+            selectColor: TTheme.of(context).errorColor3,
+            titleFont: TTheme.of(context).fontBodySmall,
+            subTitleFont: TTheme.of(context).fontBodyExtraSmall,
             cardMode: true,
           ),
         ],
@@ -424,29 +424,29 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: 'radio')
   Widget _customDisableColorAndFont(BuildContext context) {
-    return TDRadioGroup(
-      contentDirection: TDContentDirection.right,
+    return TRadioGroup(
+      contentDirection: TContentDirection.right,
       selectId: '0',
       child: Column(
         children: [
-          TDRadio(
+          TRadio(
             id: '0',
             title: '选项禁用-已选',
             subTitle: '描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息',
-            radioStyle: TDRadioStyle.circle,
+            radioStyle: TRadioStyle.circle,
             enable: false,
-            disableColor: TDTheme.of(context).errorDisabledColor,
-            titleFont: TDTheme.of(context).fontBodySmall,
-            subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
+            disableColor: TTheme.of(context).errorDisabledColor,
+            titleFont: TTheme.of(context).fontBodySmall,
+            subTitleFont: TTheme.of(context).fontBodyExtraSmall,
           ),
-          TDRadio(
+          TRadio(
             id: '1',
             title: '选项禁用-默认',
-            radioStyle: TDRadioStyle.circle,
+            radioStyle: TRadioStyle.circle,
             enable: false,
-            disableColor: TDTheme.of(context).errorDisabledColor,
-            titleFont: TDTheme.of(context).fontBodySmall,
-            subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
+            disableColor: TTheme.of(context).errorDisabledColor,
+            titleFont: TTheme.of(context).fontBodySmall,
+            subTitleFont: TTheme.of(context).fontBodyExtraSmall,
           ),
         ],
       ),
@@ -455,15 +455,15 @@ class TDRadioPageState extends State<TDRadioPage> {
 
   @Demo(group: '')
   Widget _customRadioLeftSpace(BuildContext context) {
-    return TDRadio(
+    return TRadio(
       id: '0',
       title: '选项禁用-已选',
       subTitle: '描述信息',
-      radioStyle: TDRadioStyle.circle,
+      radioStyle: TRadioStyle.circle,
       checkBoxLeftSpace: 0,
-      disableColor: TDTheme.of(context).errorDisabledColor,
-      titleFont: TDTheme.of(context).fontBodySmall,
-      subTitleFont: TDTheme.of(context).fontBodyExtraSmall,
+      disableColor: TTheme.of(context).errorDisabledColor,
+      titleFont: TTheme.of(context).fontBodySmall,
+      subTitleFont: TTheme.of(context).fontBodyExtraSmall,
     );
   }
 }

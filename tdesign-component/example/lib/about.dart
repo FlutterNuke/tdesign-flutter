@@ -38,12 +38,12 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('关于我们')),
-      body: TDCellGroup(
+      body: TCellGroup(
         title: 'TDesign Flutter',
-        theme: TDCellGroupTheme.cardTheme,
+        theme: TCellGroupTheme.cardTheme,
         cells: [
-          TDCell(title: '版本号', note: version),
-          TDCell(title: '发版日期', note: publishTime),
+          TCell(title: '版本号', note: version),
+          TCell(title: '发版日期', note: publishTime),
         ],
       ),
     );

@@ -4,14 +4,14 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 import '../annotation/demo.dart';
 import '../base/example_widget.dart';
 
-class TDTreeSelectPage extends StatefulWidget {
-  const TDTreeSelectPage({Key? key}) : super(key: key);
+class TTreeSelectPage extends StatefulWidget {
+  const TTreeSelectPage({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _TDTreeSelectPageState();
 }
 
-class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
+class _TDTreeSelectPageState extends State<TTreeSelectPage> {
   String? inputText;
   List<dynamic> values1 = [
     1,
@@ -53,13 +53,13 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
 
   @Demo(group: 'tree')
   Widget _buildDefaultTreeSelect(BuildContext context) {
-    var options = <TDSelectOption>[];
+    var options = <TSelectOption>[];
 
     for (var i = 1; i <= 10; i++) {
-      options.add(TDSelectOption(label: '选项$i', value: i, children: []));
+      options.add(TSelectOption(label: '选项$i', value: i, children: []));
 
       for (var j = 1; j <= 10; j++) {
-        options[i - 1].children.add(TDSelectOption(
+        options[i - 1].children.add(TSelectOption(
               label: '选项$i.$j',
               value: i * 10 + j,
               children: [],
@@ -67,7 +67,7 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
       }
     }
 
-    return TDTreeSelect(
+    return TTreeSelect(
       options: options,
       defaultValue: values1,
       onChange: (val, level) {
@@ -78,18 +78,18 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
 
   @Demo(group: 'tree')
   Widget _buildMultipleTreeSelect(BuildContext context) {
-    var options = <TDSelectOption>[];
+    var options = <TSelectOption>[];
 
     for (var i = 1; i <= 10; i++) {
-      options.add(TDSelectOption(label: '选项$i', value: i, children: []));
+      options.add(TSelectOption(label: '选项$i', value: i, children: []));
 
       for (var j = 1; j <= 10; j++) {
         options[i - 1].children.add(
-            TDSelectOption(label: '选项$i.$j', value: i * 10 + j, children: []));
+            TSelectOption(label: '选项$i.$j', value: i * 10 + j, children: []));
       }
     }
 
-    return TDTreeSelect(
+    return TTreeSelect(
       options: options,
       defaultValue: values2,
       multiple: true,
@@ -101,9 +101,9 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
 
   @Demo(group: 'tree')
   Widget _buildThirdTreeSelect(BuildContext context) {
-    var options = <TDSelectOption>[];
+    var options = <TSelectOption>[];
     for (var i = 1; i <= 3; i++) {
-      options.add(TDSelectOption(
+      options.add(TSelectOption(
         label: '${i == 1 ? '超长一级选项名称超长一级选项名称' : '选项$i'}',
         value: i,
         maxLines: 10,
@@ -112,7 +112,7 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
       ));
 
       for (var j = 1; j <= 3; j++) {
-        options[i - 1].children.add(TDSelectOption(
+        options[i - 1].children.add(TSelectOption(
               label: '${j == 1 ? '特别长的二级选项特别长的二级选项特别长的二级选项' : '选项$i.$j'}',
               value: i * 10 + j,
               maxLines: 2,
@@ -121,7 +121,7 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
             ));
 
         for (var k = 1; k <= 3; k++) {
-          options[i - 1].children[j - 1].children.add(TDSelectOption(
+          options[i - 1].children[j - 1].children.add(TSelectOption(
                 label:
                     '${k == 1 ? '非常长的三级选项名称非常长的三级选项名称非常长的三级选项名称' : '选项$i.$j.$k'}',
                 value: i * 100 + j * 10 + k,
@@ -131,7 +131,7 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
         }
       }
     }
-    return TDTreeSelect(
+    return TTreeSelect(
       options: options,
       defaultValue: values3,
       onChange: (val, level) {
@@ -142,14 +142,14 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
 
   @Demo(group: 'tree')
   Widget _buildPartMultipleTreeSelect(BuildContext context) {
-    var options = <TDSelectOption>[];
+    var options = <TSelectOption>[];
 
     for (var i = 1; i <= 2; i++) {
-      options.add(TDSelectOption(
+      options.add(TSelectOption(
           label: '${i == 1 ? '单选' : '多选'}', value: i, children: []));
 
       for (var j = 1; j <= 10; j++) {
-        options[i - 1].children.add(TDSelectOption(
+        options[i - 1].children.add(TSelectOption(
             label: '选项$i.$j',
             value: i * 10 + j,
             children: [],
@@ -157,7 +157,7 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
       }
     }
 
-    return TDTreeSelect(
+    return TTreeSelect(
       options: options,
       defaultValue: values1,
       onChange: (val, level) {
@@ -168,14 +168,14 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
 
   @Demo(group: 'tree')
   Widget _buildPartMultipleTreeSelect2(BuildContext context) {
-    var options = <TDSelectOption>[];
+    var options = <TSelectOption>[];
 
     for (var i = 1; i <= 2; i++) {
-      options.add(TDSelectOption(
+      options.add(TSelectOption(
           label: '${i == 1 ? '单选' : '多选'}', value: i, children: []));
 
       for (var j = 1; j <= 10; j++) {
-        options[i - 1].children.add(TDSelectOption(
+        options[i - 1].children.add(TSelectOption(
             label: '选项$i.$j',
             value: i * 10 + j,
             children: [],
@@ -183,10 +183,10 @@ class _TDTreeSelectPageState extends State<TDTreeSelectPage> {
       }
     }
 
-    return TDTreeSelect(
+    return TTreeSelect(
       options: options,
       defaultValue: values1,
-      style: TDTreeSelectStyle.outline,
+      style: TTreeSelectStyle.outline,
       onChange: (val, level) {
         print('$val, $level');
       },

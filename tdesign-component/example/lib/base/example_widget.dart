@@ -133,9 +133,9 @@ class _ExamplePageState extends State<ExamplePage> {
                                               const EdgeInsets.only(top: 24),
                                           child: Column(
                                             children: [
-                                              TDButton(
+                                              TButton(
                                                 text: '生成Web使用md',
-                                                type: TDButtonType.fill,
+                                                type: TButtonType.fill,
                                                 onTap: () =>
                                                     WebMdTool.generateWebMd(
                                                         model: model,
@@ -151,9 +151,9 @@ class _ExamplePageState extends State<ExamplePage> {
                                                             ? widget.singleChild
                                                             : null),
                                               ),
-                                              TDButton(
+                                              TButton(
                                                 text: '返回首页',
-                                                type: TDButtonType.fill,
+                                                type: TButtonType.fill,
                                                 onTap: () =>
                                                     Navigator.of(context)
                                                         .maybePop(),
@@ -196,9 +196,9 @@ class _ExamplePageState extends State<ExamplePage> {
               bottom: 0,
               child: Column(
                 children: [
-                  TDButton(
+                  TButton(
                     text: '生成Web使用md',
-                    type: TDButtonType.fill,
+                    type: TButtonType.fill,
                     onTap: () => WebMdTool.generateWebMd(
                         model: model,
                         description: widget.desc,
@@ -208,9 +208,9 @@ class _ExamplePageState extends State<ExamplePage> {
                         singleChild:
                             widget.showSingleChild ? widget.singleChild : null),
                   ),
-                  TDButton(
+                  TButton(
                     text: '返回首页',
-                    type: TDButtonType.fill,
+                    type: TButtonType.fill,
                     onTap: () => Navigator.of(context).maybePop(),
                   ),
                 ],
@@ -224,24 +224,24 @@ class _ExamplePageState extends State<ExamplePage> {
   ExampleItem _buildTestExampleItem() =>
       ExampleItem(desc: '''未在示例稿中体现，但有必要验证的组件样式，请添加到'test'参数中。以下情景必须有测试：
   1.参数为数字。需测试数字为负数、0、较大数值的场景。
-  2.参数为枚举，需测试所有枚举组合（示例已有的可不写）''', builder: (_) => const TDDivider());
+  2.参数为枚举，需测试所有枚举组合（示例已有的可不写）''', builder: (_) => const TDivider());
 
   Widget _buildNavBar() {
-    var rightBarItems = <TDNavBarItem>[];
+    var rightBarItems = <TNavBarItem>[];
 
     // web端示例页不展示标题栏
     if (PlatformUtil.isWeb && !Navigator.canPop(context)) {
       return Container();
     }
     if (showAction && !PlatformUtil.isWeb) {
-      rightBarItems.add(TDNavBarItem(
-          icon: TDIcons.info_circle,
+      rightBarItems.add(TNavBarItem(
+          icon: TIcons.info_circle,
           action: () {
-            Navigator.pushNamed(context, TDExampleRoute.getApiPath(model));
+            Navigator.pushNamed(context, TExampleRoute.getApiPath(model));
           }));
       if (!PlatformUtil.isWeb) {
-        rightBarItems.add(TDNavBarItem(
-            icon: TDIcons.code,
+        rightBarItems.add(TNavBarItem(
+            icon: TIcons.code,
             action: () {
               setState(() {
                 apiVisible = !apiVisible;
@@ -254,7 +254,7 @@ class _ExamplePageState extends State<ExamplePage> {
             }));
       }
     }
-    return TDNavBar(
+    return TNavBar(
       key: widget.navBarKey,
       title: widget.title,
       rightBarItems: rightBarItems,
@@ -274,20 +274,20 @@ class _ExamplePageState extends State<ExamplePage> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (WebMdTool.needGenerateWebMd) const TDText('WebGenTag'),
-          TDText(
+          if (WebMdTool.needGenerateWebMd) const TText('WebGenTag'),
+          TText(
             widget.title,
-            font: TDTheme.of(context).fontHeadlineSmall,
-            textColor: TDTheme.of(context).textColorPrimary,
+            font: TTheme.of(context).fontHeadlineSmall,
+            textColor: TTheme.of(context).textColorPrimary,
           ),
           Container(
             margin: const EdgeInsets.only(
               top: 4,
             ),
-            child: TDText(
+            child: TText(
               widget.desc,
-              font: TDTheme.of(context).fontBodyMedium,
-              textColor: TDTheme.of(context).textColorSecondary,
+              font: TTheme.of(context).fontBodyMedium,
+              textColor: TTheme.of(context).textColorSecondary,
             ),
           ),
           // Expanded(child: ),
@@ -303,10 +303,10 @@ class _ExamplePageState extends State<ExamplePage> {
       children: [
         Container(
           margin: const EdgeInsets.only(left: 16, right: 16, top: 32),
-          child: TDText(
+          child: TText(
             '${index < 10 ? "0$index" : index} ${data.title}',
-            font: TDTheme.of(context).fontTitleLarge,
-            textColor: TDTheme.of(context).textColorPrimary,
+            font: TTheme.of(context).fontTitleLarge,
+            textColor: TTheme.of(context).textColorPrimary,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -436,10 +436,10 @@ class _ExampleItemWidgetState extends State<ExampleItemWidget> {
                     right: 16,
                     top: widget.index == 0 ? 8 : 24,
                     bottom: 16),
-                child: TDText(
+                child: TText(
                   widget.data.desc,
-                  font: TDTheme.of(context).fontBodyMedium,
-                  textColor: TDTheme.of(context).textColorSecondary,
+                  font: TTheme.of(context).fontBodyMedium,
+                  textColor: TTheme.of(context).textColorSecondary,
                 ),
               ),
         child
@@ -542,9 +542,9 @@ class _CodeWrapperState extends State<CodeWrapper> {
                 child: Container(
                   color: Colors.black.withOpacity(0.4),
                   alignment: Alignment.center,
-                  child: TDText(
+                  child: TText(
                     'code',
-                    textColor: TDTheme.of(context).whiteColor1,
+                    textColor: TTheme.of(context).whiteColor1,
                   ),
                 ),
               ))
@@ -588,12 +588,12 @@ class _CodeWrapperState extends State<CodeWrapper> {
             return Container(
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: TDTheme.of(context).bgColorSecondaryContainer,
+                  color: TTheme.of(context).bgColorSecondaryContainer,
                   borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(TDTheme.of(context).radiusDefault))),
+                      top: Radius.circular(TTheme.of(context).radiusDefault))),
               height: 500,
               child:
-                  TDText(PlatformUtil.isWeb ? 'web不支持演示代码，请在移动端查看' : '暂无演示代码'),
+                  TText(PlatformUtil.isWeb ? 'web不支持演示代码，请在移动端查看' : '暂无演示代码'),
             );
           }
 
@@ -614,9 +614,9 @@ ${codeString}
           return Container(
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: TDTheme.of(context).bgColorSecondaryContainer,
+                color: TTheme.of(context).bgColorSecondaryContainer,
                 borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(TDTheme.of(context).radiusDefault))),
+                    top: Radius.circular(TTheme.of(context).radiusDefault))),
             height: height,
             child: Markdown(
               physics: const BouncingScrollPhysics(),
@@ -649,7 +649,7 @@ ${codeString}
 }
 
 /// State获取标题的扩展
-extension TDStateExs on State {
+extension TStateExs on State {
   String tdTitle() {
     var modelTheme =
         context.dependOnInheritedWidgetOfExactType<ExamplePageInheritedTheme>();
@@ -658,7 +658,7 @@ extension TDStateExs on State {
 }
 
 /// StatelessWidget获取标题的扩展
-extension TDWidgetExs on StatelessWidget {
+extension TWidgetExs on StatelessWidget {
   String tdTitle(BuildContext context) {
     var modelTheme =
         context.dependOnInheritedWidgetOfExactType<ExamplePageInheritedTheme>();

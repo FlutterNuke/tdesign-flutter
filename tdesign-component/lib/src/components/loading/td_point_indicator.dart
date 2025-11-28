@@ -7,8 +7,8 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
-class TDPointBounceIndicator extends StatefulWidget {
-  const TDPointBounceIndicator({
+class TPointBounceIndicator extends StatefulWidget {
+  const TPointBounceIndicator({
     Key? key,
     this.color,
     this.size = 20.0,
@@ -25,7 +25,7 @@ class TDPointBounceIndicator extends StatefulWidget {
   _TDPointBounceIndicatorState createState() => _TDPointBounceIndicatorState();
 }
 
-class _TDPointBounceIndicatorState extends State<TDPointBounceIndicator>
+class _TDPointBounceIndicatorState extends State<TPointBounceIndicator>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
@@ -40,7 +40,7 @@ class _TDPointBounceIndicatorState extends State<TDPointBounceIndicator>
   }
 
   @override
-  void didUpdateWidget(covariant TDPointBounceIndicator oldWidget) {
+  void didUpdateWidget(covariant TPointBounceIndicator oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.duration != oldWidget.duration) {
       _controller.duration = Duration(milliseconds: widget.duration);

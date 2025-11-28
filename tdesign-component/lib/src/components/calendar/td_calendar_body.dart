@@ -6,8 +6,8 @@ import '../../../tdesign_flutter.dart';
 import '../../util/context_extension.dart';
 import '../../util/iterable_ext.dart';
 
-class TDCalendarBody extends StatelessWidget {
-  const TDCalendarBody({
+class TCalendarBody extends StatelessWidget {
+  const TCalendarBody({
     Key? key,
     this.maxDate,
     this.minDate,
@@ -32,9 +32,9 @@ class TDCalendarBody extends StatelessWidget {
   final List<DateTime>? value;
   final int firstDayOfWeek;
   final Widget Function(
-    TDate? date,
-    List<TDate?> dateList,
-    Map<DateTime, List<TDate?>> data,
+    Tate? date,
+    List<Tate?> dateList,
+    Map<DateTime, List<Tate?>> data,
     int rowIndex,
     int colIndex,
   ) builder;
@@ -57,7 +57,7 @@ class TDCalendarBody extends StatelessWidget {
     final min = _getDefDate(minDate);
     final max = _getDefDate(maxDate, 6);
     final months = _monthsBetween(min, max);
-    final data = <DateTime, List<TDate?>>{};
+    final data = <DateTime, List<Tate?>>{};
     final monthHeight = <int, double>{};
     _scrollToItem(scrollController, months, monthHeight);
     return ListView.builder(
@@ -73,7 +73,7 @@ class TDCalendarBody extends StatelessWidget {
         final monthDateText = displayFormat
             .replaceFirst('year', monthYear)
             .replaceFirst('month', monthMonth);
-        late List<TDate?> monthData;
+        late List<Tate?> monthData;
         if (data.containsKey(monthDate)) {
           monthData = data[monthDate]!;
         } else {
@@ -94,7 +94,7 @@ class TDCalendarBody extends StatelessWidget {
             SizedBox(
               height: monthTitleHeight,
               child: monthTitleBuilder?.call(context, monthDate) ??
-                  TDText(monthDateText, style: monthTitleStyle),
+                  TText(monthDateText, style: monthTitleStyle),
             ),
             ...List.generate(
               (monthData.length / 7).ceil(),
@@ -183,9 +183,9 @@ class TDCalendarBody extends StatelessWidget {
     return months;
   }
 
-  List<TDate?> _getDaysInMonth(DateTime curDate, DateTime min, DateTime max) {
+  List<Tate?> _getDaysInMonth(DateTime curDate, DateTime min, DateTime max) {
     final daysInMonth =
-        List<TDate?>.generate(_getPreOffset(curDate), (index) => null);
+        List<Tate?>.generate(_getPreOffset(curDate), (index) => null);
     final daysInMonthCount = DateTime(curDate.year, curDate.month + 1, 0)
         .day; // 获取下个月的第一天的前一天，即当前月的最后一天
     for (var day = 1; day <= daysInMonthCount; day++) {
@@ -215,7 +215,7 @@ class TDCalendarBody extends StatelessWidget {
           }
         }
       }
-      daysInMonth.add(TDate(
+      daysInMonth.add(Tate(
         date: date,
         typeNotifier: DateSelectTypeNotifier(selectType),
         isLastDayOfMonth: daysInMonthCount == day,
