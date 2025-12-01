@@ -2,8 +2,8 @@
   Widget _customText(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
-        type: TDSwitchType.text,
+      const TSwitch(
+        type: TSwitchType.text,
         openText: '1111',
         closeText: '—',
       ),

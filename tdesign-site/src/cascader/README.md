@@ -28,7 +28,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildVerticalCascader(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDCascader.showMultiCascader(context, title: '选择地址', data: _data, initialData: _initData, theme: 'step',
+        TCascader.showMultiCascader(context, title: '选择地址', data: _data, initialData: _initData, theme: 'step',
             onChange: (List<MultiCascaderListModel> selectData) {
           setState(() {
             var result = [];
@@ -58,7 +58,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildVerticalLetterCascader(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDCascader.showMultiCascader(context, title: '选择地址', data: _data_2, initialData: _initData_2, theme: 'step',
+        TCascader.showMultiCascader(context, title: '选择地址', data: _data_2, initialData: _initData_2, theme: 'step',
             onChange: (List<MultiCascaderListModel> selectData) {
           setState(() {
             var result = [];
@@ -88,7 +88,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildHorizontalCascader(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDCascader.showMultiCascader(context,
+        TCascader.showMultiCascader(context,
             title: '选择地址',
             subTitles: ['请选择省份', '请选择城市', '请选择区/县'],
             data: _data,
@@ -122,7 +122,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildHorizontalLetterCascader(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDCascader.showMultiCascader(context,
+        TCascader.showMultiCascader(context,
             title: '选择地址',
             data: _data_2,
             initialData: _initData_2,
@@ -156,7 +156,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildHorizontalCompanyCascader(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDCascader.showMultiCascader(context, title: '选择部门人员', data: _data_3,isLetterSort: true, initialData: _initData_3, theme: 'tab',
+        TCascader.showMultiCascader(context, title: '选择部门人员', data: _data_3,isLetterSort: true, initialData: _initData_3, theme: 'tab',
             onChange: (List<MultiCascaderListModel> selectData) {
           setState(() {
             var result = [];
@@ -186,7 +186,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildVerticalCompanyCascader(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDCascader.showMultiCascader(context, title: '选择部门人员', data: _data_3,isLetterSort: true, initialData: _initData_3, theme: 'step',
+        TCascader.showMultiCascader(context, title: '选择部门人员', data: _data_3,isLetterSort: true, initialData: _initData_3, theme: 'step',
             onChange: (List<MultiCascaderListModel> selectData) {
           setState(() {
             var result = [];
@@ -210,7 +210,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDMultiCascader
+### TMultiCascader
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -229,7 +229,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 | closeText | String? | - | 关闭按钮文本 |
 | isLetterSort | bool | false | 是否开启字母排序 |
 | onClose | Function? | - | 选择器关闭按钮回调 |
-| action | TDCascaderAction? | - | 自定义选择器右上角按钮 |
+| action | TCascaderAction? | - | 自定义选择器右上角按钮 |
 | onChange | MultiCascaderCallback | - | 值发生变更时触发 |
 
 

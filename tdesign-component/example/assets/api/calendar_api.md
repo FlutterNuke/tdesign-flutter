@@ -1,5 +1,5 @@
 ## API
-### TDCalendarStyle
+### TCalendarStyle
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -12,8 +12,8 @@
 | decoration |  | - |  |
 | monthTitleStyle | TextStyle? | - | body区域 年月文字样式 |
 | titleCloseColor | Color? | - | header区域 关闭图标的颜色 |
-| titleMaxLine | int? | - | header区域 [TDCalendar.title]的行数 |
-| titleStyle | TextStyle? | - | header区域 [TDCalendar.title]的样式 |
+| titleMaxLine | int? | - | header区域 [TCalendar.title]的行数 |
+| titleStyle | TextStyle? | - | header区域 [TCalendar.title]的样式 |
 | weekdayStyle | TextStyle? | - | header区域 周 文字样式 |
 
 
@@ -21,12 +21,12 @@
 
 | 名称  | 说明 |
 | --- |  --- |
-| TDCalendarStyle.cellStyle  | 日期样式 |
-| TDCalendarStyle.generateStyle  | 生成默认样式 |
+| TCalendarStyle.cellStyle  | 日期样式 |
+| TCalendarStyle.generateStyle  | 生成默认样式 |
 
 ```
 ```
- ### TDCalendar
+ ### TCalendar
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -50,7 +50,7 @@
 | onHeaderClick | void Function(int index, String week)? | - | 点击周时触发 |
 | pickerHeight | double? | 178 | 时间选择器List的视窗高度 |
 | pickerItemCount | int? | 3 | 选择器List视窗中item个数，pickerHeight / pickerItemCount即item高度 |
-| style | TDCalendarStyle? | - | 自定义样式 |
+| style | TCalendarStyle? | - | 自定义样式 |
 | timePickerModel | List<DatePickerModel>? | - | 自定义时间选择器 |
 | title | String? | - | 标题 |
 | titleWidget | Widget? | - | 标题组件 |
@@ -62,14 +62,14 @@
 
 ```
 ```
- ### TDCalendarPopup
+ ### TCalendarPopup
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | autoClose | bool? | true | 自动关闭；在点击关闭按钮、确认按钮、遮罩层时自动关闭 |
 | builder | CalendarBuilder? | - | 控件构建器，优先级高于[child] |
-| child | TDCalendar? | - | 日历控件 |
+| child | TCalendar? | - | 日历控件 |
 | confirmBtn | Widget? | - | 自定义确认按钮 |
 | context | BuildContext | context | 上下文 |
 | onClose | VoidCallback? | - | 关闭时触发 |

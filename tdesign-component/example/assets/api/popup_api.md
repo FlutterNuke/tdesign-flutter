@@ -1,5 +1,5 @@
 ## API
-### TDSlidePopupRoute
+### TSlidePopupRoute
 #### 简介
 从屏幕的某个方向滑动弹出的Dialog框的路由，比如从顶部、底部、左、右滑出页面
 #### 默认构造方法
@@ -24,7 +24,7 @@
 
 ```
 ```
- ### TDPopupBottomDisplayPanel
+ ### TPopupBottomDisplayPanel
 #### 简介
 右上角带关闭的底部浮层面板
 #### 默认构造方法
@@ -49,7 +49,7 @@
 
 ```
 ```
- ### TDPopupBottomConfirmPanel
+ ### TPopupBottomConfirmPanel
 #### 简介
 带确认的底部浮层面板
 #### 默认构造方法
@@ -77,7 +77,7 @@
 
 ```
 ```
- ### TDPopupCenterPanel
+ ### TPopupCenterPanel
 #### 简介
 居中浮层面板
 #### 默认构造方法

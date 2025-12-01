@@ -2,9 +2,9 @@
   Widget _buildSwitchWithSizeSmall(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         isOn: true,
-        size: TDSwitchSize.small,
+        size: TSwitchSize.small,
       ),
       title: '小尺寸24',
     );

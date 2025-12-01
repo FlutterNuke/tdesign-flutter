@@ -64,7 +64,7 @@ class TSwipeCell extends StatefulWidget {
 
   /// 当同一组（[groupTag]）中的一个[TSwipeCell]被点击时，是否应该关闭组中的所有[TSwipeCell]
   ///
-  /// [cell]组件被点击时必须传递点击事件，执行`TDSwipeCellInherited.of(context)?.cellClick()`
+  /// [cell]组件被点击时必须传递点击事件，执行`TSwipeCellInherited.of(context)?.cellClick()`
   final bool? closeWhenTapped;
 
   /// 处理拖动开始行为的方式[GestureDetector.dragStartBehavior]

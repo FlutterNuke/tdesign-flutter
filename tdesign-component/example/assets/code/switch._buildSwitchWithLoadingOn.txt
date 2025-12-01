@@ -2,9 +2,9 @@
   Widget _buildSwitchWithLoadingOn(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         isOn: true,
-        type: TDSwitchType.loading,
+        type: TSwitchType.loading,
       ),
       title: '加载状态',
     );

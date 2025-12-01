@@ -9,26 +9,26 @@
           const SizedBox(
             width: 16,
           ),
-          TDText(
+          TText(
             '文字信息',
-            textColor: TDTheme.of(context).fontGyColor1.withOpacity(0.9),
+            textColor: TTheme.of(context).fontGyColor1.withOpacity(0.9),
           ),
-          const TDDivider(
+          const TDivider(
             width: 0.5,
             height: 12,
             margin: EdgeInsets.only(left: 16, right: 16),
           ),
-          TDText('文字信息',
-              textColor: TDTheme.of(context).fontGyColor1.withOpacity(0.9)),
-          const TDDivider(
+          TText('文字信息',
+              textColor: TTheme.of(context).fontGyColor1.withOpacity(0.9)),
+          const TDivider(
             width: 0.5,
             height: 12,
             margin: EdgeInsets.only(left: 16, right: 16),
             isDashed: true,
             direction: Axis.vertical,
           ),
-          TDText('文字信息',
-              textColor: TDTheme.of(context).fontGyColor1.withOpacity(0.9)),
+          TText('文字信息',
+              textColor: TTheme.of(context).fontGyColor1.withOpacity(0.9)),
         ],
       ),
     );

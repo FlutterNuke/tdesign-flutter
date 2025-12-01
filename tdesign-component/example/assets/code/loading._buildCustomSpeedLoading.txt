@@ -7,15 +7,15 @@
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TDLoading(
-            size: TDLoadingSize.small,
-            icon: TDLoadingIcon.circle,
+          TLoading(
+            size: TLoadingSize.small,
+            icon: TLoadingIcon.circle,
             axis: Axis.horizontal,
             text: '加载中…',
             duration: _currentSliderValue.round(),
           ),
-          TDSlider(value: _currentSliderValue,
-            sliderThemeData: TDSliderThemeData(
+          TSlider(value: _currentSliderValue,
+            sliderThemeData: TSliderThemeData(
               context: context,
               max: 2000,
               min: -20,

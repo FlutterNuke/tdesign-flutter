@@ -6,14 +6,14 @@ Widget _buildSimple(BuildContext context) {
     valueListenable: selected,
     builder: (context, value, child) {
       final date = DateTime.fromMillisecondsSinceEpoch(value[0]);
-      return TDCellGroup(
+      return TCellGroup(
         cells: [
-          TDCell(
+          TCell(
             title: '单个选择日历',
             arrow: true,
             note: '${date.year}-${date.month}-${date.day}',
             onClick: (cell) {
-              TDCalendarPopup(
+              TCalendarPopup(
                 context,
                 visible: true,
                 onConfirm: (value) {
@@ -23,7 +23,7 @@ Widget _buildSimple(BuildContext context) {
                 onClose: () {
                   print('onClose');
                 },
-                child: TDCalendar(
+                child: TCalendar(
                   title: '请选择日期',
                   value: value,
                   height: size.height * 0.6 + 176,
@@ -43,14 +43,14 @@ Widget _buildSimple(BuildContext context) {
               );
             },
           ),
-          TDCell(
+          TCell(
             title: '多个选择日历',
             arrow: true,
             onClick: (cell) {
-              TDCalendarPopup(
+              TCalendarPopup(
                 context,
                 visible: true,
-                child: TDCalendar(
+                child: TCalendar(
                   title: '请选择日期',
                   type: CalendarType.multiple,
                   value: [DateTime.now().millisecondsSinceEpoch],
@@ -59,14 +59,14 @@ Widget _buildSimple(BuildContext context) {
               );
             },
           ),
-          TDCell(
+          TCell(
             title: '区间选择日历',
             arrow: true,
             onClick: (cell) {
-              TDCalendarPopup(
+              TCalendarPopup(
                 context,
                 visible: true,
-                child: TDCalendar(
+                child: TCalendar(
                   title: '请选择日期区间',
                   type: CalendarType.range,
                   value: [
@@ -78,12 +78,12 @@ Widget _buildSimple(BuildContext context) {
               );
             },
           ),
-          TDCell(
+          TCell(
             title: '单个选择日历和时间',
             arrow: true,
             note: '${date.year}-${date.month}-${date.day} ${date.hour}:${date.minute}',
             onClick: (cell) {
-              TDCalendarPopup(
+              TCalendarPopup(
                 context,
                 visible: true,
                 onConfirm: (value) {
@@ -93,7 +93,7 @@ Widget _buildSimple(BuildContext context) {
                 onClose: () {
                   print('onClose');
                 },
-                child: TDCalendar(
+                child: TCalendar(
                   title: '请选择日期和时间',
                   value: value,
                   height: size.height * 0.92,
@@ -116,11 +116,11 @@ Widget _buildSimple(BuildContext context) {
               );
             },
           ),
-          TDCell(
+          TCell(
             title: '区间选择日历和时间',
             arrow: true,
             onClick: (cell) {
-              TDCalendarPopup(
+              TCalendarPopup(
                 context,
                 visible: true,
                 onConfirm: (value) {
@@ -129,7 +129,7 @@ Widget _buildSimple(BuildContext context) {
                 onClose: () {
                   print('onClose');
                 },
-                child: TDCalendar(
+                child: TCalendar(
                   title: '请选择日期和时间区间',
                   height: size.height * 0.92,
                   type: CalendarType.range,

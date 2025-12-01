@@ -5,7 +5,7 @@
 
     for (var i = 0; i < 20; i++) {
       list.add(
-          SideItemProps(index: i, label: '选项', value: i, icon: TDIcons.app));
+          SideItemProps(index: i, label: '选项', value: i, icon: TIcons.app));
       pages.add(getAnchorDemo(i));
     }
 
@@ -14,9 +14,9 @@
       decoration: const BoxDecoration(color: Colors.white),
     ));
 
-    list[1].badge = const TDBadge(TDBadgeType.redPoint);
-    list[2].badge = const TDBadge(
-      TDBadgeType.message,
+    list[1].badge = const TBadge(TBadgeType.redPoint);
+    list[2].badge = const TBadge(
+      TBadgeType.message,
       count: '8',
     );
 
@@ -26,13 +26,13 @@
       children: [
         SizedBox(
           width: 110,
-          child: TDSideBar(
+          child: TSideBar(
             height: demoHeight,
-            style: TDSideBarStyle.normal,
+            style: TSideBarStyle.normal,
             value: currentValue,
             controller: _sideBarController,
             children: list
-                .map((ele) => TDSideBarItem(
+                .map((ele) => TSideBarItem(
                     label: ele.label ?? '',
                     badge: ele.badge,
                     value: ele.value,

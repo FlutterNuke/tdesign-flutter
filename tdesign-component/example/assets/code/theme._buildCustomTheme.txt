@@ -1,11 +1,11 @@
 
   Widget _buildCustomTheme(BuildContext context) {
     /// 开启多主题
-    TDTheme.needMultiTheme(true);
+    TTheme.needMultiTheme(true);
     /// 此处替换主题
-    return TDTheme(
+    return TTheme(
         // 替换fonts和colors，其他主题从父类拷贝
-        data: TDTheme.of(context).copyWithTDThemeData('custom', fontMap: {
+        data: TTheme.of(context).copyWithTDThemeData('custom', fontMap: {
           'fontBodyLarge': Font(size: 40, lineHeight: 80),
         }, colorMap: {
           'brandNormalColor': Colors.red
@@ -24,22 +24,22 @@
 //       child: Column(
 //         mainAxisSize: MainAxisSize.min,
 //         children: [
-//           TDText(
+//           TText(
 //             '使用内层赋值主题',
-//             font: TDTheme.of(context).fontBodyLarge, //明确使用内层主题，必须传context
+//             font: TTheme.of(context).fontBodyLarge, //明确使用内层主题，必须传context
 //             textColor:
-//                 TDTheme.of(context).brandNormalColor, // 明确使用内层主题，必须传context
+//                 TTheme.of(context).brandNormalColor, // 明确使用内层主题，必须传context
 //           ),
-//           TDText(
+//           TText(
 //             '使用内层不赋值主题',
-//             font: TDTheme.of(context).fontTitleExtraLarge, //明确使用内层主题，必须传context
+//             font: TTheme.of(context).fontTitleExtraLarge, //明确使用内层主题，必须传context
 //             textColor:
-//                 TDTheme.of(context).successNormalColor, // 明确使用内层主题，必须传context
+//                 TTheme.of(context).successNormalColor, // 明确使用内层主题，必须传context
 //           ),
-//           TDText(
+//           TText(
 //             '使用默认主题',
-//             font: TDTheme.defaultData().fontBodyLarge, //不传context，使用默认主题，此处是外层的主题
-//             textColor: TDTheme.defaultData().brandNormalColor,
+//             font: TTheme.defaultData().fontBodyLarge, //不传context，使用默认主题，此处是外层的主题
+//             textColor: TTheme.defaultData().brandNormalColor,
 //           ),
 //         ],
 //       ),

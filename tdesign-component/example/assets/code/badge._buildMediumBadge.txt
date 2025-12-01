@@ -10,13 +10,13 @@
             child: Stack(
               alignment: Alignment.bottomLeft,
               children: [
-                TDAvatar(
-                  size: TDAvatarSize.medium,
-                  type: TDAvatarType.icon,
+                TAvatar(
+                  size: TAvatarSize.medium,
+                  type: TAvatarType.icon,
                 ),
                 Positioned(
-                  child: TDBadge(
-                    TDBadgeType.message,
+                  child: TBadge(
+                    TBadgeType.message,
                     count: '8',
                   ),
                   left: 36,

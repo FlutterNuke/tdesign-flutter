@@ -1,5 +1,5 @@
 ## API
-### TDIndexes
+### TIndexes
 #### 简介
 索引
 #### 默认构造方法
@@ -22,7 +22,7 @@
 
 ```
 ```
- ### TDIndexesList
+ ### TIndexesList
 #### 简介
 索引
 #### 默认构造方法
@@ -38,7 +38,7 @@
 
 ```
 ```
- ### TDIndexesAnchor
+ ### TIndexesAnchor
 #### 简介
 索引锚点
 #### 默认构造方法

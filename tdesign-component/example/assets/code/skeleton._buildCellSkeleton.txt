@@ -1,16 +1,16 @@
 
   Widget _buildCellSkeleton(BuildContext context) {
-    var rowColsAvatar = TDSkeleton(theme: TDSkeletonTheme.avatar);
-    var rowColsImage = TDSkeleton.fromRowCol(
-      rowCol: TDSkeletonRowCol(objects: const [
-        [TDSkeletonRowColObj.rect(width: 48, height: 48, flex: null)]
+    var rowColsAvatar = TSkeleton(theme: TSkeletonTheme.avatar);
+    var rowColsImage = TSkeleton.fromRowCol(
+      rowCol: TSkeletonRowCol(objects: const [
+        [TSkeletonRowColObj.rect(width: 48, height: 48, flex: null)]
       ]),
     );
-    var rowColsContent = TDSkeleton.fromRowCol(
-      rowCol: TDSkeletonRowCol(
+    var rowColsContent = TSkeleton.fromRowCol(
+      rowCol: TSkeletonRowCol(
         objects: const [
-          [TDSkeletonRowColObj(), TDSkeletonRowColObj.spacer(flex: 1)],
-          [TDSkeletonRowColObj()]
+          [TSkeletonRowColObj(), TSkeletonRowColObj.spacer(flex: 1)],
+          [TSkeletonRowColObj()]
         ],
       ),
     );

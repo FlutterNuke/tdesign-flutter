@@ -26,9 +26,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 <td-code-block panel="Dart">
 
   <pre slot="Dart" lang="javascript">
-TDDropdownMenu _buildDownSimple(BuildContext context) {
-  return TDDropdownMenu(
-    direction: TDDropdownMenuDirection.down,
+TDropdownMenu _buildDownSimple(BuildContext context) {
+  return TDropdownMenu(
+    direction: TDropdownMenuDirection.down,
     onMenuOpened: (value) {
       print('打开第$value个菜单');
     },
@@ -36,20 +36,20 @@ TDDropdownMenu _buildDownSimple(BuildContext context) {
       print('关闭第$value个菜单');
     },
     items: [
-      TDDropdownItem(
+      TDropdownItem(
         options: [
-          TDDropdownItemOption(label: '全部产品', value: 'all', selected: true),
-          TDDropdownItemOption(label: '最新产品', value: 'new'),
-          TDDropdownItemOption(label: '最火产品', value: 'hot'),
+          TDropdownItemOption(label: '全部产品', value: 'all', selected: true),
+          TDropdownItemOption(label: '最新产品', value: 'new'),
+          TDropdownItemOption(label: '最火产品', value: 'hot'),
         ],
         onChange: (value) {
           print('选择：$value');
         },
       ),
-      TDDropdownItem(
+      TDropdownItem(
         options: [
-          TDDropdownItemOption(label: '默认排序', value: 'default', selected: true),
-          TDDropdownItemOption(label: '价格从高到低', value: 'price'),
+          TDropdownItemOption(label: '默认排序', value: 'default', selected: true),
+          TDropdownItemOption(label: '价格从高到低', value: 'price'),
         ],
       ),
     ],
@@ -65,23 +65,23 @@ TDDropdownMenu _buildDownSimple(BuildContext context) {
 <td-code-block panel="Dart">
 
   <pre slot="Dart" lang="javascript">
-TDDropdownMenu _buildDownChunk(BuildContext context) {
-  return TDDropdownMenu(
-    direction: TDDropdownMenuDirection.down,
+TDropdownMenu _buildDownChunk(BuildContext context) {
+  return TDropdownMenu(
+    direction: TDropdownMenuDirection.down,
     items: [
-      TDDropdownItem(
+      TDropdownItem(
         label: '单列多选',
         multiple: true,
         options: [
-          TDDropdownItemOption(label: '选项1', value: '1', selected: true),
-          TDDropdownItemOption(label: '选项2', value: '2'),
-          TDDropdownItemOption(label: '选项3', value: '3'),
-          TDDropdownItemOption(label: '选项4', value: '4'),
-          TDDropdownItemOption(label: '选项5', value: '5'),
-          TDDropdownItemOption(label: '选项6', value: '6'),
-          TDDropdownItemOption(label: '选项7', value: '7'),
-          TDDropdownItemOption(label: '选项8', value: '8'),
-          TDDropdownItemOption(label: '禁用选项', value: '9', disabled: true),
+          TDropdownItemOption(label: '选项1', value: '1', selected: true),
+          TDropdownItemOption(label: '选项2', value: '2'),
+          TDropdownItemOption(label: '选项3', value: '3'),
+          TDropdownItemOption(label: '选项4', value: '4'),
+          TDropdownItemOption(label: '选项5', value: '5'),
+          TDropdownItemOption(label: '选项6', value: '6'),
+          TDropdownItemOption(label: '选项7', value: '7'),
+          TDropdownItemOption(label: '选项8', value: '8'),
+          TDropdownItemOption(label: '禁用选项', value: '9', disabled: true),
         ],
         onChange: (value) {
           print('选择：$value');
@@ -93,58 +93,58 @@ TDDropdownMenu _buildDownChunk(BuildContext context) {
           print('清空选择');
         },
       ),
-      TDDropdownItem(
+      TDropdownItem(
         // label: '双列单选',
         multiple: false,
         optionsColumns: 2,
         maxHeight: 300,
         options: [
-          TDDropdownItemOption(label: '双列单选1', value: '1'),
-          TDDropdownItemOption(label: '双列单选2', value: '2', selected: true),
-          TDDropdownItemOption(label: '双列单选3', value: '3'),
-          TDDropdownItemOption(label: '双列单选4', value: '4'),
-          TDDropdownItemOption(label: '双列单选5', value: '5'),
-          TDDropdownItemOption(label: '双列单选6', value: '6'),
-          TDDropdownItemOption(label: '双列单选7', value: '7'),
-          TDDropdownItemOption(label: '双列单选8', value: '8'),
-          TDDropdownItemOption(label: '禁用选项', value: '9', disabled: true),
-          TDDropdownItemOption(label: '禁用选项', value: '10', disabled: true),
+          TDropdownItemOption(label: '双列单选1', value: '1'),
+          TDropdownItemOption(label: '双列单选2', value: '2', selected: true),
+          TDropdownItemOption(label: '双列单选3', value: '3'),
+          TDropdownItemOption(label: '双列单选4', value: '4'),
+          TDropdownItemOption(label: '双列单选5', value: '5'),
+          TDropdownItemOption(label: '双列单选6', value: '6'),
+          TDropdownItemOption(label: '双列单选7', value: '7'),
+          TDropdownItemOption(label: '双列单选8', value: '8'),
+          TDropdownItemOption(label: '禁用选项', value: '9', disabled: true),
+          TDropdownItemOption(label: '禁用选项', value: '10', disabled: true),
         ],
       ),
-      TDDropdownItem(
+      TDropdownItem(
         label: '双列多选',
         multiple: true,
         optionsColumns: 2,
         options: [
-          TDDropdownItemOption(label: '选项1', value: '1', selected: true),
-          TDDropdownItemOption(label: '选项2', value: '2', selected: true),
-          TDDropdownItemOption(label: '选项3', value: '3'),
-          TDDropdownItemOption(label: '选项4', value: '4'),
-          TDDropdownItemOption(label: '选项5', value: '5'),
-          TDDropdownItemOption(label: '选项6', value: '6'),
-          TDDropdownItemOption(label: '选项7', value: '7'),
-          TDDropdownItemOption(label: '选项8', value: '8'),
-          TDDropdownItemOption(label: '禁用选项', value: '9', disabled: true),
-          TDDropdownItemOption(label: '禁用选项', value: '10', disabled: true),
+          TDropdownItemOption(label: '选项1', value: '1', selected: true),
+          TDropdownItemOption(label: '选项2', value: '2', selected: true),
+          TDropdownItemOption(label: '选项3', value: '3'),
+          TDropdownItemOption(label: '选项4', value: '4'),
+          TDropdownItemOption(label: '选项5', value: '5'),
+          TDropdownItemOption(label: '选项6', value: '6'),
+          TDropdownItemOption(label: '选项7', value: '7'),
+          TDropdownItemOption(label: '选项8', value: '8'),
+          TDropdownItemOption(label: '禁用选项', value: '9', disabled: true),
+          TDropdownItemOption(label: '禁用选项', value: '10', disabled: true),
         ],
       ),
-      TDDropdownItem(
+      TDropdownItem(
         label: '三列多选',
         multiple: true,
         optionsColumns: 3,
         options: [
-          TDDropdownItemOption(label: '选项1', value: '1', selected: true),
-          TDDropdownItemOption(label: '选项2', value: '2', selected: true),
-          TDDropdownItemOption(label: '选项3', value: '3', selected: true),
-          TDDropdownItemOption(label: '选项4', value: '4'),
-          TDDropdownItemOption(label: '选项5', value: '5'),
-          TDDropdownItemOption(label: '选项6', value: '6'),
-          TDDropdownItemOption(label: '选项7', value: '7'),
-          TDDropdownItemOption(label: '选项8', value: '8'),
-          TDDropdownItemOption(label: '选项9', value: '9'),
-          TDDropdownItemOption(label: '禁用选项', value: '10', disabled: true),
-          TDDropdownItemOption(label: '禁用选项', value: '11', disabled: true),
-          TDDropdownItemOption(label: '禁用选项', value: '12', disabled: true),
+          TDropdownItemOption(label: '选项1', value: '1', selected: true),
+          TDropdownItemOption(label: '选项2', value: '2', selected: true),
+          TDropdownItemOption(label: '选项3', value: '3', selected: true),
+          TDropdownItemOption(label: '选项4', value: '4'),
+          TDropdownItemOption(label: '选项5', value: '5'),
+          TDropdownItemOption(label: '选项6', value: '6'),
+          TDropdownItemOption(label: '选项7', value: '7'),
+          TDropdownItemOption(label: '选项8', value: '8'),
+          TDropdownItemOption(label: '选项9', value: '9'),
+          TDropdownItemOption(label: '禁用选项', value: '10', disabled: true),
+          TDropdownItemOption(label: '禁用选项', value: '11', disabled: true),
+          TDropdownItemOption(label: '禁用选项', value: '12', disabled: true),
         ],
       ),
     ],
@@ -160,9 +160,9 @@ TDDropdownMenu _buildDownChunk(BuildContext context) {
 <td-code-block panel="Dart">
 
   <pre slot="Dart" lang="javascript">
-TDDropdownMenu _buildUp(BuildContext context) {
-  return TDDropdownMenu(
-    direction: TDDropdownMenuDirection.up,
+TDropdownMenu _buildUp(BuildContext context) {
+  return TDropdownMenu(
+    direction: TDropdownMenuDirection.up,
     onMenuOpened: (value) {
       print('打开第$value个菜单');
     },
@@ -171,20 +171,20 @@ TDDropdownMenu _buildUp(BuildContext context) {
     },
     builder: (context) {
       return [
-        TDDropdownItem(
+        TDropdownItem(
           options: [
-            TDDropdownItemOption(label: '全部产品', value: 'all', selected: true),
-            TDDropdownItemOption(label: '最新产品', value: 'new'),
-            TDDropdownItemOption(label: '最火产品', value: 'hot'),
+            TDropdownItemOption(label: '全部产品', value: 'all', selected: true),
+            TDropdownItemOption(label: '最新产品', value: 'new'),
+            TDropdownItemOption(label: '最火产品', value: 'hot'),
           ],
           onChange: (value) {
             print('选择：$value');
           },
         ),
-        TDDropdownItem(
+        TDropdownItem(
           options: [
-            TDDropdownItemOption(label: '默认排序', value: 'default', selected: true),
-            TDDropdownItemOption(label: '价格从高到低', value: 'price'),
+            TDropdownItemOption(label: '默认排序', value: 'default', selected: true),
+            TDropdownItemOption(label: '价格从高到低', value: 'price'),
           ],
         ),
       ];
@@ -202,16 +202,16 @@ TDDropdownMenu _buildUp(BuildContext context) {
 <td-code-block panel="Dart">
 
   <pre slot="Dart" lang="javascript">
-TDDropdownMenu _buildDisabled(BuildContext context) {
-  return TDDropdownMenu(
-    direction: TDDropdownMenuDirection.down,
+TDropdownMenu _buildDisabled(BuildContext context) {
+  return TDropdownMenu(
+    direction: TDropdownMenuDirection.down,
     builder: (context) {
       return [
-        const TDDropdownItem(
+        const TDropdownItem(
           disabled: true,
           label: '禁用菜单',
         ),
-        const TDDropdownItem(
+        const TDropdownItem(
           disabled: true,
           label: '禁用菜单',
         ),
@@ -227,16 +227,16 @@ TDDropdownMenu _buildDisabled(BuildContext context) {
 <td-code-block panel="Dart">
 
   <pre slot="Dart" lang="javascript">
-TDDropdownMenu _buildDisabled(BuildContext context) {
-  return TDDropdownMenu(
-    direction: TDDropdownMenuDirection.down,
+TDropdownMenu _buildDisabled(BuildContext context) {
+  return TDropdownMenu(
+    direction: TDropdownMenuDirection.down,
     builder: (context) {
       return [
-        const TDDropdownItem(
+        const TDropdownItem(
           disabled: true,
           label: '禁用菜单',
         ),
-        const TDDropdownItem(
+        const TDropdownItem(
           disabled: true,
           label: '禁用菜单',
         ),
@@ -254,25 +254,25 @@ TDDropdownMenu _buildDisabled(BuildContext context) {
 <td-code-block panel="Dart">
 
   <pre slot="Dart" lang="javascript">
-TDDropdownMenu _buildGroup(BuildContext context) {
-  return TDDropdownMenu(
-    direction: TDDropdownMenuDirection.up,
+TDropdownMenu _buildGroup(BuildContext context) {
+  return TDropdownMenu(
+    direction: TDropdownMenuDirection.up,
     builder: (context) {
       return [
-        TDDropdownItem(
+        TDropdownItem(
           label: '分组菜单',
           multiple: true,
           optionsColumns: 3,
           options: [
-            TDDropdownItemOption(label: '选项1', value: '1', selected: true, group: '类型'),
-            TDDropdownItemOption(label: '选项2', value: '2', group: '类型'),
-            TDDropdownItemOption(label: '选项3', value: '3', group: '类型'),
-            TDDropdownItemOption(label: '选项4', value: '4', group: '类型'),
-            TDDropdownItemOption(label: '选项5', value: '5', group: '角色'),
-            TDDropdownItemOption(label: '选项6', value: '6', group: '角色'),
-            TDDropdownItemOption(label: '选项7', value: '7', group: '角色'),
-            TDDropdownItemOption(label: '选项8', value: '8', group: '角色'),
-            TDDropdownItemOption(label: '禁用选项', value: '9', disabled: true, group: '角色'),
+            TDropdownItemOption(label: '选项1', value: '1', selected: true, group: '类型'),
+            TDropdownItemOption(label: '选项2', value: '2', group: '类型'),
+            TDropdownItemOption(label: '选项3', value: '3', group: '类型'),
+            TDropdownItemOption(label: '选项4', value: '4', group: '类型'),
+            TDropdownItemOption(label: '选项5', value: '5', group: '角色'),
+            TDropdownItemOption(label: '选项6', value: '6', group: '角色'),
+            TDropdownItemOption(label: '选项7', value: '7', group: '角色'),
+            TDropdownItemOption(label: '选项8', value: '8', group: '角色'),
+            TDropdownItemOption(label: '禁用选项', value: '9', disabled: true, group: '角色'),
           ],
           onChange: (value) {
             print('选择：$value');
@@ -293,25 +293,25 @@ TDDropdownMenu _buildGroup(BuildContext context) {
 <td-code-block panel="Dart">
 
   <pre slot="Dart" lang="javascript">
-TDDropdownMenu _buildGroup(BuildContext context) {
-  return TDDropdownMenu(
-    direction: TDDropdownMenuDirection.up,
+TDropdownMenu _buildGroup(BuildContext context) {
+  return TDropdownMenu(
+    direction: TDropdownMenuDirection.up,
     builder: (context) {
       return [
-        TDDropdownItem(
+        TDropdownItem(
           label: '分组菜单',
           multiple: true,
           optionsColumns: 3,
           options: [
-            TDDropdownItemOption(label: '选项1', value: '1', selected: true, group: '类型'),
-            TDDropdownItemOption(label: '选项2', value: '2', group: '类型'),
-            TDDropdownItemOption(label: '选项3', value: '3', group: '类型'),
-            TDDropdownItemOption(label: '选项4', value: '4', group: '类型'),
-            TDDropdownItemOption(label: '选项5', value: '5', group: '角色'),
-            TDDropdownItemOption(label: '选项6', value: '6', group: '角色'),
-            TDDropdownItemOption(label: '选项7', value: '7', group: '角色'),
-            TDDropdownItemOption(label: '选项8', value: '8', group: '角色'),
-            TDDropdownItemOption(label: '禁用选项', value: '9', disabled: true, group: '角色'),
+            TDropdownItemOption(label: '选项1', value: '1', selected: true, group: '类型'),
+            TDropdownItemOption(label: '选项2', value: '2', group: '类型'),
+            TDropdownItemOption(label: '选项3', value: '3', group: '类型'),
+            TDropdownItemOption(label: '选项4', value: '4', group: '类型'),
+            TDropdownItemOption(label: '选项5', value: '5', group: '角色'),
+            TDropdownItemOption(label: '选项6', value: '6', group: '角色'),
+            TDropdownItemOption(label: '选项7', value: '7', group: '角色'),
+            TDropdownItemOption(label: '选项8', value: '8', group: '角色'),
+            TDropdownItemOption(label: '禁用选项', value: '9', disabled: true, group: '角色'),
           ],
           onChange: (value) {
             print('选择：$value');
@@ -330,12 +330,12 @@ TDDropdownMenu _buildGroup(BuildContext context) {
 
 
 ## API
-### TDDropdownItemController
+### TDropdownItemController
 #### 简介
 下拉菜单控制器
 ```
 ```
- ### TDDropdownItem
+ ### TDropdownItem
 #### 简介
 下拉菜单内容
 #### 默认构造方法
@@ -347,22 +347,22 @@ TDDropdownMenu _buildGroup(BuildContext context) {
 | label | String? | - | 标题 |
 | arrowIcon | IconData? | - | 自定义箭头图标 |
 | multiple | bool? | false | 是否多选 |
-| options | List<TDDropdownItemOption>? | const [] | 选项数据 |
-| builder | TDDropdownItemContentBuilder? | - | 完全自定义展示内容 |
+| options | List<TDropdownItemOption>? | const [] | 选项数据 |
+| builder | TDropdownItemContentBuilder? | - | 完全自定义展示内容 |
 | optionsColumns | int? | 1 | 选项分栏（1-3） |
 | onChange | ValueChanged<T?>? | - | 值改变时触发 |
 | onConfirm | ValueChanged<T?>? | - | 点击确认时触发 |
 | onReset | VoidCallback? | - | 点击重置时触发 |
 | minHeight | double? | - | 内容最小高度 |
 | maxHeight | double? | - | 内容最大高度 |
-| tabBarWidth | double? | - | 该item在menu上的宽度，仅在[TDDropdownMenu.isScrollable]为true时有效 |
-| tabBarAlign | MainAxisAlignment? | - | [label]和[arrowIcon]/[TDDropdownMenu.arrowIcon]的对齐方式 |
-| tabBarFlex | int? | 1 | 该item在menu上的宽度占比，仅在[TDDropdownMenu.isScrollable]为false时有效 |
-| controller | TDDropdownItemController? | - | 下拉菜单控制器 |
+| tabBarWidth | double? | - | 该item在menu上的宽度，仅在[TDropdownMenu.isScrollable]为true时有效 |
+| tabBarAlign | MainAxisAlignment? | - | [label]和[arrowIcon]/[TDropdownMenu.arrowIcon]的对齐方式 |
+| tabBarFlex | int? | 1 | 该item在menu上的宽度占比，仅在[TDropdownMenu.isScrollable]为false时有效 |
+| controller | TDropdownItemController? | - | 下拉菜单控制器 |
 
 ```
 ```
- ### TDDropdownItemOption
+ ### TDropdownItemOption
 #### 简介
 选项数据
 #### 默认构造方法
@@ -379,7 +379,7 @@ TDDropdownMenu _buildGroup(BuildContext context) {
 
 ```
 ```
- ### TDDropdownMenu
+ ### TDropdownMenu
 #### 简介
 下拉菜单
 #### 默认构造方法
@@ -387,10 +387,10 @@ TDDropdownMenu _buildGroup(BuildContext context) {
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | key |  | - |  |
-| builder | TDDropdownItemBuilder? | - | 下拉菜单构建器，优先级高于[items] |
-| items | List<TDDropdownItem>? | - | 下拉菜单 |
+| builder | TDropdownItemBuilder? | - | 下拉菜单构建器，优先级高于[items] |
+| items | List<TDropdownItem>? | - | 下拉菜单 |
 | closeOnClickOverlay | bool | true | 是否在点击遮罩层后关闭菜单 |
-| direction | TDDropdownMenuDirection? | TDDropdownMenuDirection.auto | 菜单展开方向（down、up、auto） |
+| direction | TDropdownMenuDirection? | TDropdownMenuDirection.auto | 菜单展开方向（down、up、auto） |
 | duration | double? | 200.0 | 动画时长，毫秒 |
 | showOverlay | bool? | true | 是否显示遮罩层 |
 | isScrollable | bool? | false | 是否开启滚动列表 |
@@ -400,7 +400,7 @@ TDDropdownMenu _buildGroup(BuildContext context) {
 | onMenuClosed | ValueChanged<int>? | - | 关闭菜单事件 |
 | width | double? | - | menu的宽度 |
 | height | double? | 48 | menu的高度 |
-| tabBarAlign | MainAxisAlignment? | MainAxisAlignment.center | [TDDropdownItem.label]和[arrowIcon]/[TDDropdownItem.arrowIcon]的对齐方式 |
+| tabBarAlign | MainAxisAlignment? | MainAxisAlignment.center | [TDropdownItem.label]和[arrowIcon]/[TDropdownItem.arrowIcon]的对齐方式 |
 | decoration | Decoration? | - | 下拉菜单的装饰器 |
 
 

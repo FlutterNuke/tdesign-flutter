@@ -27,18 +27,18 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildPureIconLoading(BuildContext context) {
     return _buildRow([
-      const TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.circle,
+      const TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.circle,
       ),
-      const TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.activity,
+      const TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.activity,
       ),
-      TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.point,
-        iconColor: TDTheme.of(context).brandNormalColor,
+      TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.point,
+        iconColor: TTheme.of(context).brandNormalColor,
       ),
     ]);
   }</pre>
@@ -53,15 +53,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildTextIconHorizontalLoading(BuildContext context) {
     return _buildRow(const [
-      TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.circle,
+      TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.circle,
         text: '加载中…',
         axis: Axis.horizontal,
       ),
-      TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.activity,
+      TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.activity,
         text: '加载中…',
         axis: Axis.horizontal,
       ),
@@ -78,15 +78,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildTextIconVerticalLoading(BuildContext context) {
     return _buildRow(const [
-      TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.circle,
+      TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.circle,
         text: '加载中…',
         axis: Axis.vertical,
       ),
-      TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.activity,
+      TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.activity,
         text: '加载中…',
         axis: Axis.vertical,
       ),
@@ -103,26 +103,26 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildPureTextLoading(BuildContext context) {
     return _buildRow([
-      const TDLoading(
-        size: TDLoadingSize.small,
+      const TLoading(
+        size: TLoadingSize.small,
         text: '加载中…',
       ),
-      TDLoading(
-        size: TDLoadingSize.small,
+      TLoading(
+        size: TLoadingSize.small,
         text: '加载失败',
-        textColor: TDTheme.of(context).fontGyColor3,
+        textColor: TTheme.of(context).fontGyColor3,
       ),
-      TDLoading(
-        size: TDLoadingSize.small,
+      TLoading(
+        size: TLoadingSize.small,
         text: '加载失败',
         refreshWidget: GestureDetector(
-          child: TDText(
+          child: TText(
             '刷新',
-            font: TDTheme.of(context).fontBodySmall,
-            textColor: TDTheme.of(context).brandNormalColor,
+            font: TTheme.of(context).fontBodySmall,
+            textColor: TTheme.of(context).brandNormalColor,
           ),
           onTap: () {
-            TDToast.showText('刷新', context: context);
+            TToast.showText('刷新', context: context);
           },
         ),
       ),
@@ -140,9 +140,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildLargeLoading(BuildContext context) {
     return _buildRow([
-      const TDLoading(
-        size: TDLoadingSize.large,
-        icon: TDLoadingIcon.circle,
+      const TLoading(
+        size: TLoadingSize.large,
+        icon: TLoadingIcon.circle,
         text: '加载中…',
         axis: Axis.horizontal,
       ),
@@ -159,9 +159,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildMediumLoading(BuildContext context) {
     return _buildRow([
-      const TDLoading(
-        size: TDLoadingSize.medium,
-        icon: TDLoadingIcon.circle,
+      const TLoading(
+        size: TLoadingSize.medium,
+        icon: TLoadingIcon.circle,
         text: '加载中…',
         axis: Axis.horizontal,
       ),
@@ -178,9 +178,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildSmallLoading(BuildContext context) {
     return _buildRow([
-      const TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.circle,
+      const TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.circle,
         text: '加载中…',
         axis: Axis.horizontal,
       ),
@@ -204,15 +204,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TDLoading(
-            size: TDLoadingSize.small,
-            icon: TDLoadingIcon.circle,
+          TLoading(
+            size: TLoadingSize.small,
+            icon: TLoadingIcon.circle,
             axis: Axis.horizontal,
             text: '加载中…',
             duration: _currentSliderValue.round(),
           ),
-          TDSlider(value: _currentSliderValue,
-            sliderThemeData: TDSliderThemeData(
+          TSlider(value: _currentSliderValue,
+            sliderThemeData: TSliderThemeData(
               context: context,
               max: 2000,
               min: -20,
@@ -235,14 +235,14 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDLoading
+### TLoading
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | key |  | - |  |
-| size | TDLoadingSize | - | 尺寸 |
-| icon | TDLoadingIcon? | TDLoadingIcon.circle | 图标，支持圆形、点状、菊花状 |
+| size | TLoadingSize | - | 尺寸 |
+| icon | TLoadingIcon? | TLoadingIcon.circle | 图标，支持圆形、点状、菊花状 |
 | iconColor | Color? | - | 图标颜色 |
 | axis | Axis | Axis.vertical | 文案和图标相对方向 |
 | text | String? | - | 文案 |

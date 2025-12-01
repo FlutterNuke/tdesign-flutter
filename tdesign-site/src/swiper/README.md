@@ -34,9 +34,9 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       loop: true,
       pagination: const SwiperPagination(
           alignment: Alignment.bottomCenter,
-          builder: TDSwiperPagination.dots),
+          builder: TSwiperPagination.dots),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -57,9 +57,9 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       loop: true,
       pagination: const SwiperPagination(
           alignment: Alignment.bottomCenter,
-          builder: TDSwiperPagination.dotsBar),
+          builder: TSwiperPagination.dotsBar),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -80,9 +80,9 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       loop: true,
       pagination: const SwiperPagination(
           alignment: Alignment.bottomCenter,
-          builder: TDSwiperPagination.fraction),
+          builder: TSwiperPagination.fraction),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -103,9 +103,9 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       loop: true,
       pagination: const SwiperPagination(
           alignment: Alignment.center,
-          builder: TDSwiperPagination.controls),
+          builder: TSwiperPagination.controls),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -126,12 +126,12 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       autoplay: true,
       itemCount: 6,
       loop: true,
-      transformer: TDPageTransformer.margin(),
+      transformer: TPageTransformer.margin(),
       pagination: const SwiperPagination(
           alignment: Alignment.center,
-          builder: TDSwiperPagination.dots),
+          builder: TSwiperPagination.dots),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -152,12 +152,12 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       autoplay: true,
       itemCount: 6,
       loop: true,
-      transformer: TDPageTransformer.scaleAndFade(),
+      transformer: TPageTransformer.scaleAndFade(),
       pagination: const SwiperPagination(
           alignment: Alignment.center,
-          builder: TDSwiperPagination.dots),
+          builder: TSwiperPagination.dots),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -179,9 +179,9 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       loop: true,
       pagination: const SwiperPagination(
           alignment: Alignment.bottomCenter,
-          builder: TDSwiperPagination.dots),
+          builder: TSwiperPagination.dots),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -203,9 +203,9 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       outer: true,
       pagination: const SwiperPagination(
           alignment: Alignment.bottomCenter,
-          builder: TDSwiperPagination.dots),
+          builder: TSwiperPagination.dots),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -227,9 +227,9 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
       scrollDirection: Axis.vertical,
       pagination: const SwiperPagination(
           alignment: Alignment.centerRight,
-          builder: TDSwiperPagination.dots),
+          builder: TSwiperPagination.dots),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }</pre>
@@ -239,7 +239,7 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 
 
 ## API
-### TDPageTransformer
+### TPageTransformer
 #### 简介
 TD默认PageTransformer
 #### 默认构造方法
@@ -255,12 +255,12 @@ TD默认PageTransformer
 
 | 名称  | 说明 |
 | --- |  --- |
-| TDPageTransformer.margin  | 普通margin的卡片式 |
-| TDPageTransformer.scaleAndFade  | 缩放或透明的卡片式 |
+| TPageTransformer.margin  | 普通margin的卡片式 |
+| TPageTransformer.scaleAndFade  | 缩放或透明的卡片式 |
 
 ```
 ```
- ### TDSwiperPagination
+ ### TSwiperPagination
 #### 简介
 TDesign风格的Swiper指示器样式，与flutter_swiper的Swiper结合使用
 #### 默认构造方法
@@ -270,7 +270,7 @@ TDesign风格的Swiper指示器样式，与flutter_swiper的Swiper结合使用
 | alignment | Alignment? | - | 当 scrollDirection== Axis.horizontal 时，默认Alignment.bottomCenter |
 | key | Key? | - |  |
 | margin | EdgeInsetsGeometry | const EdgeInsets.all(10.0) | 指示器和container之间的距离 |
-| builder | SwiperPlugin | TDSwiperPagination.dots | 具体样式 |
+| builder | SwiperPlugin | TSwiperPagination.dots | 具体样式 |
 
 
   

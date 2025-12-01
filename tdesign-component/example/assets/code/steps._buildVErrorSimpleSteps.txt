@@ -6,12 +6,12 @@
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vErrorSimpleStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
               simple: true,
-              status: TDStepsStatus.error,
+              status: TStepsStatus.error,
             ),
           )
         ],

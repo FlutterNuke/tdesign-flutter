@@ -4,19 +4,19 @@
       padding: const EdgeInsets.only(left: 16),
       child: Row(
         children: const [
-          TDAvatar(
-            size: TDAvatarSize.medium,
-            type: TDAvatarType.normal,
+          TAvatar(
+            size: TAvatarSize.medium,
+            type: TAvatarType.normal,
             defaultUrl: 'assets/img/td_avatar_1.png',),
           SizedBox(width: 48,),
-          TDAvatar(
-              size: TDAvatarSize.medium,
-              type: TDAvatarType.customText,
+          TAvatar(
+              size: TAvatarSize.medium,
+              type: TAvatarType.customText,
               text: 'A'),
           SizedBox(width: 48,),
-          TDAvatar(
-            size: TDAvatarSize.medium,
-            type: TDAvatarType.icon,),
+          TAvatar(
+            size: TAvatarSize.medium,
+            type: TAvatarType.icon,),
         ],
       ),
     );

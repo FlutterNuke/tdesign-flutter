@@ -25,7 +25,7 @@ class TTextPage extends StatelessWidget {
           ExampleItem(
               desc: 'style覆盖textColor和font:',
               builder: _buildStyleCoverColorAndFont),
-          ExampleItem(desc: 'TDText.rich测试:', builder: _buildRichText),
+          ExampleItem(desc: 'TText.rich测试:', builder: _buildRichText),
           ExampleItem(desc: '获取系统Text:', builder: _getSystemText),
           ExampleItem(
               desc: '中文居中:（带有英文可能不居中）', builder: _buildVerticalCenterText),
@@ -105,7 +105,7 @@ class TTextPage extends StatelessWidget {
     return TText.rich(
       TextSpan(children: [
         TTextSpan(
-            text: 'TDTextSpan1',
+            text: 'TTextSpan1',
             font: TTheme.of(context).fontTitleExtraLarge,
             textColor: TTheme.of(context).warningNormalColor,
             isTextThrough: true,

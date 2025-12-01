@@ -6,9 +6,9 @@
     return Container(
       alignment: Alignment.centerLeft,
       padding: const EdgeInsets.only(left: 16),
-      child: TDAvatar(
-        size: TDAvatarSize.medium,
-        type: TDAvatarType.display,
+      child: TAvatar(
+        size: TAvatarSize.medium,
+        type: TAvatarType.display,
         displayText: '+5',
         avatarDisplayListAsset: avatarList,),
     );

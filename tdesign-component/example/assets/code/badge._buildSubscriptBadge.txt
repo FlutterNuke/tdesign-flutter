@@ -6,17 +6,17 @@
         Container(
           padding: const EdgeInsets.only(left: 16),
           alignment: Alignment.centerLeft,
-          child: TDText(
+          child: TText(
             '单行标题',
-            textColor: TDTheme.of(context).fontGyColor1,
-            font: TDTheme.of(context).fontBodyLarge,
+            textColor: TTheme.of(context).fontGyColor1,
+            font: TTheme.of(context).fontBodyLarge,
           ),
           color: Colors.white,
           height: 48,
           width: MediaQuery.of(context).size.width,
         ),
-        const TDBadge(
-          TDBadgeType.subscript,
+        const TBadge(
+          TBadgeType.subscript,
           message: 'NEW',
         ),
       ],

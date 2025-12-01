@@ -26,11 +26,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildRightLabelLinear(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.linear,
+    return TProgress(
+        type: TProgressType.linear,
         value: 0.8,
         strokeWidth: 6,
-        progressLabelPosition: TDProgressLabelPosition.right);
+        progressLabelPosition: TProgressLabelPosition.right);
   }</pre>
 
 </td-code-block>
@@ -42,7 +42,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildInsideLabelLinear(BuildContext context) {
-    return TDProgress(type: TDProgressType.linear, value: 0.8);
+    return TProgress(type: TProgressType.linear, value: 0.8);
   }</pre>
 
 </td-code-block>
@@ -54,7 +54,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildCircle(BuildContext context) {
-    return TDProgress(type: TDProgressType.circular, value: 0.3);
+    return TProgress(type: TProgressType.circular, value: 0.3);
   }</pre>
 
 </td-code-block>
@@ -66,7 +66,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildMicro(BuildContext context) {
-    return TDProgress(type: TDProgressType.micro, value: 0.75);
+    return TProgress(type: TProgressType.micro, value: 0.75);
   }</pre>
 
 </td-code-block>
@@ -78,8 +78,8 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildButton(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.button,
+    return TProgress(
+        type: TProgressType.button,
         onTap: _toggleProgress,
         onLongPress: _resetProgress,
         value: progressValue,
@@ -95,12 +95,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildMicroButton(BuildContext context) {
-    return TDProgress(
-      type: TDProgressType.micro,
+    return TProgress(
+      type: TProgressType.micro,
       value: microProgressValue,
       onTap: _toggleMicroProgress,
-      label: TDIconLabel(isPlaying ? Icons.pause : Icons.play_arrow,
-          color: TDTheme.of(context).brandNormalColor),
+      label: TIconLabel(isPlaying ? Icons.pause : Icons.play_arrow,
+          color: TTheme.of(context).brandNormalColor),
     );
   }</pre>
 
@@ -114,12 +114,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildPrimary(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.linear,
-        progressStatus: TDProgressStatus.primary,
+    return TProgress(
+        type: TProgressType.linear,
+        progressStatus: TProgressStatus.primary,
         value: 0.8,
         strokeWidth: 6,
-        progressLabelPosition: TDProgressLabelPosition.right);
+        progressLabelPosition: TProgressLabelPosition.right);
   }</pre>
 
 </td-code-block>
@@ -131,12 +131,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildWarning(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.linear,
-        progressStatus: TDProgressStatus.warning,
+    return TProgress(
+        type: TProgressType.linear,
+        progressStatus: TProgressStatus.warning,
         value: 0.8,
         strokeWidth: 6,
-        progressLabelPosition: TDProgressLabelPosition.right,
+        progressLabelPosition: TProgressLabelPosition.right,
     );
   }</pre>
 
@@ -149,12 +149,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildDanger(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.linear,
-        progressStatus: TDProgressStatus.danger,
+    return TProgress(
+        type: TProgressType.linear,
+        progressStatus: TProgressStatus.danger,
         value: 0.8,
         strokeWidth: 6,
-        progressLabelPosition: TDProgressLabelPosition.right);
+        progressLabelPosition: TProgressLabelPosition.right);
   }</pre>
 
 </td-code-block>
@@ -166,12 +166,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildSuccess(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.linear,
-        progressStatus: TDProgressStatus.success,
+    return TProgress(
+        type: TProgressType.linear,
+        progressStatus: TProgressStatus.success,
         value: 0.8,
         strokeWidth: 6,
-        progressLabelPosition: TDProgressLabelPosition.right);
+        progressLabelPosition: TProgressLabelPosition.right);
   }</pre>
 
 </td-code-block>
@@ -183,9 +183,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildCirclePrimary(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.circular,
-        progressStatus: TDProgressStatus.primary,
+    return TProgress(
+        type: TProgressType.circular,
+        progressStatus: TProgressStatus.primary,
         value: 0.3);
   }</pre>
 
@@ -198,9 +198,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildCircleWarning(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.circular,
-        progressStatus: TDProgressStatus.warning,
+    return TProgress(
+        type: TProgressType.circular,
+        progressStatus: TProgressStatus.warning,
         value: 0.3);
   }</pre>
 
@@ -213,9 +213,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildCircleDanger(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.circular,
-        progressStatus: TDProgressStatus.danger,
+    return TProgress(
+        type: TProgressType.circular,
+        progressStatus: TProgressStatus.danger,
         value: 0.3);
   }</pre>
 
@@ -228,9 +228,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildCircleSuccess(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.circular,
-        progressStatus: TDProgressStatus.success,
+    return TProgress(
+        type: TProgressType.circular,
+        progressStatus: TProgressStatus.success,
         value: 1);
   }</pre>
 
@@ -239,17 +239,17 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDProgress
+### TProgress
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | key |  | - |  |
-| type | TDProgressType | - | 进度条类型 |
+| type | TProgressType | - | 进度条类型 |
 | value | double? | - | 进度值 (0.0 到 1.0 之间的正数) |
-| label | TDLabelWidget? | - | 进度条标签 |
-| progressStatus | TDProgressStatus | TDProgressStatus.primary | 进度条状态 |
-| progressLabelPosition | TDProgressLabelPosition | TDProgressLabelPosition.inside | 标签显示位置 |
+| label | TLabelWidget? | - | 进度条标签 |
+| progressStatus | TProgressStatus | TProgressStatus.primary | 进度条状态 |
+| progressLabelPosition | TProgressLabelPosition | TProgressLabelPosition.inside | 标签显示位置 |
 | strokeWidth | double? | - | 进度条粗细 (正数) |
 | color | Color? | - | 进度条颜色 |
 | backgroundColor | Color? | - | 进度条背景颜色 |

@@ -11,7 +11,7 @@ TDesign Flutter 从0.2.0版本开始，正常情况下，每月初发一个版�
 
 ## 自定义主题
 - 自定义主题用法请参考：https://tdesign.tencent.com/flutter/getting-started#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98
-- 如果自定义主题未生效，请检查是否设置：TDTheme.needMultiTheme(true);
+- 如果自定义主题未生效，请检查是否设置：TTheme.needMultiTheme(true);
 - 在启动即修改主题颜色，完整示例代码请参考：https://github.com/Tencent/tdesign-flutter/blob/main/tdesign-component/example/lib/component_test/test_app.dart
 - 在应用使用中切换主题颜色，示例代码请参考example的main.dart和home.dart：https://github.com/Tencent/tdesign-flutter/blob/main/tdesign-component/example/lib/main.dart
 - 转换完整代码：https://github.com/Tencent/tdesign-flutter/blob/main/tdesign-component/example/shell/theme/css2JsonTheme.dart
@@ -26,17 +26,17 @@ Flutter官方SDK不支持文本居中功能，若要实现通用的文字居中�
 
 TDesign Flutter 0.1.4版本开始，添加了全局变量kTextForceVerticalCenterEnable来控制是否使用内部padding，如果将全局变量kTextForceVerticalCenterEnable设为false，则显示效果与直接使用官方Text一致。(部分机型，尤其是iOS机型，将kTextForceVerticalCenterEnable设为false，可能比设为true更居中，遇到文字不居中问题，可以尝试将kTextForceVerticalCenterEnable改为false看看效果。)
 
-TDesign Flutter 0.1.5版本之后，可以通过重写TDTextPaddingConfig的paddingRate和paddingExtraRate进行自定义适配,TDTextPaddingConfig使用方法可参考TDTextPage。如果kTextForceVerticalCenterEnable设为false也无法满足需求，则可以通过重写TDTextPaddingConfig自定义适配主流机型。
+TDesign Flutter 0.1.5版本之后，可以通过重写TDTextPaddingConfig的paddingRate和paddingExtraRate进行自定义适配,TTextPaddingConfig使用方法可参考TDTextPage。如果kTextForceVerticalCenterEnable设为false也无法满足需求，则可以通过重写TDTextPaddingConfig自定义适配主流机型。
 
 ## 新增组件
 如果有新增组件的想法，可以提issue，或者在已有issue补充。如果想提交代码，开发实现，可以拉负责人一起评估。
 
 ## Input相关
-- 自定义高度： TDInput没有自带height参数，可以通过外部嵌套SizeBox来修改高度。不过修改高度后，内部相关高度不会等比缩放，需要业务自己同步修改。
+- 自定义高度： TInput没有自带height参数，可以通过外部嵌套SizeBox来修改高度。不过修改高度后，内部相关高度不会等比缩放，需要业务自己同步修改。
 - 输入正则：Input的FilteringTextInputFormatter.allow(RegExp(r''))的正则是匹配即将输入的单个字符串的，不是匹配已输入的整个字符串的，按字符串匹配写的正则可能导致无法输入。
 
-## TDImage缓存问题
-TDImage基于系统Image组件封装，未单独处理缓存逻辑，使用的是系统组件自带的缓存。
+## TImage缓存问题
+TImage基于系统Image组件封装，未单独处理缓存逻辑，使用的是系统组件自带的缓存。
 
 ## Toast 使用context
 目前TDToast显示需要context，如果使用的是GetX，可以考虑是否要方法记录一个全局context，再给TDToast使用。如果后续实现方案优化了context，将更新本文档。

@@ -6,9 +6,9 @@
       loop: true,
       pagination: const SwiperPagination(
           alignment: Alignment.bottomRight,
-          builder: TDSwiperPagination.fraction),
+          builder: TSwiperPagination.fraction),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }

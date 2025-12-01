@@ -7,9 +7,9 @@
       outer: true,
       pagination: const SwiperPagination(
           alignment: Alignment.bottomCenter,
-          builder: TDSwiperPagination.dots),
+          builder: TSwiperPagination.dots),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }

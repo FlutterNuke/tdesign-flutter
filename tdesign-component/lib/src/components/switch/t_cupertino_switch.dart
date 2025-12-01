@@ -119,7 +119,7 @@ class TCupertinoSwitch extends StatefulWidget {
   /// The custom widget over the thumb.
   final Widget? thumbView;
 
-  /// {@template flutter.cupertino.TDCupertinoSwitch.dragStartBehavior}
+  /// {@template flutter.cupertino.TCupertinoSwitch.dragStartBehavior}
   /// Determines the way that drag start behavior is handled.
   ///
   /// If set to [DragStartBehavior.start], the drag behavior used to move the

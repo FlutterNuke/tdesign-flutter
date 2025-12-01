@@ -9,14 +9,14 @@
       children: [
         SizedBox(
           width: list.isEmpty ? size.width : 110,
-          child: TDSideBar(
+          child: TSideBar(
             height: demoHeight,
-            style: TDSideBarStyle.normal,
+            style: TSideBarStyle.normal,
             value: currentValue,
             controller: _sideBarController,
             loading: true,
             children: list
-                .map((ele) => TDSideBarItem(
+                .map((ele) => TSideBarItem(
                     label: ele.label ?? '',
                     badge: ele.badge,
                     value: ele.value,

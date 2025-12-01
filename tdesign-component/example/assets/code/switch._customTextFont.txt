@@ -2,8 +2,8 @@
   Widget _customTextFont(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
-        type: TDSwitchType.text,
+      const TSwitch(
+        type: TSwitchType.text,
         openText: '开',
         closeText: '关',
         thumbContentOffColor: Colors.red,

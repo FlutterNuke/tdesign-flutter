@@ -6,7 +6,7 @@
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: basicHStepsListData1,
             ),
           )

@@ -5,15 +5,15 @@
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 16),
-          child: TDText(
+          child: TText(
             '方形',
-            font: TDTheme.of(context).fontBodyMedium,
-            textColor: TDTheme.of(context).fontGyColor2.withOpacity(0.6),
+            font: TTheme.of(context).fontBodyMedium,
+            textColor: TTheme.of(context).fontGyColor2.withOpacity(0.6),
           ),
         ),
-        const TDImage(
+        const TImage(
           assetUrl: 'assets/img/image.png',
-          type: TDImageType.square,
+          type: TImageType.square,
         ),
       ],
     );

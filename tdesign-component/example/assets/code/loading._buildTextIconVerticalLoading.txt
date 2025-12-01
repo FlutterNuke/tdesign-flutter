@@ -1,15 +1,15 @@
 
   Widget _buildTextIconVerticalLoading(BuildContext context) {
     return _buildRow(const [
-      TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.circle,
+      TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.circle,
         text: '加载中…',
         axis: Axis.vertical,
       ),
-      TDLoading(
-        size: TDLoadingSize.small,
-        icon: TDLoadingIcon.activity,
+      TLoading(
+        size: TLoadingSize.small,
+        icon: TLoadingIcon.activity,
         text: '加载中…',
         axis: Axis.vertical,
       ),

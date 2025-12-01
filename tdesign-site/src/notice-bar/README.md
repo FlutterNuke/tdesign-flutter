@@ -26,7 +26,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
 Widget _textNoticeBar(BuildContext context) {
-  return const TDNoticeBar(context: '这是一条普通的通知信息');
+  return const TNoticeBar(context: '这是一条普通的通知信息');
 }</pre>
 
 </td-code-block>
@@ -38,7 +38,7 @@ Widget _textNoticeBar(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _scrollNoticeBar(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: '提示文字描述提示文字描述提示文字描述提示文字描述提示文字',
     marquee: true,
     speed: 50,
@@ -56,10 +56,10 @@ Widget _scrollNoticeBar(BuildContext context) {
 Widget _scrollIconNoticeBar(BuildContext context) {
   return const Padding(
     padding: EdgeInsets.only(top: 16),
-    child: TDNoticeBar(
+    child: TNoticeBar(
       context: '提示文字描述提示文字描述提示文字描述提示文字描述提示文字',
       speed: 50,
-      prefixIcon: TDIcons.sound,
+      prefixIcon: TIcons.sound,
       marquee: true,
     ),
   );
@@ -74,9 +74,9 @@ Widget _scrollIconNoticeBar(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _iconNoticeBar(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: '这是一条普通的通知信息',
-    prefixIcon: TDIcons.error_circle_filled,
+    prefixIcon: TIcons.error_circle_filled,
   );
 }</pre>
 
@@ -89,10 +89,10 @@ Widget _iconNoticeBar(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _closeNoticeBar(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: '这是一条普通的通知信息',
-    prefixIcon: TDIcons.error_circle_filled,
-    suffixIcon: TDIcons.close,
+    prefixIcon: TIcons.error_circle_filled,
+    suffixIcon: TIcons.close,
   );
 }</pre>
 
@@ -105,14 +105,14 @@ Widget _closeNoticeBar(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _entranceNoticeBar1(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: '这是一条普通的通知信息',
-    prefixIcon: TDIcons.error_circle_filled,
-    right: TDButton(
+    prefixIcon: TIcons.error_circle_filled,
+    right: TButton(
       text: '文字按钮',
-      type: TDButtonType.text,
-      theme: TDButtonTheme.primary,
-      size: TDButtonSize.extraSmall,
+      type: TButtonType.text,
+      theme: TButtonTheme.primary,
+      size: TButtonSize.extraSmall,
       height: 22,
       padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
     ),
@@ -130,10 +130,10 @@ Widget _entranceNoticeBar1(BuildContext context) {
 Widget _entranceNoticeBar2(BuildContext context) {
   return const Padding(
     padding: EdgeInsets.only(top: 16),
-    child: TDNoticeBar(
+    child: TNoticeBar(
       context: '这是一条普通的通知信息',
-      prefixIcon: TDIcons.error_circle_filled,
-      suffixIcon: TDIcons.chevron_right,
+      prefixIcon: TIcons.error_circle_filled,
+      suffixIcon: TIcons.chevron_right,
     ),
   );
 }</pre>
@@ -147,11 +147,11 @@ Widget _entranceNoticeBar2(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _customNoticeBar(BuildContext context) {
-  return TDNoticeBar(
+  return TNoticeBar(
     context: '这是一条普通的通知信息',
-    prefixIcon: TDIcons.notification,
-    suffixIcon: TDIcons.chevron_right,
-    style: TDNoticeBarStyle(backgroundColor: TDTheme.of(context).grayColor3),
+    prefixIcon: TIcons.notification,
+    suffixIcon: TIcons.chevron_right,
+    style: TNoticeBarStyle(backgroundColor: TTheme.of(context).grayColor3),
   );
 }</pre>
 
@@ -165,10 +165,10 @@ Widget _customNoticeBar(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _normalNoticeBar(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: '这是一条普通的通知信息',
-    prefixIcon: TDIcons.error_circle_filled,
-    theme: TDNoticeBarTheme.info,
+    prefixIcon: TIcons.error_circle_filled,
+    theme: TNoticeBarTheme.info,
   );
 }</pre>
 
@@ -181,10 +181,10 @@ Widget _normalNoticeBar(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _successNoticeBar(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: '这是一条普通的通知信息',
-    prefixIcon: TDIcons.error_circle_filled,
-    theme: TDNoticeBarTheme.success,
+    prefixIcon: TIcons.error_circle_filled,
+    theme: TNoticeBarTheme.success,
   );
 }</pre>
 
@@ -197,10 +197,10 @@ Widget _successNoticeBar(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _warningNoticeBar(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: '这是一条普通的通知信息',
-    prefixIcon: TDIcons.error_circle_filled,
-    theme: TDNoticeBarTheme.warning,
+    prefixIcon: TIcons.error_circle_filled,
+    theme: TNoticeBarTheme.warning,
   );
 }</pre>
 
@@ -213,10 +213,10 @@ Widget _warningNoticeBar(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _errorNoticeBar(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: '这是一条普通的通知信息',
-    prefixIcon: TDIcons.error_circle_filled,
-    theme: TDNoticeBarTheme.error,
+    prefixIcon: TIcons.error_circle_filled,
+    theme: TNoticeBarTheme.error,
   );
 }</pre>
 
@@ -234,7 +234,7 @@ Widget _cardNoticeBar(BuildContext context) {
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 16),
     decoration: BoxDecoration(
-      color: TDNoticeBarStyle.generateTheme(context).backgroundColor,
+      color: TNoticeBarStyle.generateTheme(context).backgroundColor,
       borderRadius: const BorderRadius.all(Radius.circular(9)),
       boxShadow: const [
         BoxShadow(
@@ -265,10 +265,10 @@ Widget _cardNoticeBar(BuildContext context) {
             borderRadius: BorderRadius.all(Radius.circular(12)),
           ),
           clipBehavior: Clip.hardEdge,
-          child: const TDNoticeBar(
+          child: const TNoticeBar(
             context: '这是一条普通的通知信息',
-            prefixIcon: TDIcons.error_circle_filled,
-            suffixIcon: TDIcons.chevron_right,
+            prefixIcon: TIcons.error_circle_filled,
+            suffixIcon: TIcons.chevron_right,
           ),
         ),
         Container(
@@ -288,7 +288,7 @@ Widget _cardNoticeBar(BuildContext context) {
 
 
 ## API
-### TDNoticeBar
+### TNoticeBar
 #### 简介
 
 #### 默认构造方法
@@ -297,14 +297,14 @@ Widget _cardNoticeBar(BuildContext context) {
 | --- | --- | --- | --- |
 | key |  | - |  |
 | context | dynamic | - | 文本内容 |
-| style | TDNoticeBarStyle? | - | 公告栏样式 |
+| style | TNoticeBarStyle? | - | 公告栏样式 |
 | left | Widget? | - | 左侧内容（自定义左侧内容，优先级高于prefixIcon） |
 | right | Widget? | - | 右侧内容（自定义右侧内容，优先级高于suffixIcon） |
 | speed | double? | 50 | 滚动速度 |
 | interval | int? | 3000 | 步进滚动间隔时间（毫秒） |
 | marquee | bool? | false | 跑马灯效果 |
 | direction | Axis? | Axis.horizontal | 滚动方向 |
-| theme | TDNoticeBarTheme? | TDNoticeBarTheme.info | 主题 |
+| theme | TNoticeBarTheme? | TNoticeBarTheme.info | 主题 |
 | prefixIcon | IconData? | - | 左侧图标 |
 | suffixIcon | IconData? | - | 右侧图标 |
 | onTap | ValueChanged? | - | 点击事件 |
@@ -313,7 +313,7 @@ Widget _cardNoticeBar(BuildContext context) {
 
 ```
 ```
- ### TDNoticeBarStyle
+ ### TNoticeBarStyle
 #### 简介
 公告栏样式
 #### 默认构造方法
@@ -332,7 +332,7 @@ Widget _cardNoticeBar(BuildContext context) {
 
 | 名称  | 说明 |
 | --- |  --- |
-| TDNoticeBarStyle.generateTheme  | 根据主题生成样式 |
+| TNoticeBarStyle.generateTheme  | 根据主题生成样式 |
 
 
   

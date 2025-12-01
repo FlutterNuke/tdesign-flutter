@@ -9,15 +9,15 @@
           child: Stack(
             alignment: Alignment.bottomLeft,
             children: [
-              TDButton(
+              TButton(
                 width: 80,
                 height: 48,
                 text: '按钮',
-                size: TDButtonSize.large,
+                size: TButtonSize.large,
               ),
               Positioned(
-                child: TDBadge(
-                  TDBadgeType.message,
+                child: TBadge(
+                  TBadgeType.message,
                   count: '8',
                 ),
                 right: 0,

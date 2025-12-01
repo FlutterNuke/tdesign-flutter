@@ -4,7 +4,7 @@
       children: [
         GestureDetector(
           onTap: () {
-            TDPicker.showMultiPicker(context,
+            TPicker.showMultiPicker(context,
                 leftText: '自定义取消',
                 rightText: '自定义确认',
                 title: '基础选择器', onConfirm: (selected) {
@@ -18,7 +18,7 @@
         ),
         GestureDetector(
           onTap: () {
-            TDPicker.showMultiLinkedPicker(context,
+            TPicker.showMultiLinkedPicker(context,
                 leftText: '自定义取消',
                 rightText: '自定义确认',
                 title: '联动选择器', onConfirm: (selected) {

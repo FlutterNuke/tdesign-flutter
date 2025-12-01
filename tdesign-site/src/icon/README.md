@@ -36,12 +36,12 @@ icon数量: 2114
             alignment: Alignment.topLeft,
             child: const Wrap(
               children: [
-                TDText('筛选Icon请前往TDesign官网(长按网址可复制):'),
+                TText('筛选Icon请前往TDesign官网(长按网址可复制):'),
                 SelectableText('https://tdesign.tencent.com/icons')
               ],
             ),
           ),
-          TDSearchBar(
+          TSearchBar(
             action: '搜索',
             onActionClick: (text) {
               setState(() {
@@ -50,7 +50,7 @@ icon数量: 2114
               });
               Future.delayed(const Duration(milliseconds: 30), () {
                 var list = [];
-                TDIcons.all.forEach((key, value) {
+                TIcons.all.forEach((key, value) {
                   if (value.name.contains(text)) {
                     list.add(value);
                   }
@@ -63,14 +63,14 @@ icon数量: 2114
             },
             onClearClick: (_) {
               setState(() {
-                iconList = TDIcons.all.values;
+                iconList = TIcons.all.values;
               });
             },
           ),
           Container(
-            child: TDButton(
+            child: TButton(
               text: showBorder ? '隐藏边框' : '显示边框',
-              shape: TDButtonShape.filled,
+              shape: TButtonShape.filled,
               onTap: () {
                 setState(() {
                   showBorder = !showBorder;
@@ -84,7 +84,7 @@ icon数量: 2114
               return Container(
                 height: 300,
                 alignment: Alignment.center,
-                child: isLoading ? const TDText('加载中...') : const TDText('暂无内容'),
+                child: isLoading ? const TText('加载中...') : const TText('暂无内容'),
               );
             }
             return SizedBox(
@@ -107,10 +107,10 @@ icon数量: 2114
                           child: Column(
                             children: [
                               Container(
-                                color: showBorder ? TDTheme.of(context).brandDisabledColor : Colors.transparent,
+                                color: showBorder ? TTheme.of(context).brandDisabledColor : Colors.transparent,
                                 child: Icon(iconData1),
                               ),
-                              TDText(iconData1.name)
+                              TText(iconData1.name)
                             ],
                           ),
                         ),
@@ -121,10 +121,10 @@ icon数量: 2114
                             child: Column(
                               children: [
                                 Container(
-                                  color: showBorder ? TDTheme.of(context).brandDisabledColor : Colors.transparent,
+                                  color: showBorder ? TTheme.of(context).brandDisabledColor : Colors.transparent,
                                   child: Icon(iconData2),
                                 ),
-                                TDText(iconData2.name)
+                                TText(iconData2.name)
                               ],
                             ),
                           )
@@ -143,13 +143,13 @@ icon数量: 2114
 
 
 ## API
-### TDIcons
+### TIcons
 
 #### 工厂构造方法
 
 | 名称  | 说明 |
 | --- |  --- |
-| TDIcons._  | 私有构造方法，不支持外部创建，仅提供静态常量给外部使用 |
+| TIcons._  | 私有构造方法，不支持外部创建，仅提供静态常量给外部使用 |
 
 
   

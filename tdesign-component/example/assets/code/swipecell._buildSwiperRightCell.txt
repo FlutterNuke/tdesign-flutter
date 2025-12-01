@@ -2,18 +2,18 @@
   Widget _buildSwiperRightCell(BuildContext context) {
     // 屏幕宽度
     var screenWidth = MediaQuery.of(context).size.width;
-    return TDSwipeCell(
+    return TSwipeCell(
       groupTag: 'test',
-      left: TDSwipeCellPanel(
+      left: TSwipeCellPanel(
         extentRatio: 60 / screenWidth,
         children: [
-          TDSwipeCellAction(
-            backgroundColor: TDTheme.of(context).brandColor7,
+          TSwipeCellAction(
+            backgroundColor: TTheme.of(context).brandColor7,
             label: '选择',
           ),
         ],
       ),
-      cell: const TDCell(
+      cell: const TCell(
         title: '右滑操作',
         note: '辅助信息',
       ),

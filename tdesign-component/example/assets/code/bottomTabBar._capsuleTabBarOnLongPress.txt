@@ -1,12 +1,12 @@
 
   Widget _capsuleTabBarOnLongPress(BuildContext context) {
-    return TDBottomTabBar(
-      TDBottomTabBarBasicType.iconText,
-      componentType: TDBottomTabBarComponentType.label,
-      outlineType: TDBottomTabBarOutlineType.capsule,
+    return TBottomTabBar(
+      TBottomTabBarBasicType.iconText,
+      componentType: TBottomTabBarComponentType.label,
+      outlineType: TBottomTabBarOutlineType.capsule,
       useVerticalDivider: true,
       navigationTabs: [
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -15,10 +15,10 @@
           },
           onLongPress: () {
             print('长按了标签1');
-            TDToast.showText('长按了标签1', context: context);
+            TToast.showText('长按了标签1', context: context);
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -26,10 +26,10 @@
             onTapTab(context, '标签2');
           },
           onLongPress: () {
-            TDToast.showText('长按了标签2', context: context);
+            TToast.showText('长按了标签2', context: context);
           },
         ),
-        TDBottomTabBarTabConfig(
+        TBottomTabBarTabConfig(
           selectedIcon: _selectedIcon,
           unselectedIcon: _unSelectedIcon,
           tabText: '标签',
@@ -37,7 +37,7 @@
             onTapTab(context, '标签3');
           },
           onLongPress: () {
-            TDToast.showText('长按了标签3', context: context);
+            TToast.showText('长按了标签3', context: context);
           },
         ),
       ],

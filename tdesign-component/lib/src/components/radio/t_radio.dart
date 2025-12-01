@@ -265,7 +265,7 @@ class TRadioGroup extends TCheckboxGroup {
               if (element.cardMode == false) {
                 throw FlutterError(
                     'if use cardMode at TRadioGroup, then every '
-                    'TDRadio should set it\'s own carMode to true.');
+                    'TRadio should set it\'s own carMode to true.');
               }
               if (element.subTitle != null && direction == Axis.horizontal) {
                 throw FlutterError(

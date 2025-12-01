@@ -7,9 +7,9 @@
       scrollDirection:Axis.vertical,
       pagination: const SwiperPagination(
           alignment: Alignment.bottomRight,
-          builder: TDSwiperPagination.dotsBar),
+          builder: TSwiperPagination.dotsBar),
       itemBuilder: (BuildContext context, int index) {
-        return const TDImage(assetUrl: 'assets/img/image.png',);
+        return const TImage(assetUrl: 'assets/img/image.png',);
       },
     );
   }

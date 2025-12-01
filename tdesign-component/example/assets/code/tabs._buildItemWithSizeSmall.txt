@@ -1,20 +1,20 @@
 
   Widget _buildItemWithSizeSmall(BuildContext context) {
     var tabs = [
-      const TDTab(
+      const TTab(
         text: '小尺寸',
       ),
-      const TDTab(
+      const TTab(
         text: '选项',
       ),
-      const TDTab(
+      const TTab(
         text: '选项',
       ),
-      const TDTab(
+      const TTab(
         text: '选项',
       ),
     ];
-    return TDTabBar(
+    return TTabBar(
         tabs: tabs,
         controller: TabController(length: 4, vsync: this),
         backgroundColor: Colors.white,

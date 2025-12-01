@@ -2,21 +2,21 @@
   Widget _verticalTextDivider(BuildContext context) {
     return Column(
       children: const [
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.left,
         ),
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.center,
         ),
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.right,
         ),

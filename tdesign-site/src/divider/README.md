@@ -30,7 +30,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
       height: 20,
       child: Container(
         alignment: Alignment.center,
-        child: const TDDivider(),
+        child: const TDivider(),
       ),
     );
   }</pre>
@@ -46,21 +46,21 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _verticalTextDivider(BuildContext context) {
     return Column(
       children: const [
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.left,
         ),
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.center,
         ),
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.right,
         ),
@@ -86,26 +86,26 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           const SizedBox(
             width: 16,
           ),
-          TDText(
+          TText(
             '文字信息',
-            textColor: TDTheme.of(context).fontGyColor1.withOpacity(0.9),
+            textColor: TTheme.of(context).fontGyColor1.withOpacity(0.9),
           ),
-          const TDDivider(
+          const TDivider(
             width: 0.5,
             height: 12,
             margin: EdgeInsets.only(left: 16, right: 16),
           ),
-          TDText('文字信息',
-              textColor: TDTheme.of(context).fontGyColor1.withOpacity(0.9)),
-          const TDDivider(
+          TText('文字信息',
+              textColor: TTheme.of(context).fontGyColor1.withOpacity(0.9)),
+          const TDivider(
             width: 0.5,
             height: 12,
             margin: EdgeInsets.only(left: 16, right: 16),
             isDashed: true,
             direction: Axis.vertical,
           ),
-          TDText('文字信息',
-              textColor: TDTheme.of(context).fontGyColor1.withOpacity(0.9)),
+          TText('文字信息',
+              textColor: TTheme.of(context).fontGyColor1.withOpacity(0.9)),
         ],
       ),
     );
@@ -126,13 +126,13 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           isDashed: true,
         ),
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.left,
           isDashed: true,
@@ -140,7 +140,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.center,
           isDashed: true,
@@ -148,7 +148,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.right,
           isDashed: true,
@@ -162,7 +162,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDDivider
+### TDivider
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |

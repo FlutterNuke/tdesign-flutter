@@ -60,7 +60,7 @@ class TestPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const TText('TDSteps Test Page'),
+        title: const TText('TSteps Test Page'),
       ),
       body: Form(
         key: _formKey,

@@ -40,7 +40,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildNormalTDText(BuildContext context) {
-    return TDText(
+    return TText(
       exampleTxt,
     );
   }</pre>
@@ -54,11 +54,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildGeneralProp(BuildContext context) {
-    return TDText(
+    return TText(
       exampleTxt,
-      font: TDTheme.of(context).fontHeadlineLarge,
-      textColor: TDTheme.of(context).brandNormalColor,
-      backgroundColor: TDTheme.of(context).brandFocusColor,
+      font: TTheme.of(context).fontHeadlineLarge,
+      textColor: TTheme.of(context).brandNormalColor,
+      backgroundColor: TTheme.of(context).brandFocusColor,
     );
   }</pre>
 
@@ -71,11 +71,11 @@ style覆盖textColor,不覆盖font:
 
   <pre slot="Dart" lang="javascript">
   Widget _buildStyleCoverColor(BuildContext context) {
-    return TDText(
+    return TText(
       exampleTxt,
-      font: TDTheme.of(context).fontBodyLarge,
-      textColor: TDTheme.of(context).brandNormalColor,
-      style: TextStyle(color: TDTheme.of(context).errorNormalColor),
+      font: TTheme.of(context).fontBodyLarge,
+      textColor: TTheme.of(context).brandNormalColor,
+      style: TextStyle(color: TTheme.of(context).errorNormalColor),
     );
   }</pre>
 
@@ -88,45 +88,45 @@ style覆盖textColor和font:
 
   <pre slot="Dart" lang="javascript">
   Widget _buildStyleCoverColorAndFont(BuildContext context) {
-    return TDText(
+    return TText(
       exampleTxt,
-      font: TDTheme.of(context).fontBodyLarge,
-      textColor: TDTheme.of(context).brandNormalColor,
+      font: TTheme.of(context).fontBodyLarge,
+      textColor: TTheme.of(context).brandNormalColor,
     );
   }</pre>
 
 </td-code-block>
                                   
 
-TDText.rich测试:
+TText.rich测试:
             
 <td-code-block panel="Dart">
 
   <pre slot="Dart" lang="javascript">
   Widget _buildRichText(BuildContext context) {
-    return TDText.rich(
+    return TText.rich(
       TextSpan(children: [
-        TDTextSpan(
-            text: 'TDTextSpan1',
-            font: TDTheme.of(context).fontTitleExtraLarge,
-            textColor: TDTheme.of(context).warningNormalColor,
+        TTextSpan(
+            text: 'TTextSpan1',
+            font: TTheme.of(context).fontTitleExtraLarge,
+            textColor: TTheme.of(context).warningNormalColor,
             isTextThrough: true,
-            lineThroughColor: TDTheme.of(context).brandNormalColor,
-            style: TextStyle(color: TDTheme.of(context).errorNormalColor)),
+            lineThroughColor: TTheme.of(context).brandNormalColor,
+            style: TextStyle(color: TTheme.of(context).errorNormalColor)),
         TextSpan(
             text: 'TextSpan2',
             style: TextStyle(
-                fontSize: 14, color: TDTheme.of(context).brandNormalColor)),
+                fontSize: 14, color: TTheme.of(context).brandNormalColor)),
         const WidgetSpan(
             child: Icon(
-          TDIcons.setting,
+          TIcons.setting,
           size: 24,
         )),
       ]),
-      font: TDTheme.of(context).fontBodyLarge,
-      textColor: TDTheme.of(context).brandNormalColor,
+      font: TTheme.of(context).fontBodyLarge,
+      textColor: TTheme.of(context).brandNormalColor,
       style:
-          TextStyle(color: TDTheme.of(context).errorNormalColor, fontSize: 32),
+          TextStyle(color: TTheme.of(context).errorNormalColor, fontSize: 32),
     );
   }</pre>
 
@@ -139,9 +139,9 @@ TDText.rich测试:
 
   <pre slot="Dart" lang="javascript">
   Widget _getSystemText(BuildContext context) {
-    return TDText(
+    return TText(
       exampleTxt,
-      backgroundColor: TDTheme.of(context).brandFocusColor,
+      backgroundColor: TTheme.of(context).brandFocusColor,
     ).getRawText(context: context);
   }</pre>
 
@@ -154,11 +154,11 @@ TDText.rich测试:
 
   <pre slot="Dart" lang="javascript">
   Widget _buildVerticalCenterText(BuildContext context) {
-    return TDText(
+    return TText(
       '中华人民共和国腾讯科技',
       // font: Font(size: 100, lineHeight: 100),
       forceVerticalCenter: true,
-      backgroundColor: TDTheme.of(context).brandFocusColor,
+      backgroundColor: TTheme.of(context).brandFocusColor,
     );
   }</pre>
 
@@ -171,7 +171,7 @@ TDText.rich测试:
 
   <pre slot="Dart" lang="javascript">
   Widget _buildCustomPaddingText(BuildContext context) {
-    return TDTextConfiguration(
+    return TTextConfiguration(
       paddingConfig: CustomTextPaddingConfig(),
       child: const CustomPaddingText(),
     );
@@ -182,7 +182,7 @@ TDText.rich测试:
 
 
 ## API
-### TDText
+### TText
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -218,11 +218,11 @@ TDText.rich测试:
 
 | 名称  | 说明 |
 | --- |  --- |
-| TDText.rich  | 富文本构造方法 |
+| TText.rich  | 富文本构造方法 |
 
 ```
 ```
- ### TDTextSpan
+ ### TTextSpan
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -246,14 +246,14 @@ TDText.rich测试:
 
 ```
 ```
- ### TDTextConfiguration
+ ### TTextConfiguration
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | key |  | - |  |
 | child |  | - |  |
-| paddingConfig | TDTextPaddingConfig? | - | forceVerticalCenter=true时，内置padding配置 |
+| paddingConfig | TTextPaddingConfig? | - | forceVerticalCenter=true时，内置padding配置 |
 | globalFontFamily | FontFamily? | - | 全局字体,kTextNeedGlobalFontFamily=true时生效 |
 
 

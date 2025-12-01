@@ -2,7 +2,7 @@
   Widget _buildSwitchWithText(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(isOn: true, type: TDSwitchType.text),
+      const TSwitch(isOn: true, type: TSwitchType.text),
       title: '带文字开关',
     );
   }

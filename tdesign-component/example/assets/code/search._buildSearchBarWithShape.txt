@@ -4,9 +4,9 @@
       children: [
         _buildColumnWidgets(
           context,
-          TDSearchBar(
+          TSearchBar(
             placeHolder: '搜索预设文案',
-            style: TDSearchStyle.square,
+            style: TSearchStyle.square,
             onTextChanged: (String text) {
               setState(() {
                 inputText = text;
@@ -16,9 +16,9 @@
         ),
         _buildColumnWidgets(
           context,
-          TDSearchBar(
+          TSearchBar(
             placeHolder: '搜索预设文案',
-            style: TDSearchStyle.round,
+            style: TSearchStyle.round,
             onTextChanged: (String text) {
               setState(() {
                 inputText = text;

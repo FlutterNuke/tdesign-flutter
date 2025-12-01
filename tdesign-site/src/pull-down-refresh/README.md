@@ -27,7 +27,7 @@ import 'package:easy_refresh/easy_refresh.dart';
   Widget _buildRefresh(BuildContext context) {
     return EasyRefresh(
       // 下拉样式
-      header: TDRefreshHeader(),
+      header: TRefreshHeader(),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -35,26 +35,26 @@ import 'package:easy_refresh/easy_refresh.dart';
               height: 171,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: TDTheme.of(context).grayColor1,
-                  borderRadius: BorderRadius.all(Radius.circular(TDTheme.of(context).radiusLarge))),
+                  color: TTheme.of(context).grayColor1,
+                  borderRadius: BorderRadius.all(Radius.circular(TTheme.of(context).radiusLarge))),
               margin: const EdgeInsets.only(left: 16, right: 16),
-              child: TDText(
+              child: TText(
                 PlatformUtil.isWeb ? 'Web暂不支持下拉，请下载安装apk体验' : '拖拽该区域演示 顶部下拉刷新',
-                font: TDTheme.of(context).fontBodyLarge,
-                textColor: TDTheme.of(context).fontGyColor4,
+                font: TTheme.of(context).fontBodyLarge,
+                textColor: TTheme.of(context).fontGyColor4,
               ),
             ),
             Container(
               height: 70,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: TDTheme.of(context).grayColor1,
-                  borderRadius: BorderRadius.all(Radius.circular(TDTheme.of(context).radiusLarge))),
+                  color: TTheme.of(context).grayColor1,
+                  borderRadius: BorderRadius.all(Radius.circular(TTheme.of(context).radiusLarge))),
               margin: const EdgeInsets.only(top: 16, left: 16, right: 16),
-              child: TDText(
+              child: TText(
                 '下拉刷新次数：${count}',
-                font: TDTheme.of(context).fontBodyLarge,
-                textColor: TDTheme.of(context).fontGyColor4,
+                font: TTheme.of(context).fontBodyLarge,
+                textColor: TTheme.of(context).fontGyColor4,
               ),
             ),
             const SizedBox(height: 500),
@@ -77,7 +77,7 @@ import 'package:easy_refresh/easy_refresh.dart';
 
 
 ## API
-### TDRefreshHeader
+### TRefreshHeader
 #### 简介
 TDesign刷新头部
  结合EasyRefresh类实现下拉刷新,继承自Header类，字段含义与父类一致
@@ -99,7 +99,7 @@ TDesign刷新头部
 | enableInfiniteRefresh | bool | false | 是否开启无限刷新 |
 | infiniteHitOver |  | - |  |
 | overScroll | bool | true | 越界滚动([enableInfiniteRefresh]为true或[infiniteOffset]有值时生效) |
-| loadingIcon | TDLoadingIcon | TDLoadingIcon.circle | loading样式 |
+| loadingIcon | TLoadingIcon | TLoadingIcon.circle | loading样式 |
 | backgroundColor | Color? | - | 背景颜色 |
 | spring |  | - |  |
 | horizontalSpring |  | - |  |

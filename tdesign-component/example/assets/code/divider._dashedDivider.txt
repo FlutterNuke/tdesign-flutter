@@ -5,13 +5,13 @@
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           isDashed: true,
         ),
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.left,
           isDashed: true,
@@ -19,7 +19,7 @@
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.center,
           isDashed: true,
@@ -27,7 +27,7 @@
         SizedBox(
           height: 20,
         ),
-        TDDivider(
+        TDivider(
           text: '文字信息',
           alignment: TextAlignment.right,
           isDashed: true,

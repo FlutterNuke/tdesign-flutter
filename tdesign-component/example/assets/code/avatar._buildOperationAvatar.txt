@@ -6,12 +6,12 @@
     return Container(
       alignment: Alignment.centerLeft,
       padding: const EdgeInsets.only(left: 16),
-      child: TDAvatar(
-          size: TDAvatarSize.medium,
-          type: TDAvatarType.operation,
+      child: TAvatar(
+          size: TAvatarSize.medium,
+          type: TAvatarType.operation,
           avatarDisplayListAsset: avatarList,
           onTap: () {
-            TDToast.showText('点击了操作', context: context);
+            TToast.showText('点击了操作', context: context);
           }),
     );
   }

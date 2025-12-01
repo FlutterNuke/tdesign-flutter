@@ -26,7 +26,7 @@
 - 提供 TDesign 设计风格的 Flutter UI 组件库。
 - 支持根据 App 设计风格定制主题。
 - 提供常用 Icon 库，支持定制替换。
-- 根据 TDesign 规范定义颜色组，可在 TDColors 中查看，方便适配 TDesign 规范的组件。
+- 根据 TDesign 规范定义颜色组，可在 TColors 中查看，方便适配 TDesign 规范的组件。
 - 色值声明类可以添加默认颜色，实时查看色值默认显示效果。
 
 # 🔨 使用
@@ -51,20 +51,20 @@ dependencies:
 import 'package:tdesign_flutter/tdesign_flutter.dart';
 ```
 
-- 您可以通过json文件配置主题样式，如颜色、字体大小、字体样式、角半径和阴影。使用 `TDTheme.of(context)` 或 `TDTheme.defaultData()` 获取主题数据。
-  建议组件使用 `TDTheme.of(context)`，除非组件不需要遵循本地主题，在这种情况下可以使用 `TDTheme.defaultData()`。
+- 您可以通过json文件配置主题样式，如颜色、字体大小、字体样式、角半径和阴影。使用 `TTheme.of(context)` 或 `TTheme.defaultData()` 获取主题数据。
+  建议组件使用 `TTheme.of(context)`，除非组件不需要遵循本地主题，在这种情况下可以使用 `TTheme.defaultData()`。
 
 颜色，字体，圆角等使用示例：
 
 ```dart
-TDTheme.of(context).brandNormalColor
-TDTheme.defaultData().fontBodyLarge
+TTheme.of(context).brandNormalColor
+TTheme.defaultData().fontBodyLarge
 ```
 
 - TDesign的图标不遵循主题，它们都是ttf格式，使用示例：
 
 ```dart
-Icon(TDIcons.activity)
+Icon(TIcons.activity)
 ```
 
 - 有关更多使用示例，请参阅 [example/lib/page](tdesign-component/example/lib/page)

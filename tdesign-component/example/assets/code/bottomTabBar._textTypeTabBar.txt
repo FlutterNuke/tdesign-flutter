@@ -5,24 +5,24 @@
         int currentSelectIndex) {
           print('点击了 $tabName, 当前index: $currentIndex, 当前选择index: $currentSelectIndex');
       if (currentIndex == currentSelectIndex) {
-        TDToast.showText('$tabName 已经被选中了', context: context);
+        TToast.showText('$tabName 已经被选中了', context: context);
         return;
       }
-      TDToast.showText('点击了 $tabName', context: context);
+      TToast.showText('点击了 $tabName', context: context);
     }
 
-    return TDBottomTabBar(TDBottomTabBarBasicType.text,
+    return TBottomTabBar(TBottomTabBarBasicType.text,
         currentIndex: _currentIndex,
         useVerticalDivider: false,
         navigationTabs: [
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             onTap: () {
               _onTapTab(context, '标签1', 0, _currentIndex);
               _currentIndex = 0;
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             onTap: () {
               _onTapTab(context, '标签2', 1, _currentIndex);

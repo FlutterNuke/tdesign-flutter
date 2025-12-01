@@ -26,12 +26,12 @@
     
     颜色，字体，圆角等使用示例：
 ```
-    TDTheme.of(context).brandNormalColor
-    TDTheme.defaultData().fontBodyLarge
+    TTheme.of(context).brandNormalColor
+    TTheme.defaultData().fontBodyLarge
 ```
 - TDesign的Icon不跟随主题，都是ttf格式,使用示例：
 ```
-    Icon(TDIcons.activity)
+    Icon(TIcons.activity)
 ```
     
 - 使用示例：`example/lib/page/`
@@ -43,7 +43,7 @@
 ```
     MaterialApp(
       theme: ThemeData(
-        extensions: [TDThemeData.fromJson('test', testThemeConfig)!],
+        extensions: [TThemeData.fromJson('test', testThemeConfig)!],
       )
       ……
     )
@@ -82,7 +82,7 @@
 3.将主题json加载进TDTheme,美观的自定义主题就设置完成了.
 ```
     var jsonString = await rootBundle.loadString('assets/theme.json');
-    var _themeData = TDThemeData.fromJson('green', jsonString);
+    var _themeData = TThemeData.fromJson('green', jsonString);
     // ……
     MaterialApp(
       title: 'TDesign Flutter Example',
@@ -94,13 +94,13 @@
 ```
 
 # 国际化
-TD组件库内部不内置国际化语言,但支持与flutter的国际化能力搭配使用.可以继承TDResourceDelegate类,该类抽离了组件内部所有文字资源,重新获取文字的方法,进行国际化处理,并通过 TDTheme.setResourceBuilder 注入.
+TD组件库内部不内置国际化语言,但支持与flutter的国际化能力搭配使用.可以继承TDResourceDelegate类,该类抽离了组件内部所有文字资源,重新获取文字的方法,进行国际化处理,并通过 TTheme.setResourceBuilder 注入.
 示例代码:
 
 1. 重写TDResourceDelegate类:
 ```
 /// 国际化资源代理
-class IntlResourceDelegate extends TDResourceDelegate {
+class IntlResourceDelegate extends TResourceDelegate {
   IntlResourceDelegate(this.context);
 
   BuildContext context;
@@ -127,7 +127,7 @@ class IntlResourceDelegate extends TDResourceDelegate {
       home: Builder(
         builder: (context) {
           // 设置文案代理,国际化需要在MaterialApp初始化完成之后才生效,而且需要每次更新context
-          TDTheme.setResourceBuilder((context) => delegate..updateContext(context), needAlwaysBuild: true);
+          TTheme.setResourceBuilder((context) => delegate..updateContext(context), needAlwaysBuild: true);
           return MyHomePage(
             title: AppLocalizations.of(context)?.components ?? '',
           );
@@ -167,7 +167,7 @@ class IntlResourceDelegate extends TDResourceDelegate {
 - 文本居中:
  > 0.1.4版本:Flutter 3.16之后,修改了渲染引擎,导致启用forceVerticalCenter参数的组件字体偏移更多,不再居中.可以通过设置kTextForceVerticalCenterEnable=false来禁用字体居中功能,让组件显示与官方Text一致
  > 
- > 0.1.5版本:适配了Android和iOS双端基础系统字体的中文居中,其他语言的字体,可以通过重写TDTextPaddingConfig的paddingRate和paddingExtraRate进行自定义适配,TDTextPaddingConfig使用方法可参考TDTextPage.
+ > 0.1.5版本:适配了Android和iOS双端基础系统字体的中文居中,其他语言的字体,可以通过重写TDTextPaddingConfig的paddingRate和paddingExtraRate进行自定义适配,TTextPaddingConfig使用方法可参考TDTextPage.
 
 - 修改全局字体:
 > 设置kTextNeedGlobalFontFamily=true,然后设置TDTextConfiguration的globalFontFamily参数.(0.1.6版本开始支持)

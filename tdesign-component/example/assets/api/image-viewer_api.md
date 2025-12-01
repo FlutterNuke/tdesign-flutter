@@ -1,5 +1,5 @@
 ## API
-### TDImageViewerWidget
+### TImageViewerWidget
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -32,7 +32,7 @@
 
 ```
 ```
- ### TDImageViewer
+ ### TImageViewer
 
 #### 静态方法
 

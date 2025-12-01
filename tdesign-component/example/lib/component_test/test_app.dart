@@ -63,9 +63,9 @@ Padding body(BuildContext context) {
                     ),
                     //  // 先加载再显示
                     // child: FutureBuilder(
-                    //     future:TDFontLoader.load(name: 'test1', fontFamilyUrl: 'https://xinyue.qq.com/m/flutter_web/assets/packages/flutter_component/fonts/FZLanTingHeiS-EB-GB.ttf'),
+                    //     future:TFontLoader.load(name: 'test1', fontFamilyUrl: 'https://xinyue.qq.com/m/flutter_web/assets/packages/flutter_component/fonts/FZLanTingHeiS-EB-GB.ttf'),
                     //   initialData: false,
-                    //   builder: (_,data)=>TDText(
+                    //   builder: (_,data)=>TText(
                     //     (data.data ?? false) ? '测试文案' : '',
                     //     textColor: TTheme.of(context).brandNormalColor,
                     //     fontFamilyUrl: 'https://xinyue.qq.com/m/flutter_web/assets/packages/flutter_component/fonts/FZLanTingHeiS-EB-GB.ttf',

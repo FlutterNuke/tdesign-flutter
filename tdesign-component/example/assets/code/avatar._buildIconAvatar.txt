@@ -4,14 +4,14 @@
       padding: const EdgeInsets.only(left: 16),
       child: Row(
         children: const [
-          TDAvatar(
-            size: TDAvatarSize.medium,
-            type: TDAvatarType.icon,),
+          TAvatar(
+            size: TAvatarSize.medium,
+            type: TAvatarType.icon,),
           SizedBox(width: 32,),
-          TDAvatar(
-            size: TDAvatarSize.medium,
-            type: TDAvatarType.icon,
-            shape: TDAvatarShape.square,
+          TAvatar(
+            size: TAvatarSize.medium,
+            type: TAvatarType.icon,
+            shape: TAvatarShape.square,
           ),
         ],
       ),

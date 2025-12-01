@@ -26,12 +26,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _basicTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1', ellipsis: true),
-        TDTableCol(title: '标题', colKey: 'title2'),
-        TDTableCol(title: '标题', colKey: 'title3'),
-        TDTableCol(title: '标题', colKey: 'title4')
+        TTableCol(title: '标题', colKey: 'title1', ellipsis: true),
+        TTableCol(title: '标题', colKey: 'title2'),
+        TTableCol(title: '标题', colKey: 'title3'),
+        TTableCol(title: '标题', colKey: 'title4')
       ],
       data: _getData(9),
     );
@@ -46,12 +46,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _sortableTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1', ellipsis: true, sortable: true),
-        TDTableCol(title: '标题', colKey: 'title2', sortable: true),
-        TDTableCol(title: '标题', colKey: 'title3', sortable: true),
-        TDTableCol(title: '标题', colKey: 'title4', sortable: true)
+        TTableCol(title: '标题', colKey: 'title1', ellipsis: true, sortable: true),
+        TTableCol(title: '标题', colKey: 'title2', sortable: true),
+        TTableCol(title: '标题', colKey: 'title3', sortable: true),
+        TTableCol(title: '标题', colKey: 'title4', sortable: true)
       ],
       data: _getData(9),
     );
@@ -66,30 +66,30 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _operationBtnTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1', ellipsis: true),
-        TDTableCol(title: '标题', colKey: 'title2'),
-        TDTableCol(title: '标题', colKey: 'title3'),
-        TDTableCol(
+        TTableCol(title: '标题', colKey: 'title1', ellipsis: true),
+        TTableCol(title: '标题', colKey: 'title2'),
+        TTableCol(title: '标题', colKey: 'title3'),
+        TTableCol(
           title: '标题',
           colKey: 'title4',
           cellBuilder: (BuildContext context, int index) {
             return Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TDText(
+                TText(
                   '修改',
                   style: TextStyle(
-                    color: TDTheme.of(context).brandNormalColor,
+                    color: TTheme.of(context).brandNormalColor,
                     fontSize: 14,
                     height: 1,
                   ),
                 ),
-                TDText(
+                TText(
                   '通过',
                   style: TextStyle(
-                    color: TDTheme.of(context).brandNormalColor,
+                    color: TTheme.of(context).brandNormalColor,
                     fontSize: 14,
                     height: 1,
                   ),
@@ -112,20 +112,20 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _operationIconTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1', ellipsis: true),
-        TDTableCol(title: '标题', colKey: 'title2'),
-        TDTableCol(title: '标题', colKey: 'title3'),
-        TDTableCol(
+        TTableCol(title: '标题', colKey: 'title1', ellipsis: true),
+        TTableCol(title: '标题', colKey: 'title2'),
+        TTableCol(title: '标题', colKey: 'title3'),
+        TTableCol(
           title: '标题',
           colKey: 'title4',
           cellBuilder: (BuildContext context, int index) {
             return Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(TDIcons.upload, color: TDTheme.of(context).brandNormalColor, size: 16),
-                Icon(TDIcons.delete, color: TDTheme.of(context).brandNormalColor, size: 16),
+                Icon(TIcons.upload, color: TTheme.of(context).brandNormalColor, size: 16),
+                Icon(TIcons.delete, color: TTheme.of(context).brandNormalColor, size: 16),
               ],
             );
           },
@@ -144,12 +144,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _fixedFirstColTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1'),
-        TDTableCol(title: '标题', colKey: 'title2'),
-        TDTableCol(title: '标题', colKey: 'title3'),
-        TDTableCol(title: '标题', colKey: 'title4', fixed: TDTableColFixed.left),
+        TTableCol(title: '标题', colKey: 'title1'),
+        TTableCol(title: '标题', colKey: 'title2'),
+        TTableCol(title: '标题', colKey: 'title3'),
+        TTableCol(title: '标题', colKey: 'title4', fixed: TTableColFixed.left),
       ],
       data: _getData(10),
     );
@@ -164,30 +164,30 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _fixedEndColTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1'),
-        TDTableCol(title: '标题', colKey: 'title2'),
-        TDTableCol(title: '标题', colKey: 'title3'),
-        TDTableCol(
+        TTableCol(title: '标题', colKey: 'title1'),
+        TTableCol(title: '标题', colKey: 'title2'),
+        TTableCol(title: '标题', colKey: 'title3'),
+        TTableCol(
           title: '标题',
           colKey: 'title4',
-          fixed: TDTableColFixed.right,
+          fixed: TTableColFixed.right,
           cellBuilder: (BuildContext context, int index) {
             return Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TDText(
+                TText(
                   '修改',
                   style: TextStyle(
-                    color: TDTheme.of(context).brandNormalColor,
+                    color: TTheme.of(context).brandNormalColor,
                     fontSize: 14,
                   ),
                 ),
-                TDText(
+                TText(
                   '通过',
                   style: TextStyle(
-                    color: TDTheme.of(context).brandNormalColor,
+                    color: TTheme.of(context).brandNormalColor,
                     fontSize: 14,
                   ),
                 ),
@@ -209,11 +209,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _horizontalScrollTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1', width: 160),
-        TDTableCol(title: '标题', colKey: 'title2', width: 160),
-        TDTableCol(title: '标题', colKey: 'title3', width: 160),
+        TTableCol(title: '标题', colKey: 'title1', width: 160),
+        TTableCol(title: '标题', colKey: 'title2', width: 160),
+        TTableCol(title: '标题', colKey: 'title3', width: 160),
       ],
       data: _getData2(),
     );
@@ -229,13 +229,13 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _stripeTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       stripe: true,
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1', ellipsis: true),
-        TDTableCol(title: '标题', colKey: 'title2'),
-        TDTableCol(title: '标题', colKey: 'title3'),
-        TDTableCol(title: '标题', colKey: 'title4')
+        TTableCol(title: '标题', colKey: 'title1', ellipsis: true),
+        TTableCol(title: '标题', colKey: 'title2'),
+        TTableCol(title: '标题', colKey: 'title3'),
+        TTableCol(title: '标题', colKey: 'title4')
       ],
       data: _getData(9),
     );
@@ -250,13 +250,13 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _borderTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       bordered: true,
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1', ellipsis: true),
-        TDTableCol(title: '标题', colKey: 'title2'),
-        TDTableCol(title: '标题', colKey: 'title3'),
-        TDTableCol(title: '标题', colKey: 'title4')
+        TTableCol(title: '标题', colKey: 'title1', ellipsis: true),
+        TTableCol(title: '标题', colKey: 'title2'),
+        TTableCol(title: '标题', colKey: 'title3'),
+        TTableCol(title: '标题', colKey: 'title4')
       ],
       data: _getData(9),
     );
@@ -267,7 +267,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDTableCol
+### TTableCol
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -275,11 +275,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 | title | String? | - | 表头标题 |
 | colKey | String? | - | 列取值字段 |
 | width | double? | - | 列宽 |
-| fixed | TDTableColFixed? | TDTableColFixed.none | 固定列 |
+| fixed | TTableColFixed? | TTableColFixed.none | 固定列 |
 | ellipsis | bool? | - | 列内容超出时是否省略 |
 | ellipsisTitle | bool? | - | 列标题超出时显示省略内容 |
 | cellBuilder | IndexedWidgetBuilder? | - | 自定义列 |
-| align | TDTableColAlign? | TDTableColAlign.left | 列内容横向对齐方式 |
+| align | TTableColAlign? | TTableColAlign.left | 列内容横向对齐方式 |
 | sortable | bool? | false | 是否可排序 |
 | selection | bool? | - | 行是否显示复选框，自定义列时无效 |
 | selectable | SelectableFunc? | - | 当前行CheckBox是否可选，仅selection：true有效 |
@@ -287,7 +287,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 ```
 ```
- ### TDTableEmpty
+ ### TTableEmpty
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -297,16 +297,16 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 ```
 ```
- ### TDTable
+ ### TTable
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | key |  | - |  |
 | bordered | bool? | - | 是否显示表格边框 |
-| columns | List<TDTableCol> | - | 列配置 |
+| columns | List<TTableCol> | - | 列配置 |
 | data | List<dynamic>? | - | 数据源 |
-| empty | TDTableEmpty? | - | 空表格呈现样式 |
+| empty | TTableEmpty? | - | 空表格呈现样式 |
 | height | double? | - | 表格高度，超出后会出现滚动条 |
 | rowHeight | double? | - | 行高 |
 | loading | bool? | false | 加载中状态 |

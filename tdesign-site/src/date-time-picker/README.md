@@ -28,7 +28,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildYearMonthDay(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
+        TPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
           setState(() {
             selected_1 =
                 '${selected['year'].toString().padLeft(4, '0')}-${selected['month'].toString().padLeft(2, '0')}-${selected['day'].toString().padLeft(2, '0')}';
@@ -54,7 +54,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildYearMonth(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
+        TPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
           setState(() {
             selected_2 = '${selected['year'].toString().padLeft(4, '0')}-'
                 '${selected['month'].toString().padLeft(2, '0')}';
@@ -81,7 +81,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildMonthDay(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
+        TPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
           setState(() {
             selected_3 = '${selected['month'].toString().padLeft(2, '0')}-'
                 '${selected['day'].toString().padLeft(2, '0')}';
@@ -108,7 +108,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildHourMinuteSecond(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
+        TPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
           setState(() {
             selected_4 = '${selected['hour'].toString().padLeft(2, '0')}:'
                 '${selected['minute'].toString().padLeft(2, '0')}:'
@@ -141,7 +141,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildAll(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
+        TPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
           setState(() {
             selected_5 = '${selected['year'].toString().padLeft(4, '0')}-'
                 '${selected['month'].toString().padLeft(2, '0')}-'
@@ -174,7 +174,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildWeekDay(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
+        TPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
           setState(() {
             selected_6 = '${selected['year'].toString().padLeft(4, '0')}-'
                 '${selected['month'].toString().padLeft(2, '0')}-'
@@ -204,7 +204,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildWithTitle(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
+        TPicker.showDatePicker(context, title: '选择时间', onConfirm: (selected) {
           setState(() {
             selected_7 = '${selected['year'].toString().padLeft(4, '0')}-'
                 '${selected['month'].toString().padLeft(2, '0')}-'
@@ -231,7 +231,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildWithoutTitle(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(context, title: '', onConfirm: (selected) {
+        TPicker.showDatePicker(context, title: '', onConfirm: (selected) {
           setState(() {
             selected_8 = '${selected['year'].toString().padLeft(4, '0')}-'
                 '${selected['month'].toString().padLeft(2, '0')}-'
@@ -252,7 +252,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDPicker
+### TPicker
 
 #### 静态方法
 
@@ -264,7 +264,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 ```
 ```
- ### TDDatePicker
+ ### TDatePicker
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |

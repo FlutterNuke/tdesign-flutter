@@ -10,11 +10,11 @@
             child: Stack(
               alignment: Alignment.bottomLeft,
               children: [
-                Icon(TDIcons.notification),
+                Icon(TIcons.notification),
                 Positioned(
-                  child: TDBadge(
-                    TDBadgeType.square,
-                    border: TDBadgeBorder.small,
+                  child: TBadge(
+                    TBadgeType.square,
+                    border: TBadgeBorder.small,
                     count: '16',
                   ),
                   left: 20,

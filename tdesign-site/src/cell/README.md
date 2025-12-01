@@ -28,20 +28,20 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
 Widget _buildSimple(BuildContext context) {
   // 可统一修改样式
-  var style = TDCellStyle(context: context);
-  return TDCellGroup(
+  var style = TCellStyle(context: context);
+  return TCellGroup(
     style: style,
     cells: [
       // 可单独修改样式
-      TDCell(arrow: true, title: '单行标题', style: TDCellStyle.cellStyle(context)),
-      TDCell(arrow: true, title: '单行标题', required: true, onClick: (cell) {
+      TCell(arrow: true, title: '单行标题', style: TCellStyle.cellStyle(context)),
+      TCell(arrow: true, title: '单行标题', required: true, onClick: (cell) {
             print('单行标题');
           }),
-      const TDCell(arrow: true, title: '单行标题', noteWidget: TDBadge(TDBadgeType.message, count: '8')),
-      const TDCell(arrow: false, title: '单行标题', rightIconWidget: TDSwitch(isOn: true)),
-      const TDCell(arrow: true, title: '单行标题', note: '辅助信息'),
-      const TDCell(arrow: true, title: '单行标题', leftIcon: TDIcons.lock_on),
-      const TDCell(arrow: false, title: '单行标题'),
+      const TCell(arrow: true, title: '单行标题', noteWidget: TBadge(TBadgeType.message, count: '8')),
+      const TCell(arrow: false, title: '单行标题', rightIconWidget: TSwitch(isOn: true)),
+      const TCell(arrow: true, title: '单行标题', note: '辅助信息'),
+      const TCell(arrow: true, title: '单行标题', leftIcon: TIcons.lock_on),
+      const TCell(arrow: false, title: '单行标题'),
     ],
   );
 }</pre>
@@ -55,20 +55,20 @@ Widget _buildSimple(BuildContext context) {
   <pre slot="Dart" lang="javascript">
 Widget _buildSimple(BuildContext context) {
   // 可统一修改样式
-  var style = TDCellStyle(context: context);
-  return TDCellGroup(
+  var style = TCellStyle(context: context);
+  return TCellGroup(
     style: style,
     cells: [
       // 可单独修改样式
-      TDCell(arrow: true, title: '单行标题', style: TDCellStyle.cellStyle(context)),
-      TDCell(arrow: true, title: '单行标题', required: true, onClick: (cell) {
+      TCell(arrow: true, title: '单行标题', style: TCellStyle.cellStyle(context)),
+      TCell(arrow: true, title: '单行标题', required: true, onClick: (cell) {
             print('单行标题');
           }),
-      const TDCell(arrow: true, title: '单行标题', noteWidget: TDBadge(TDBadgeType.message, count: '8')),
-      const TDCell(arrow: false, title: '单行标题', rightIconWidget: TDSwitch(isOn: true)),
-      const TDCell(arrow: true, title: '单行标题', note: '辅助信息'),
-      const TDCell(arrow: true, title: '单行标题', leftIcon: TDIcons.lock_on),
-      const TDCell(arrow: false, title: '单行标题'),
+      const TCell(arrow: true, title: '单行标题', noteWidget: TBadge(TBadgeType.message, count: '8')),
+      const TCell(arrow: false, title: '单行标题', rightIconWidget: TSwitch(isOn: true)),
+      const TCell(arrow: true, title: '单行标题', note: '辅助信息'),
+      const TCell(arrow: true, title: '单行标题', leftIcon: TIcons.lock_on),
+      const TCell(arrow: false, title: '单行标题'),
     ],
   );
 }</pre>
@@ -83,47 +83,47 @@ Widget _buildSimple(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _buildDesSimple(BuildContext context) {
-  return const TDCellGroup(
+  return const TCellGroup(
     cells: [
-      TDCell(arrow: true, title: '单行标题', description: '一段很长很长的内容文字'),
-      TDCell(
+      TCell(arrow: true, title: '单行标题', description: '一段很长很长的内容文字'),
+      TCell(
           arrow: true,
           title: '单行标题',
           description: '一段很长很长的内容文字',
           required: true),
-      TDCell(
+      TCell(
           arrow: true,
           title: '单行标题',
           description: '一段很长很长的内容文字',
-          noteWidget: TDBadge(TDBadgeType.message, count: '8')),
-      TDCell(
+          noteWidget: TBadge(TBadgeType.message, count: '8')),
+      TCell(
           arrow: false,
           title: '单行标题',
           description: '一段很长很长的内容文字',
-          rightIconWidget: TDSwitch(isOn: true)),
-      TDCell(
+          rightIconWidget: TSwitch(isOn: true)),
+      TCell(
           arrow: true, title: '单行标题', description: '一段很长很长的内容文字', note: '辅助信息'),
-      TDCell(
+      TCell(
           arrow: true,
           title: '单行标题',
           description: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内',
-          leftIcon: TDIcons.lock_on),
-      TDCell(
+          leftIcon: TIcons.lock_on),
+      TCell(
           arrow: false,
           title: '单行标题',
           description: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内'),
-      TDCell(
+      TCell(
           arrow: false,
           title: '多行高度不定，长文本自动换行，该选项的描述是一段很长的内容',
           description: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内'),
-      TDCell(
+      TCell(
         arrow: true,
         title: '多行带头像',
         description: '一段很长很长的内容文字',
         image: AssetImage('assets/img/td_avatar_1.png'),
       ),
       // NetworkImage('https://tdesign.gtimg.com/mobile/demos/avatar1.png')),
-      TDCell(
+      TCell(
         arrow: true,
         title: '多行带图片',
         description: '一段很长很长的内容文字',
@@ -142,47 +142,47 @@ Widget _buildDesSimple(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _buildDesSimple(BuildContext context) {
-  return const TDCellGroup(
+  return const TCellGroup(
     cells: [
-      TDCell(arrow: true, title: '单行标题', description: '一段很长很长的内容文字'),
-      TDCell(
+      TCell(arrow: true, title: '单行标题', description: '一段很长很长的内容文字'),
+      TCell(
           arrow: true,
           title: '单行标题',
           description: '一段很长很长的内容文字',
           required: true),
-      TDCell(
+      TCell(
           arrow: true,
           title: '单行标题',
           description: '一段很长很长的内容文字',
-          noteWidget: TDBadge(TDBadgeType.message, count: '8')),
-      TDCell(
+          noteWidget: TBadge(TBadgeType.message, count: '8')),
+      TCell(
           arrow: false,
           title: '单行标题',
           description: '一段很长很长的内容文字',
-          rightIconWidget: TDSwitch(isOn: true)),
-      TDCell(
+          rightIconWidget: TSwitch(isOn: true)),
+      TCell(
           arrow: true, title: '单行标题', description: '一段很长很长的内容文字', note: '辅助信息'),
-      TDCell(
+      TCell(
           arrow: true,
           title: '单行标题',
           description: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内',
-          leftIcon: TDIcons.lock_on),
-      TDCell(
+          leftIcon: TIcons.lock_on),
+      TCell(
           arrow: false,
           title: '单行标题',
           description: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内'),
-      TDCell(
+      TCell(
           arrow: false,
           title: '多行高度不定，长文本自动换行，该选项的描述是一段很长的内容',
           description: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内'),
-      TDCell(
+      TCell(
         arrow: true,
         title: '多行带头像',
         description: '一段很长很长的内容文字',
         image: AssetImage('assets/img/td_avatar_1.png'),
       ),
       // NetworkImage('https://tdesign.gtimg.com/mobile/demos/avatar1.png')),
-      TDCell(
+      TCell(
         arrow: true,
         title: '多行带图片',
         description: '一段很长很长的内容文字',
@@ -204,12 +204,12 @@ Widget _buildDesSimple(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _buildCard(BuildContext context) {
-  return const TDCellGroup(
-    theme: TDCellGroupTheme.cardTheme,
+  return const TCellGroup(
+    theme: TCellGroupTheme.cardTheme,
     cells: [
-      TDCell(arrow: true, title: '单行标题'),
-      TDCell(arrow: true, title: '单行标题', required: true),
-      TDCell(arrow: true, title: '单行标题'),
+      TCell(arrow: true, title: '单行标题'),
+      TCell(arrow: true, title: '单行标题', required: true),
+      TCell(arrow: true, title: '单行标题'),
     ],
   );
 }</pre>
@@ -222,12 +222,12 @@ Widget _buildCard(BuildContext context) {
 
   <pre slot="Dart" lang="javascript">
 Widget _buildCard(BuildContext context) {
-  return const TDCellGroup(
-    theme: TDCellGroupTheme.cardTheme,
+  return const TCellGroup(
+    theme: TCellGroupTheme.cardTheme,
     cells: [
-      TDCell(arrow: true, title: '单行标题'),
-      TDCell(arrow: true, title: '单行标题', required: true),
-      TDCell(arrow: true, title: '单行标题'),
+      TCell(arrow: true, title: '单行标题'),
+      TCell(arrow: true, title: '单行标题', required: true),
+      TCell(arrow: true, title: '单行标题'),
     ],
   );
 }</pre>
@@ -237,7 +237,7 @@ Widget _buildCard(BuildContext context) {
 
 
 ## API
-### TDCellStyle
+### TCellStyle
 #### 简介
 单元格组件样式
 #### 默认构造方法
@@ -268,11 +268,11 @@ Widget _buildCard(BuildContext context) {
 
 | 名称  | 说明 |
 | --- |  --- |
-| TDCellStyle.cellStyle  | 生成单元格默认样式 |
+| TCellStyle.cellStyle  | 生成单元格默认样式 |
 
 ```
 ```
- ### TDCell
+ ### TCell
 #### 简介
 单元格组件
 #### 默认构造方法
@@ -280,7 +280,7 @@ Widget _buildCard(BuildContext context) {
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | key |  | - |  |
-| align | TDCellAlign? | TDCellAlign.middle | 内容的对齐方式，默认居中对齐。可选项：top/middle/bottom |
+| align | TCellAlign? | TCellAlign.middle | 内容的对齐方式，默认居中对齐。可选项：top/middle/bottom |
 | arrow | bool? | false | 是否显示右侧箭头 |
 | bordered | bool? | true | 是否显示下边框，仅在TDCellGroup组件下起作用 |
 | description | String? | - | 下方内容描述文字 |
@@ -296,9 +296,9 @@ Widget _buildCard(BuildContext context) {
 | required | bool? | false | 是否显示表单必填星号 |
 | title | String? | - | 标题 |
 | titleWidget | Widget? | - | 标题组件 |
-| onClick | TDCellClick? | - | 点击事件 |
-| onLongPress | TDCellClick? | - | 长按事件 |
-| style | TDCellStyle? | - | 自定义样式 |
+| onClick | TCellClick? | - | 点击事件 |
+| onLongPress | TCellClick? | - | 长按事件 |
+| style | TCellStyle? | - | 自定义样式 |
 | rightIcon | IconData? | - | 最右侧图标 |
 | rightIconWidget | Widget? | - | 最右侧图标组件 |
 | disabled | bool? | false | 禁用 |
@@ -308,7 +308,7 @@ Widget _buildCard(BuildContext context) {
 
 ```
 ```
- ### TDCellGroup
+ ### TCellGroup
 #### 简介
 单元格组组件
 #### 默认构造方法
@@ -317,11 +317,11 @@ Widget _buildCard(BuildContext context) {
 | --- | --- | --- | --- |
 | key |  | - |  |
 | bordered | bool? | false | 是否显示组边框 |
-| theme | TDCellGroupTheme? | TDCellGroupTheme.defaultTheme | 单元格组风格。可选项：default/card |
+| theme | TCellGroupTheme? | TCellGroupTheme.defaultTheme | 单元格组风格。可选项：default/card |
 | title | String? | - | 单元格组标题 |
-| cells | List<TDCell> | - | 单元格列表 |
+| cells | List<TCell> | - | 单元格列表 |
 | builder | CellBuilder? | - | cell构建器，可自定义cell父组件，如Dismissible |
-| style | TDCellStyle? | - | 自定义样式 |
+| style | TCellStyle? | - | 自定义样式 |
 | titleWidget | Widget? | - | 单元格组标题组件 |
 | scrollable | bool? | false | 可滚动 |
 | isShowLastBordered | bool? | false | 是否显示最后一个cell的下边框 |

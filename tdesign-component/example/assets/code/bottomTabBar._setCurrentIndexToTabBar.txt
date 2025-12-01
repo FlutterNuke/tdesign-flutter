@@ -9,10 +9,10 @@
               child: PageView(
             children: const [
               Center(
-                child: TDText('页面1,手指左滑查看页面2'),
+                child: TText('页面1,手指左滑查看页面2'),
               ),
               Center(
-                child: TDText('页面2,手指右滑查看页面1'),
+                child: TText('页面2,手指右滑查看页面1'),
               ),
             ],
             onPageChanged: (index) {
@@ -22,19 +22,19 @@
               });
             },
           )),
-          TDBottomTabBar(
+          TBottomTabBar(
               // 设置选择index
               currentIndex: currentIndex,
-              TDBottomTabBarBasicType.icon,
+              TBottomTabBarBasicType.icon,
               useVerticalDivider: true,
               navigationTabs: [
-                TDBottomTabBarTabConfig(
+                TBottomTabBarTabConfig(
                     selectedIcon: _selectedIcon,
                     unselectedIcon: _unSelectedIcon,
                     onTap: () {
                       onTapTab(context, '标签1');
                     }),
-                TDBottomTabBarTabConfig(
+                TBottomTabBarTabConfig(
                     selectedIcon: _selectedIcon,
                     unselectedIcon: _unSelectedIcon,
                     onTap: () {

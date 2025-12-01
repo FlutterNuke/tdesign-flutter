@@ -26,8 +26,8 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _iconEmpty(BuildContext context) {
-    return const TDEmpty(
-      type: TDEmptyType.plain,
+    return const TEmpty(
+      type: TEmptyType.plain,
       emptyText: '描述文字',
     );
   }</pre>
@@ -41,14 +41,14 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _imageEmpty(BuildContext context) {
-    return TDEmpty(
-      type: TDEmptyType.plain,
+    return TEmpty(
+      type: TEmptyType.plain,
       emptyText: '描述文字',
       image: Container(
         width: 120,
         height: 120,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(TDTheme.of(context).radiusDefault),
+            borderRadius: BorderRadius.circular(TTheme.of(context).radiusDefault),
             image: const DecorationImage(image: AssetImage('assets/img/empty.png'))),
       ),
     );
@@ -63,8 +63,8 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _operationEmpty(BuildContext context) {
-    return const TDEmpty(
-      type: TDEmptyType.operation,
+    return const TEmpty(
+      type: TEmptyType.operation,
       operationText: '操作按钮',
       emptyText: '描述文字',
     );
@@ -79,15 +79,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _operationCustomEmpty(BuildContext context) {
-    return TDEmpty(
-      type: TDEmptyType.operation,
+    return TEmpty(
+      type: TEmptyType.operation,
       emptyText: '描述文字',
       customOperationWidget: Padding(
           padding: const EdgeInsets.only(top: 32),
-          child: TDButton(
+          child: TButton(
             text: '自定义操作按钮',
-            size: TDButtonSize.medium,
-            theme: TDButtonTheme.danger,
+            size: TButtonSize.medium,
+            theme: TButtonTheme.danger,
             width: 160,
             onTap: () {},
           )),
@@ -99,17 +99,17 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDEmpty
+### TEmpty
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| type | TDEmptyType | TDEmptyType.plain | 类型，为operation有操作按钮，plain无按钮 |
+| type | TEmptyType | TEmptyType.plain | 类型，为operation有操作按钮，plain无按钮 |
 | image | Widget? | - | 展示图片 |
 | emptyText | String? | - | 描述文字 |
 | operationText | String? | - | 操作按钮文案 |
-| operationTheme | TDButtonTheme? | - | 操作按钮文案主题色 |
-| onTapEvent | TDTapEvent? | - | 点击事件 |
+| operationTheme | TButtonTheme? | - | 操作按钮文案主题色 |
+| onTapEvent | TTapEvent? | - | 点击事件 |
 | emptyTextColor | Color? | - | 描述文字颜色 |
 | emptyTextFont | Font? | - | 描述文字大小 |
 | customOperationWidget | Widget? | - | 自定义操作按钮 |

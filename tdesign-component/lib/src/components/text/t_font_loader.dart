@@ -29,7 +29,7 @@ class TFontLoader {
       return true;
     } catch (e) {
       print(
-          'TDFontLoader load error, name: ${name}, fontFamilyUrl: $fontFamilyUrl}, e: $e');
+          'TFontLoader load error, name: ${name}, fontFamilyUrl: $fontFamilyUrl}, e: $e');
     }
     return false;
   }
@@ -72,7 +72,7 @@ class _TDFontLoaderWidgetState extends State<TFontLoaderWidget> {
         }
       } catch (e) {
         print(
-            'TDFontLoader loadFont error, data: ${widget.textWidget.data}, fontFamily: ${widget.textWidget.fontFamilyUrl}, e: $e');
+            'TFontLoader loadFont error, data: ${widget.textWidget.data}, fontFamily: ${widget.textWidget.fontFamilyUrl}, e: $e');
       }
     }
 

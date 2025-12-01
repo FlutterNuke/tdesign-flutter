@@ -1,11 +1,11 @@
 
   Widget _customBgColor(BuildContext context) {
-    return TDBottomTabBar(TDBottomTabBarBasicType.iconText,
+    return TBottomTabBar(TBottomTabBarBasicType.iconText,
         useVerticalDivider: false,
-        selectedBgColor: TDTheme.of(context).errorColor3,
-        unselectedBgColor: TDTheme.of(context).grayColor3,
+        selectedBgColor: TTheme.of(context).errorColor3,
+        unselectedBgColor: TTheme.of(context).grayColor3,
         navigationTabs: [
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
@@ -13,7 +13,7 @@
               onTapTab(context, '标签1');
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
@@ -21,7 +21,7 @@
               onTapTab(context, '标签2');
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
@@ -29,7 +29,7 @@
               onTapTab(context, '标签2');
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,
@@ -37,7 +37,7 @@
               onTapTab(context, '标签2');
             },
           ),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
             tabText: '标签',
             selectedIcon: _selectedIcon,
             unselectedIcon: _unSelectedIcon,

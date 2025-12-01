@@ -2,17 +2,17 @@
   Widget _basicTypeWithHandleIconOne(BuildContext context) {
     return Column(
       children: [
-        TDInput(
+        TInput(
           leftLabel: '标签文字',
           controller: controller[7],
           backgroundColor: Colors.white,
           hintText: '请输入文字',
           rightBtn: Icon(
-            TDIcons.error_circle_filled,
-            color: TDTheme.of(context).fontGyColor3,
+            TIcons.error_circle_filled,
+            color: TTheme.of(context).fontGyColor3,
           ),
           onBtnTap: () {
-            TDToast.showText('点击右侧按钮', context: context);
+            TToast.showText('点击右侧按钮', context: context);
           },
           onChanged: (text) {
             setState(() {});

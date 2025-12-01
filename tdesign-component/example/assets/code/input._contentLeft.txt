@@ -2,7 +2,7 @@
   Widget _contentLeft(BuildContext context) {
     return Column(
       children: [
-        TDInput(
+        TInput(
           leftLabel: '左对齐',
           controller: controller[23],
           backgroundColor: Colors.white,

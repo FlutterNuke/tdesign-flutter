@@ -2,7 +2,7 @@
   Widget _buildDefaultSearchBar(BuildContext context) {
     return _buildColumnWidgets(
         context,
-        TDSearchBar(
+        TSearchBar(
           placeHolder: '搜索预设文案',
           onTextChanged: (String text) {
             setState(() {

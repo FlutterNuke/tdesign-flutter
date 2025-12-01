@@ -28,7 +28,7 @@ Tencent TDesign UI component library of Flutter, suitable for use in mobile proj
 - Provides Flutter UI component library in TDesign design style
 - Support customizing themes according to App design style
 - Provides commonly used Icon library and supports customized replacement
-- Define color groups according to the TDesign specification, which can be viewed in TDColors to facilitate the adaptation of components to the TDesign specification.
+- Define color groups according to the TDesign specification, which can be viewed in TColors to facilitate the adaptation of components to the TDesign specification.
 - The color value declaration class can add default colors and view the default display effect of color values in real time.
 
 # 🔨 Usage
@@ -54,21 +54,21 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 ```
 
 - You can configure theme styles such as colors, font sizes, font styles, corner radius, and shadows through a json file. 
-Retrieve theme data using `TDTheme.of(context)` or `TDTheme.defaultData()`. It is recommended 
-that components use `TDTheme.of(context)` unless the component does not need to follow local themes, 
-in which case `TDTheme.defaultData()` can be used.
+Retrieve theme data using `TTheme.of(context)` or `TTheme.defaultData()`. It is recommended 
+that components use `TTheme.of(context)` unless the component does not need to follow local themes, 
+in which case `TTheme.defaultData()` can be used.
 
 Examples of using colors, fonts, and corner radius:
 
 ```dart
-TDTheme.of(context).brandNormalColor
-TDTheme.defaultData().fontBodyLarge
+TTheme.of(context).brandNormalColor
+TTheme.defaultData().fontBodyLarge
 ```
 
 - TDesign's icons do not follow the theme, they are all in ttf format, usage examples:
 
 ```dart
-Icon(TDIcons.activity)
+Icon(TIcons.activity)
 ```
 
 - For more use examples, please refer to [example/lib/page](tdesign-component/example/lib/page)

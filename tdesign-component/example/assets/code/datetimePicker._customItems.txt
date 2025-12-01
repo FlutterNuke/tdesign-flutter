@@ -2,7 +2,7 @@
   Widget _customItems(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDPicker.showDatePicker(
+        TPicker.showDatePicker(
           context,
           title: '选择时间',
           onConfirm: (selected) {
@@ -31,7 +31,7 @@
           itemBuilder: (context, content, colIndex, index,
               itemDistanceCalculator, distance) {
             return colIndex == 5
-                ? TDText(
+                ? TText(
                     content,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -40,8 +40,8 @@
                           context, distance),
                       fontSize: index % 2 == 0 ? 20 : 10,
                       color: index % 2 == 1
-                          ? TDTheme.of(context).fontGyColor1
-                          : TDTheme.of(context).successColor6,
+                          ? TTheme.of(context).fontGyColor1
+                          : TTheme.of(context).successColor6,
                     ),
                   )
                 : null;

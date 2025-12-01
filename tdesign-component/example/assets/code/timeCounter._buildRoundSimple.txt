@@ -1,4 +1,4 @@
 
-TDTimeCounter _buildRoundSimple(BuildContext context) {
-  return const TDTimeCounter(time: 60 * 60 * 1000, theme: TDTimeCounterTheme.round);
+TTimeCounter _buildRoundSimple(BuildContext context) {
+  return const TTimeCounter(time: 60 * 60 * 1000, theme: TTimeCounterTheme.round);
 }

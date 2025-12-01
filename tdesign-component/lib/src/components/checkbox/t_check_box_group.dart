@@ -351,7 +351,7 @@ class TCheckboxGroupContainer extends TCheckboxGroup {
         if (element.cardMode == false) {
           throw FlutterError(
               'if use cardMode at TCheckboxGroupContainer, then every '
-                  'TDCheckbox should set it\'s own carMode to true.');
+                  'TCheckbox should set it\'s own carMode to true.');
         }
         if (element.subTitle != null && direction == Axis.horizontal) {
           throw FlutterError(

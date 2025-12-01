@@ -2,7 +2,7 @@
   Widget buildMultiArea(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        TDPicker.showMultiLinkedPicker(context, title: '选择地区',
+        TPicker.showMultiLinkedPicker(context, title: '选择地区',
             onConfirm: (selected) {
               setState(() {
                 selected_3 = '${selected[0]} ${selected[1]} ${selected[2]}';

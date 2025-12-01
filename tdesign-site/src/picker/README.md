@@ -28,7 +28,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildArea(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        TDPicker.showMultiPicker(context, title: '选择地区',
+        TPicker.showMultiPicker(context, title: '选择地区',
             onConfirm: (selected) {
               setState(() {
                 selected_1 = '${data_1[selected[0]]}';
@@ -51,7 +51,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildTime(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        TDPicker.showMultiPicker(context, title: '选择时间',
+        TPicker.showMultiPicker(context, title: '选择时间',
             onConfirm: (selected) {
               setState(() {
                 selected_2 = '${data_2[0][selected[0]]} ${data_2[1][selected[1]]}';
@@ -74,7 +74,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildMultiArea(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        TDPicker.showMultiLinkedPicker(context, title: '选择地区',
+        TPicker.showMultiLinkedPicker(context, title: '选择地区',
             onConfirm: (selected) {
               setState(() {
                 selected_3 = '${selected[0]} ${selected[1]} ${selected[2]}';
@@ -101,7 +101,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildAreaWithTitle(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        TDPicker.showMultiPicker(context, title: '选择地区',
+        TPicker.showMultiPicker(context, title: '选择地区',
             onConfirm: (selected) {
               setState(() {
                 selected_4 = '${data_1[selected[0]]}';
@@ -124,7 +124,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget buildAreaWithoutTitle(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        TDPicker.showMultiPicker(context, title: '',
+        TPicker.showMultiPicker(context, title: '',
             onConfirm: (selected) {
               setState(() {
                 selected_5 = '${data_1[selected[0]]}';
@@ -141,7 +141,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDPicker
+### TPicker
 
 #### 静态方法
 
@@ -153,7 +153,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 ```
 ```
- ### TDMultiPicker
+ ### TMultiPicker
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -185,7 +185,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 ```
 ```
- ### TDMultiLinkedPicker
+ ### TMultiLinkedPicker
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |

@@ -26,14 +26,14 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _basicImageViewer(BuildContext context) {
-    return TDButton(
-      type: TDButtonType.ghost,
-      theme: TDButtonTheme.primary,
+    return TButton(
+      type: TButtonType.ghost,
+      theme: TButtonTheme.primary,
       isBlock: true,
-      size: TDButtonSize.large,
+      size: TButtonSize.large,
       text: '基础图片预览',
       onTap: () {
-        TDImageViewer.showImageViewer(context: context, images: images);
+        TImageViewer.showImageViewer(context: context, images: images);
       },
     );
   }</pre>
@@ -51,14 +51,14 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
       'https://tdesign.gtimg.com/mobile/demos/swiper1.png',
       'https://tdesign.gtimg.com/mobile/demos/swiper2.png',
     ];
-    return TDButton(
-      type: TDButtonType.ghost,
-      theme: TDButtonTheme.primary,
+    return TButton(
+      type: TButtonType.ghost,
+      theme: TButtonTheme.primary,
       isBlock: true,
-      size: TDButtonSize.large,
+      size: TButtonSize.large,
       text: '带操作图片预览',
       onTap: () {
-        TDImageViewer.showImageViewer(
+        TImageViewer.showImageViewer(
           context: context,
           images: delImages,
           showIndex: true,
@@ -73,7 +73,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDImageViewerWidget
+### TImageViewerWidget
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -106,7 +106,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 ```
 ```
- ### TDImageViewer
+ ### TImageViewer
 
 #### 静态方法
 

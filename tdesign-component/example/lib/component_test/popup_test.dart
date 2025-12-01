@@ -60,7 +60,7 @@ class _TestPageState extends State<TestPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('TDConfirmDialog测试')),
+      appBar: AppBar(title: const Text('TConfirmDialog测试')),
       body: Center(
         child: TButton(
           child: const Text('显示问题弹窗'),

@@ -27,8 +27,8 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildStepperWithBase(BuildContext context) {
     return _buildRow(context, [
-      const TDStepper(
-        theme: TDStepperTheme.filled,
+      const TStepper(
+        theme: TStepperTheme.filled,
       )
     ]);
   }</pre>
@@ -44,8 +44,8 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildStepperWithMaxMinStatus(BuildContext context) {
     return _buildRow(context, [
-      const TDStepper(theme: TDStepperTheme.filled, value: 0, min: 0),
-      const TDStepper(theme: TDStepperTheme.filled, value: 999, max: 999),
+      const TStepper(theme: TStepperTheme.filled, value: 0, min: 0),
+      const TStepper(theme: TStepperTheme.filled, value: 999, max: 999),
     ]);
   }</pre>
 
@@ -59,8 +59,8 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildStepperWithDisableStatus(BuildContext context) {
     return _buildRow(context, [
-      const TDStepper(
-        theme: TDStepperTheme.filled,
+      const TStepper(
+        theme: TStepperTheme.filled,
         disabled: true,
       ),
     ]);
@@ -77,9 +77,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildStepperWithTheme(BuildContext context) {
     return _buildRow(context, [
-      const TDStepper(theme: TDStepperTheme.filled, value: 3),
-      const TDStepper(theme: TDStepperTheme.outline, value: 3),
-      const TDStepper(theme: TDStepperTheme.normal, value: 3),
+      const TStepper(theme: TStepperTheme.filled, value: 3),
+      const TStepper(theme: TStepperTheme.outline, value: 3),
+      const TStepper(theme: TStepperTheme.normal, value: 3),
     ]);
   }</pre>
 
@@ -93,12 +93,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _buildStepperWithSize(BuildContext context) {
     return _buildRow(context, [
-      const TDStepper(
-          size: TDStepperSize.large, theme: TDStepperTheme.filled, value: 3),
-      const TDStepper(
-          size: TDStepperSize.medium, theme: TDStepperTheme.filled, value: 3),
-      const TDStepper(
-          size: TDStepperSize.small, theme: TDStepperTheme.filled, value: 3),
+      const TStepper(
+          size: TStepperSize.large, theme: TStepperTheme.filled, value: 3),
+      const TStepper(
+          size: TStepperSize.medium, theme: TStepperTheme.filled, value: 3),
+      const TStepper(
+          size: TStepperSize.small, theme: TStepperTheme.filled, value: 3),
     ]);
   }</pre>
 
@@ -107,7 +107,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDStepper
+### TStepper
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -116,18 +116,18 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 | disableInput | bool | false | 禁用输入框 |
 | disabled | bool | false | 禁用全部操作 |
 | inputWidth | double? | - | 禁用全部操作 |
-| eventController | StreamController<TDStepperEventType>? | - | 事件控制器 |
+| eventController | StreamController<TStepperEventType>? | - | 事件控制器 |
 | max | int | 100 | 最大值 |
 | min | int | 0 | 最小值 |
-| size | TDStepperSize | TDStepperSize.medium | 组件尺寸 |
+| size | TStepperSize | TStepperSize.medium | 组件尺寸 |
 | step | int | 1 | 步长 |
-| theme | TDStepperTheme | TDStepperTheme.normal | 组件风格 |
+| theme | TStepperTheme | TStepperTheme.normal | 组件风格 |
 | value | int? | 0 | 值 |
 | defaultValue | int? | 0 | 默认值 |
 | onBlur | VoidCallback? | - | 输入框失去焦点时触发 |
 | onChange | ValueChanged<int>? | - | 数值发生变更时触发 |
-| onOverlimit | TDStepperOverlimitFunction? | - | 数值超出限制时触发 |
-| controller | TDStepperController? | - | Stepper控制器 |
+| onOverlimit | TStepperOverlimitFunction? | - | 数值超出限制时触发 |
+| controller | TStepperController? | - | Stepper控制器 |
 
 
   

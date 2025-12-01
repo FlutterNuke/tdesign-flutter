@@ -2,7 +2,7 @@
   Widget _buildTestVerticalCompanyCascader(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        TDCascader.showMultiCascader(context,
+        TCascader.showMultiCascader(context,
             title: '选择部门人员',
             data: _data_4,
             initialData: _initData_5,

@@ -11,7 +11,7 @@ class TagTestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TDTag 宽度测试',
+      title: 'TTag 宽度测试',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -27,7 +27,7 @@ class TestPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const TText('TDTag 宽度测试'),
+        title: const TText('TTag 宽度测试'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),

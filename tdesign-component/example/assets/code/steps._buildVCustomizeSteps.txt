@@ -6,9 +6,9 @@
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vCustomizeStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               simple: true,
               activeIndex: 3,
               verticalSelect: true,

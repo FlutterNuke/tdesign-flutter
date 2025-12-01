@@ -28,7 +28,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildDefaultSearchBar(BuildContext context) {
     return _buildColumnWidgets(
         context,
-        TDSearchBar(
+        TSearchBar(
           placeHolder: '搜索预设文案',
           onTextChanged: (String text) {
             setState(() {
@@ -47,7 +47,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildFocusSearchBar(BuildContext context) {
-    return const TDSearchBar(
+    return const TSearchBar(
       placeHolder: '搜索预设文案',
       needCancel: true,
       autoFocus: true,
@@ -68,9 +68,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
       children: [
         _buildColumnWidgets(
           context,
-          TDSearchBar(
+          TSearchBar(
             placeHolder: '搜索预设文案',
-            style: TDSearchStyle.square,
+            style: TSearchStyle.square,
             onTextChanged: (String text) {
               setState(() {
                 inputText = text;
@@ -80,9 +80,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         ),
         _buildColumnWidgets(
           context,
-          TDSearchBar(
+          TSearchBar(
             placeHolder: '搜索预设文案',
-            style: TDSearchStyle.round,
+            style: TSearchStyle.round,
             onTextChanged: (String text) {
               setState(() {
                 inputText = text;
@@ -103,9 +103,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildCenterSearchBar(BuildContext context) {
-    return TDSearchBar(
+    return TSearchBar(
       placeHolder: '搜索预设文案',
-      alignment: TDSearchAlignment.center,
+      alignment: TSearchAlignment.center,
       onTextChanged: (String text) {
         setState(() {
           inputText = text;
@@ -119,18 +119,18 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDSearchBar
+### TSearchBar
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | key |  | - |  |
 | placeHolder | String? | - | 预设文案 |
-| style | TDSearchStyle? | TDSearchStyle.square | 样式 |
-| alignment | TDSearchAlignment? | TDSearchAlignment.left | 对齐方式，居中或这头部对齐 |
-| onTextChanged | TDSearchBarEvent? | - | 文字改变回调 |
-| onSubmitted | TDSearchBarEvent? | - | 提交回调 |
-| onEditComplete | TDSearchBarCallBack? | - | 编辑完成回调 |
+| style | TSearchStyle? | TSearchStyle.square | 样式 |
+| alignment | TSearchAlignment? | TSearchAlignment.left | 对齐方式，居中或这头部对齐 |
+| onTextChanged | TSearchBarEvent? | - | 文字改变回调 |
+| onSubmitted | TSearchBarEvent? | - | 提交回调 |
+| onEditComplete | TSearchBarCallBack? | - | 编辑完成回调 |
 | onTapOutside |  | - |  |
 | onInputClick | GestureTapCallback? | - | 输入框点击事件 |
 | autoHeight | bool | false | 是否自动计算高度 |
@@ -142,8 +142,8 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 | controller | TextEditingController? | - | 控制器 |
 | backgroundColor | Color? | Colors.white | 背景颜色 |
 | action | String | '' | 自定义操作文字 |
-| onActionClick | TDSearchBarEvent? | - | 自定义操作回调 |
-| onClearClick | TDSearchBarClearEvent? | - | 自定义操作回调 |
+| onActionClick | TSearchBarEvent? | - | 自定义操作回调 |
+| onClearClick | TSearchBarClearEvent? | - | 自定义操作回调 |
 | focusNode | FocusNode? | - | 自定义焦点 |
 | inputAction | TextInputAction? | - | 键盘动作类型 |
 | enabled | bool? | - | 是否禁用 |

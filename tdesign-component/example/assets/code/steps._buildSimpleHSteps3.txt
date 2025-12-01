@@ -6,9 +6,9 @@
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: simpleHStepsListData3,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
               simple: true,
             ),

@@ -4,7 +4,7 @@
       height: 20,
       child: Container(
         alignment: Alignment.center,
-        child: const TDDivider(),
+        child: const TDivider(),
       ),
     );
   }

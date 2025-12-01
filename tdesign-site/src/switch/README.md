@@ -28,7 +28,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithBase(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(),
+      const TSwitch(),
       title: '基础开关',
     );
   }</pre>
@@ -44,7 +44,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithText(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(isOn: true, type: TDSwitchType.text),
+      const TSwitch(isOn: true, type: TSwitchType.text),
       title: '带文字开关',
     );
   }</pre>
@@ -60,7 +60,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithIcon(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(isOn: true, type: TDSwitchType.icon),
+      const TSwitch(isOn: true, type: TSwitchType.icon),
       title: '带图标开关',
     );
   }</pre>
@@ -76,7 +76,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithColor(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(isOn: true, trackOnColor: Colors.green),
+      const TSwitch(isOn: true, trackOnColor: Colors.green),
       title: '自定义颜色开关',
     );
   }</pre>
@@ -93,9 +93,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithLoadingOff(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         isOn: false,
-        type: TDSwitchType.loading,
+        type: TSwitchType.loading,
       ),
       title: '加载状态',
     );
@@ -112,9 +112,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithLoadingOn(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         isOn: true,
-        type: TDSwitchType.loading,
+        type: TSwitchType.loading,
       ),
       title: '加载状态',
     );
@@ -131,7 +131,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithDisableOff(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         enable: false,
         isOn: false,
       ),
@@ -150,7 +150,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithDisableOn(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         enable: false,
         isOn: true,
       ),
@@ -170,9 +170,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithSizeLarge(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         isOn: true,
-        size: TDSwitchSize.large,
+        size: TSwitchSize.large,
       ),
       title: '大尺寸32',
     );
@@ -189,9 +189,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithSizeMed(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         isOn: true,
-        size: TDSwitchSize.medium,
+        size: TSwitchSize.medium,
       ),
       title: '中尺寸28',
     );
@@ -208,9 +208,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _buildSwitchWithSizeSmall(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(
+      const TSwitch(
         isOn: true,
-        size: TDSwitchSize.small,
+        size: TSwitchSize.small,
       ),
       title: '小尺寸24',
     );
@@ -221,7 +221,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDSwitch
+### TSwitch
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -229,8 +229,8 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 | key |  | - |  |
 | enable | bool | true | 是否可点击 |
 | isOn | bool | false | 是否打开 |
-| size | TDSwitchSize? | TDSwitchSize.medium | 尺寸：大、中、小 |
-| type | TDSwitchType? | TDSwitchType.fill | 类型：填充、文本、加载 |
+| size | TSwitchSize? | TSwitchSize.medium | 尺寸：大、中、小 |
+| type | TSwitchType? | TSwitchType.fill | 类型：填充、文本、加载 |
 | trackOnColor | Color? | - | 开启时轨道颜色 |
 | trackOffColor | Color? | - | 关闭时轨道颜色 |
 | thumbContentOnColor | Color? | - | 开启时ThumbView的颜色 |

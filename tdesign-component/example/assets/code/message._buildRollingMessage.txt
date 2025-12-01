@@ -1,14 +1,14 @@
 
   Widget _buildRollingMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
         isBlock: true,
         text: '可滚动的通知',
-        size: TDButtonSize.large,
-        type: TDButtonType.outline,
+        size: TButtonSize.large,
+        type: TButtonType.outline,
         width: 450,
-        theme: TDButtonTheme.primary,
+        theme: TButtonTheme.primary,
         onTap: () {
-          TDMessage.showMessage(
+          TMessage.showMessage(
               context: context,
               visible: true,
               icon: false,

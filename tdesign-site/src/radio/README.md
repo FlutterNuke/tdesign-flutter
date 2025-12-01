@@ -26,19 +26,19 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _verticalRadios(BuildContext context) {
-    return TDCell(
+    return TCell(
       title: '单选标题',
       hover: false,
       required: true,
-      descriptionWidget: TDRadioGroup(
+      descriptionWidget: TRadioGroup(
         selectId: '0',
         direction: Axis.horizontal,
-        directionalTdRadios: const [TDRadio(
+        directionalTdRadios: const [TRadio(
           id: '0',
           title: '单选标题0',
           showDivider: false,
         ),
-          TDRadio(
+          TRadio(
             id: '1',
             title: '单选标题1',
             showDivider: false,
@@ -57,26 +57,26 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _horizontalRadios(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       direction: Axis.horizontal,
       directionalTdRadios: const [
-        TDRadio(
+        TRadio(
           id: '0',
           title: '单选标题',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
-        TDRadio(
+        TRadio(
           id: '1',
           title: '单选标题',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
-        TDRadio(
+        TRadio(
           id: '2',
           title: '上限四字',
-          radioStyle: TDRadioStyle.circle,
+          radioStyle: TRadioStyle.circle,
           showDivider: false,
         ),
       ],
@@ -93,21 +93,21 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _radioStatus(BuildContext context) {
-    return TDRadioGroup(
-      contentDirection: TDContentDirection.right,
+    return TRadioGroup(
+      contentDirection: TContentDirection.right,
       selectId: '0',
       child: const Column(
         children: [
-          TDRadio(
+          TRadio(
             id: '0',
             title: '选项禁用-已选',
-            radioStyle: TDRadioStyle.circle,
+            radioStyle: TRadioStyle.circle,
             enable: false,
           ),
-          TDRadio(
+          TRadio(
             id: '1',
             title: '选项禁用-默认',
-            radioStyle: TDRadioStyle.circle,
+            radioStyle: TRadioStyle.circle,
             enable: false,
           ),
         ],
@@ -127,10 +127,10 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _checkStyle(BuildContext context) {
     return Column(
       children: [
-        TDRadioGroup(
-          radioCheckStyle: TDRadioStyle.check,
+        TRadioGroup(
+          radioCheckStyle: TRadioStyle.check,
           selectId: 'index:0',
-          child: const TDRadio(
+          child: const TRadio(
             id: 'index:0',
             title: '单选',
           ),
@@ -138,10 +138,10 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         const SizedBox(
           height: 17,
         ),
-        TDRadioGroup(
-          radioCheckStyle: TDRadioStyle.hollowCircle,
+        TRadioGroup(
+          radioCheckStyle: TRadioStyle.hollowCircle,
           selectId: 'index:0',
-          child: const TDRadio(
+          child: const TRadio(
             id: 'index:0',
             title: '单选',
           ),
@@ -161,18 +161,18 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _checkPosition(BuildContext context) {
     return Column(
       children: [
-        TDRadioGroup(
-          contentDirection: TDContentDirection.right,
+        TRadioGroup(
+          contentDirection: TContentDirection.right,
           selectId: 'index:0',
-          child: const TDRadio(
+          child: const TRadio(
             id: 'index:0',
             title: '单选',
           ),
         ),
-        TDRadioGroup(
-          contentDirection: TDContentDirection.left,
+        TRadioGroup(
+          contentDirection: TContentDirection.left,
           selectId: 'index:0',
-          child: const TDRadio(
+          child: const TRadio(
             id: 'index:0',
             title: '单选',
             showDivider: false,
@@ -191,7 +191,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _passThroughStyle(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:0',
       passThrough: true,
       child: ListView.builder(
@@ -200,10 +200,10 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           var title = '单选';
-          return TDRadio(
+          return TRadio(
             id: 'index:$index',
             title: title,
-            size: TDCheckBoxSize.large,
+            size: TCheckBoxSize.large,
           );
         },
         itemCount: 4,
@@ -221,12 +221,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _verticalCardStyle(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       cardMode: true,
       direction: Axis.vertical,
       directionalTdRadios: const [
-        TDRadio(
+        TRadio(
           id: 'index:0',
           title: '单选',
           titleMaxLine: 2,
@@ -234,7 +234,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:1',
           title: '单选',
           titleMaxLine: 2,
@@ -242,7 +242,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:2',
           title: '单选',
           titleMaxLine: 2,
@@ -250,7 +250,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:3',
           title: '单选',
           titleMaxLine: 2,
@@ -271,28 +271,28 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _horizontalCardStyle(BuildContext context) {
-    return TDRadioGroup(
+    return TRadioGroup(
       selectId: 'index:1',
       cardMode: true,
       direction: Axis.horizontal,
       rowCount: 2,
       directionalTdRadios: const [
-        TDRadio(
+        TRadio(
           id: 'index:0',
           title: '单选',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:1',
           title: '单选',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:2',
           title: '单选',
           cardMode: true,
         ),
-        TDRadio(
+        TRadio(
           id: 'index:3',
           title: '单选',
           cardMode: true,
@@ -306,7 +306,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDRadio
+### TRadio
 #### 简介
 单选框按钮,继承自TDCheckbox，字段含义与父类一致
 #### 默认构造方法
@@ -328,9 +328,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 | spacing |  | - |  |
 | cardMode |  | - |  |
 | showDivider | bool | - | 是否显示下划线 |
-| size |  | TDCheckBoxSize.small |  |
-| radioStyle | TDRadioStyle | TDRadioStyle.circle | 单选框按钮样式 |
-| contentDirection |  | TDContentDirection.right |  |
+| size |  | TCheckBoxSize.small |  |
+| radioStyle | TRadioStyle | TRadioStyle.circle | 单选框按钮样式 |
+| contentDirection |  | TContentDirection.right |  |
 | customIconBuilder |  | - |  |
 | titleColor |  | - |  |
 | subTitleColor |  | - |  |
@@ -341,7 +341,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 ```
 ```
- ### TDRadioGroup
+ ### TRadioGroup
 #### 简介
 RadioGroup分组对象，继承自TDCheckboxGroup，字段含义与父类一致
  RadioGroup应该嵌套在RadioGroup内，所有在RadioGroup的RadioButton只能有一个被选中
@@ -360,7 +360,7 @@ RadioGroup分组对象，继承自TDCheckboxGroup，字段含义与父类一致
 | passThrough |  | - |  |
 | cardMode |  | false |  |
 | strictMode | bool | true | 严格模式下，用户不能取消勾选，只能切换选择项， |
-| radioCheckStyle | TDRadioStyle? | - | 勾选样式 |
+| radioCheckStyle | TRadioStyle? | - | 勾选样式 |
 | titleMaxLine |  | - |  |
 | customIconBuilder |  | - |  |
 | customContentBuilder |  | - |  |

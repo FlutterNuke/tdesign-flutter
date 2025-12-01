@@ -1,9 +1,9 @@
 
 Widget _stepNoticeBar(BuildContext context) {
-  return const TDNoticeBar(
+  return const TNoticeBar(
     context: ['君不见黄河之水天上来', '奔流到海不复回', '君不见'],
     direction: Axis.vertical,
-    prefixIcon: TDIcons.sound,
+    prefixIcon: TIcons.sound,
     marquee: true,
   );
 }

@@ -32,7 +32,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: basicHStepsListData1,
             ),
           )
@@ -56,9 +56,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: basicHStepsListData2,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
             ),
           )
@@ -82,9 +82,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: basicHStepsListData3,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
             ),
           )
@@ -109,9 +109,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: hIconStepsListData1,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 0,
             ),
           )
@@ -135,9 +135,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: hIconStepsListData2,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
             ),
           )
@@ -161,9 +161,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: hIconStepsListData3,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
             ),
           )
@@ -188,9 +188,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: simpleHStepsListData1,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 0,
               simple: true,
             ),
@@ -215,9 +215,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: simpleHStepsListData2,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
               simple: true,
             ),
@@ -242,9 +242,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: simpleHStepsListData3,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
               simple: true,
             ),
@@ -270,11 +270,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: hErrorStepsListData1,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
-              status: TDStepsStatus.error,
+              status: TStepsStatus.error,
             ),
           )
         ],
@@ -297,11 +297,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: hErrorStepsListData2,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
-              status: TDStepsStatus.error,
+              status: TStepsStatus.error,
             ),
           )
         ],
@@ -324,11 +324,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: hErrorStepsListData3,
-              direction: TDStepsDirection.horizontal,
+              direction: TStepsDirection.horizontal,
               activeIndex: 1,
-              status: TDStepsStatus.error,
+              status: TStepsStatus.error,
               simple: true,
             ),
           )
@@ -353,9 +353,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vBasicStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
             ),
           )
@@ -379,9 +379,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vIconStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
             ),
           )
@@ -405,9 +405,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vSimpleStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
               simple: true,
             ),
@@ -432,11 +432,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vErrorBasicStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
-              status: TDStepsStatus.error,
+              status: TStepsStatus.error,
             ),
           )
         ],
@@ -459,11 +459,11 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vErrorIconStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
-              status: TDStepsStatus.error,
+              status: TStepsStatus.error,
             ),
           )
         ],
@@ -486,12 +486,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vErrorSimpleStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
               simple: true,
-              status: TDStepsStatus.error,
+              status: TStepsStatus.error,
             ),
           )
         ],
@@ -514,9 +514,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vCustomTitleBasicStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
             ),
           )
@@ -540,9 +540,9 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vCustomContentBasicStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 1,
             ),
           )
@@ -567,7 +567,7 @@ Read-only Steps 纯展示水平步骤条
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: hReadOnlyStepsListData,
               readOnly: true,
             ),
@@ -592,9 +592,9 @@ Read-only Steps 纯展示垂直步骤条
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vReadOnlyStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               activeIndex: 0,
               readOnly: true,
             ),
@@ -619,9 +619,9 @@ Vertical Customize Steps 垂直自定义步骤条
         children: [
           Expanded(
             flex: 1,
-            child: TDSteps(
+            child: TSteps(
               steps: vCustomizeStepsListData,
-              direction: TDStepsDirection.vertical,
+              direction: TStepsDirection.vertical,
               simple: true,
               activeIndex: 3,
               verticalSelect: true,
@@ -637,7 +637,7 @@ Vertical Customize Steps 垂直自定义步骤条
 
 
 ## API
-### TDStepsItemData
+### TStepsItemData
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -651,16 +651,16 @@ Vertical Customize Steps 垂直自定义步骤条
 
 ```
 ```
- ### TDSteps
+ ### TSteps
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | key |  | - |  |
-| steps | List<TDStepsItemData> | - | 步骤条数据 |
+| steps | List<TStepsItemData> | - | 步骤条数据 |
 | activeIndex | int | 0 | 步骤条当前激活的索引 |
-| direction | TDStepsDirection | TDStepsDirection.horizontal | 步骤条方向 |
-| status | TDStepsStatus | TDStepsStatus.success | 步骤条状态 |
+| direction | TStepsDirection | TStepsDirection.horizontal | 步骤条方向 |
+| status | TStepsStatus | TStepsStatus.success | 步骤条状态 |
 | simple | bool | false | 步骤条simple模式 |
 | readOnly | bool | false | 步骤条readOnly模式 |
 | verticalSelect | bool | false | 步骤条垂直自定义步骤条选择模式 |

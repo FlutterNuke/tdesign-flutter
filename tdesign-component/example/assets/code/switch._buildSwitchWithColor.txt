@@ -2,7 +2,7 @@
   Widget _buildSwitchWithColor(BuildContext context) {
     return _buildItem(
       context,
-      const TDSwitch(isOn: true, trackOnColor: Colors.green),
+      const TSwitch(isOn: true, trackOnColor: Colors.green),
       title: '自定义颜色开关',
     );
   }

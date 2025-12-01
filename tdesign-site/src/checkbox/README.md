@@ -26,7 +26,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _verticalCheckbox(BuildContext context) {
-    return TDCheckboxGroupContainer(
+    return TCheckboxGroupContainer(
       selectIds: const ['index:1'],
       child: ListView.builder(
         padding: EdgeInsets.zero,
@@ -41,7 +41,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           if (index == 3) {
             subTitle = '描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息';
           }
-          return TDCheckbox(
+          return TCheckbox(
             id: 'index:$index',
             title: title,
             titleMaxLine: 2,
@@ -63,28 +63,28 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _horizontalCheckbox(BuildContext context) {
-    return TDCheckboxGroupContainer(
+    return TCheckboxGroupContainer(
       selectIds: const ['1'],
       direction: Axis.horizontal,
       directionalTdCheckboxes: const [
-        TDCheckbox(
+        TCheckbox(
           id: '0',
           title: '多选标题',
-          style: TDCheckboxStyle.circle,
+          style: TCheckboxStyle.circle,
           insetSpacing: 12,
           showDivider: false,
         ),
-        TDCheckbox(
+        TCheckbox(
           id: '1',
           title: '多选标题',
-          style: TDCheckboxStyle.circle,
+          style: TCheckboxStyle.circle,
           insetSpacing: 12,
           showDivider: false,
         ),
-        TDCheckbox(
+        TCheckbox(
           id: '2',
           title: '上限四字',
-          style: TDCheckboxStyle.circle,
+          style: TCheckboxStyle.circle,
           insetSpacing: 12,
           showDivider: false,
         ),
@@ -102,7 +102,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   <pre slot="Dart" lang="javascript">
   Widget _checkAllSelected(BuildContext context) {
     const itemCount = 4;
-    return TDCheckboxGroupContainer(
+    return TCheckboxGroupContainer(
       selectIds: checkIds,
       passThrough: false,
       controller: controller,
@@ -116,7 +116,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
             title = '全选';
             return SizedBox(
               height: 56,
-              child: TDCheckbox(
+              child: TCheckbox(
                 id: 'index:$index',
                 title: title,
                 customIconBuilder: (context, checked) {
@@ -140,7 +140,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           }else{
             return SizedBox(
               height: index == itemCount - 1 ? null : 56,
-              child: TDCheckbox(
+              child: TCheckbox(
                 id: 'index:$index',
                 title: title,
                 subTitle: index == itemCount - 1 ? '描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息' : null,
@@ -174,21 +174,21 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _checkboxStatus(BuildContext context) {
-    return TDCheckboxGroupContainer(
-      contentDirection: TDContentDirection.right,
+    return TCheckboxGroupContainer(
+      contentDirection: TContentDirection.right,
       selectIds: const ['0'],
       child: Column(
         children: const [
-          TDCheckbox(
+          TCheckbox(
             id: '0',
             title: '选项禁用-已选',
-            style: TDCheckboxStyle.circle,
+            style: TCheckboxStyle.circle,
             enable: false,
           ),
-          TDCheckbox(
+          TCheckbox(
             id: '1',
             title: '选项禁用-默认',
-            style: TDCheckboxStyle.circle,
+            style: TCheckboxStyle.circle,
             enable: false,
           ),
         ],
@@ -208,10 +208,10 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _checkStyle(BuildContext context) {
     return Column(
       children: [
-        TDCheckboxGroupContainer(
-          style: TDCheckboxStyle.check,
+        TCheckboxGroupContainer(
+          style: TCheckboxStyle.check,
           selectIds: const ['index:0'],
-          child: const TDCheckbox(
+          child: const TCheckbox(
             id: 'index:0',
             title: '多选',
           ),
@@ -219,10 +219,10 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         const SizedBox(
           height: 17,
         ),
-        TDCheckboxGroupContainer(
-          style: TDCheckboxStyle.square,
+        TCheckboxGroupContainer(
+          style: TCheckboxStyle.square,
           selectIds: const ['index:0'],
-          child: const TDCheckbox(
+          child: const TCheckbox(
             id: 'index:0',
             title: '多选',
           ),
@@ -242,18 +242,18 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
   Widget _checkPosition(BuildContext context) {
     return Column(
       children: [
-        TDCheckboxGroupContainer(
-          contentDirection: TDContentDirection.right,
+        TCheckboxGroupContainer(
+          contentDirection: TContentDirection.right,
           selectIds: const ['index:0'],
-          child: const TDCheckbox(
+          child: const TCheckbox(
             id: 'index:0',
             title: '多选',
           ),
         ),
-        TDCheckboxGroupContainer(
-          contentDirection: TDContentDirection.left,
+        TCheckboxGroupContainer(
+          contentDirection: TContentDirection.left,
           selectIds: const ['index:0'],
-          child: const TDCheckbox(
+          child: const TCheckbox(
             id: 'index:0',
             title: '多选',
           ),
@@ -271,7 +271,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _passThroughStyle(BuildContext context) {
-    return TDCheckboxGroupContainer(
+    return TCheckboxGroupContainer(
       selectIds: const ['index:0'],
       passThrough: true,
       child: ListView.builder(
@@ -280,10 +280,10 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           var title = '多选';
-          return TDCheckbox(
+          return TCheckbox(
             id: 'index:$index',
             title: title,
-            size: TDCheckBoxSize.large,
+            size: TCheckBoxSize.large,
           );
         },
         itemCount: 4,
@@ -301,12 +301,12 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _verticalCardStyle(BuildContext context) {
-    return TDCheckboxGroupContainer(
+    return TCheckboxGroupContainer(
       selectIds: const ['index:1'],
       cardMode: true,
       direction: Axis.vertical,
       directionalTdCheckboxes: const [
-        TDCheckbox(
+        TCheckbox(
           id: 'index:0',
           title: '多选',
           titleMaxLine: 2,
@@ -314,7 +314,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDCheckbox(
+        TCheckbox(
           id: 'index:1',
           title: '多选',
           titleMaxLine: 2,
@@ -322,7 +322,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDCheckbox(
+        TCheckbox(
           id: 'index:2',
           title: '多选',
           titleMaxLine: 2,
@@ -330,7 +330,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
           subTitle: '描述信息',
           cardMode: true,
         ),
-        TDCheckbox(
+        TCheckbox(
           id: 'index:3',
           title: '多选',
           titleMaxLine: 2,
@@ -351,22 +351,22 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _horizontalCardStyle(BuildContext context) {
-    return TDCheckboxGroupContainer(
+    return TCheckboxGroupContainer(
       selectIds: const ['index:1'],
       cardMode: true,
       direction: Axis.horizontal,
       directionalTdCheckboxes: const [
-        TDCheckbox(
+        TCheckbox(
           id: 'index:0',
           title: '多选',
           cardMode: true,
         ),
-        TDCheckbox(
+        TCheckbox(
           id: 'index:1',
           title: '多选',
           cardMode: true,
         ),
-        TDCheckbox(
+        TCheckbox(
           id: 'index:2',
           title: '多选',
           cardMode: true,
@@ -380,7 +380,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 
 ## API
-### TDCheckboxGroup
+### TCheckboxGroup
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -388,20 +388,20 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 | child |  | - |  |
 | key |  | - |  |
 | onChangeGroup | OnGroupChange? | - | 状态变化监听器 |
-| controller | TDCheckboxGroupController? | - | 可以通过控制器操作勾选状态 |
+| controller | TCheckboxGroupController? | - | 可以通过控制器操作勾选状态 |
 | checkedIds | List<String>? | - | 勾选的CheckBox id列表 |
 | maxChecked | int? | - | 最多可以勾选多少 |
 | titleMaxLine | int? | - | CheckBox标题的行数 |
 | customContentBuilder | ContentBuilder? | - | CheckBox完全自定义内容 |
-| contentDirection | TDContentDirection? | - | 文字相对icon的方位 |
-| style | TDCheckboxStyle? | - | CheckBox复选框样式：圆形或方形 |
+| contentDirection | TContentDirection? | - | 文字相对icon的方位 |
+| style | TCheckboxStyle? | - | CheckBox复选框样式：圆形或方形 |
 | spacing | double? | - | CheckBoxicon和文字的距离 |
 | customIconBuilder | IconBuilder? | - | 自定义选择icon的样式 |
 | onOverloadChecked | VoidCallback? | - | 超过最大可勾选的个数 |
 
 ```
 ```
- ### TDCheckbox
+ ### TCheckbox
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -419,15 +419,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 | customIconBuilder | IconBuilder? | - | 自定义Checkbox显示样式 |
 | customContentBuilder | ContentBuilder? | - | 完全自定义内容 |
 | insetSpacing | double? | 16 | 文字和非图标侧的距离 |
-| style | TDCheckboxStyle? | - | 复选框样式：圆形或方形 |
+| style | TCheckboxStyle? | - | 复选框样式：圆形或方形 |
 | spacing | double? | - | icon和文字的距离 |
 | backgroundColor | Color? | - | 背景颜色 |
 | selectColor | Color? | - | 选择颜色 |
 | disableColor | Color? | - | 禁用选择颜色 |
-| size | TDCheckBoxSize | TDCheckBoxSize.small | 复选框大小 |
+| size | TCheckBoxSize | TCheckBoxSize.small | 复选框大小 |
 | cardMode | bool | false | 展示为卡片模式 |
 | showDivider | bool | true | 是否展示分割线 |
-| contentDirection | TDContentDirection | TDContentDirection.right | 文字相对icon的方位 |
+| contentDirection | TContentDirection | TContentDirection.right | 文字相对icon的方位 |
 | onCheckBoxChanged | OnCheckValueChanged? | - | 切换监听 |
 | titleColor | Color? | - | 标题文字颜色 |
 | subTitleColor | Color? | - | 副标题文字颜色 |

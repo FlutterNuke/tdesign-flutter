@@ -1,21 +1,21 @@
 
   Widget _iconTypeTabBar3tabs(BuildContext context) {
-    return TDBottomTabBar(TDBottomTabBarBasicType.icon,
+    return TBottomTabBar(TBottomTabBarBasicType.icon,
         useVerticalDivider: true,
         navigationTabs: [
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
               selectedIcon: _selectedIcon,
               unselectedIcon: _unSelectedIcon,
               onTap: () {
                 onTapTab(context, '标签1');
               }),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
               selectedIcon: _selectedIcon,
               unselectedIcon: _unSelectedIcon,
               onTap: () {
                 onTapTab(context, '标签2');
               }),
-          TDBottomTabBarTabConfig(
+          TBottomTabBarTabConfig(
               selectedIcon: _selectedIcon,
               unselectedIcon: _unSelectedIcon,
               onTap: () {

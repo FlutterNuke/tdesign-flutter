@@ -1,8 +1,8 @@
 
   Widget _buildRightLabelLinear(BuildContext context) {
-    return TDProgress(
-        type: TDProgressType.linear,
+    return TProgress(
+        type: TProgressType.linear,
         value: 0.8,
         strokeWidth: 6,
-        progressLabelPosition: TDProgressLabelPosition.right);
+        progressLabelPosition: TProgressLabelPosition.right);
   }

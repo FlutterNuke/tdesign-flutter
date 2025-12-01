@@ -6,14 +6,14 @@ Widget _buildCustomCell(BuildContext context) {
     valueListenable: selected,
     builder: (context, value, child) {
       final date = DateTime.fromMillisecondsSinceEpoch(value[0]);
-      return TDCellGroup(
+      return TCellGroup(
         cells: [
-          TDCell(
+          TCell(
             title: '自定义日期单元格',
             arrow: true,
             note: '${date.year}-${date.month}-${date.day}',
             onClick: (cell) {
-              TDCalendarPopup(
+              TCalendarPopup(
                 context,
                 visible: true,
                 onConfirm: (value) {
@@ -23,7 +23,7 @@ Widget _buildCustomCell(BuildContext context) {
                 onClose: () {
                   print('onClose');
                 },
-                child: TDCalendar(
+                child: TCalendar(
                   title: '请选择日期',
                   value: value,
                   height: size.height * 0.6 + 176,

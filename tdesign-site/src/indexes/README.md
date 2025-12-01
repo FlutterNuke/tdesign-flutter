@@ -29,27 +29,27 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 Widget _buildSimple(BuildContext context) {
   final renderBox = navBarkey.currentContext?.findRenderObject() as RenderBox?;
   final indexList = _list.map((item) => item['index'] as String).toList();
-  return TDButton(
+  return TButton(
     text: '基础用法',
     isBlock: true,
-    size: TDButtonSize.large,
-    theme: TDButtonTheme.primary,
-    type: TDButtonType.outline,
+    size: TButtonSize.large,
+    theme: TButtonTheme.primary,
+    type: TButtonType.outline,
     onTap: () {
       Navigator.of(context).push(
-        TDSlidePopupRoute(
+        TSlidePopupRoute(
           slideTransitionFrom: SlideTransitionFrom.right,
           modalTop: renderBox?.size.height,
           builder: (context) {
             return Container(
               color: Colors.white,
-              child: TDIndexes(
+              child: TIndexes(
                 indexList: indexList,
                 builderContent: (context, index) {
                   final list = _list.firstWhere((element) => element['index'] == index)['children'] as List<String>;
-                  return TDCellGroup(
+                  return TCellGroup(
                     cells: list
-                        .map((e) => TDCell(
+                        .map((e) => TCell(
                               title: e,
                             ))
                         .toList(),
@@ -74,27 +74,27 @@ Widget _buildSimple(BuildContext context) {
 Widget _buildSimple(BuildContext context) {
   final renderBox = navBarkey.currentContext?.findRenderObject() as RenderBox?;
   final indexList = _list.map((item) => item['index'] as String).toList();
-  return TDButton(
+  return TButton(
     text: '基础用法',
     isBlock: true,
-    size: TDButtonSize.large,
-    theme: TDButtonTheme.primary,
-    type: TDButtonType.outline,
+    size: TButtonSize.large,
+    theme: TButtonTheme.primary,
+    type: TButtonType.outline,
     onTap: () {
       Navigator.of(context).push(
-        TDSlidePopupRoute(
+        TSlidePopupRoute(
           slideTransitionFrom: SlideTransitionFrom.right,
           modalTop: renderBox?.size.height,
           builder: (context) {
             return Container(
               color: Colors.white,
-              child: TDIndexes(
+              child: TIndexes(
                 indexList: indexList,
                 builderContent: (context, index) {
                   final list = _list.firstWhere((element) => element['index'] == index)['children'] as List<String>;
-                  return TDCellGroup(
+                  return TCellGroup(
                     cells: list
-                        .map((e) => TDCell(
+                        .map((e) => TCell(
                               title: e,
                             ))
                         .toList(),
@@ -122,28 +122,28 @@ Widget _buildSimple(BuildContext context) {
 Widget _buildOther(BuildContext context) {
   final renderBox = navBarkey.currentContext?.findRenderObject() as RenderBox?;
   final indexList = _list.map((item) => item['index'] as String).toList();
-  return TDButton(
+  return TButton(
     text: '胶囊索引',
     isBlock: true,
-    size: TDButtonSize.large,
-    theme: TDButtonTheme.primary,
-    type: TDButtonType.outline,
+    size: TButtonSize.large,
+    theme: TButtonTheme.primary,
+    type: TButtonType.outline,
     onTap: () {
       Navigator.of(context).push(
-        TDSlidePopupRoute(
+        TSlidePopupRoute(
           slideTransitionFrom: SlideTransitionFrom.right,
           modalTop: renderBox?.size.height,
           builder: (context) {
             return Container(
               color: Colors.white,
-              child: TDIndexes(
+              child: TIndexes(
                 indexList: indexList,
                 capsuleTheme: true,
                 builderContent: (context, index) {
                   final list = _list.firstWhere((element) => element['index'] == index)['children'] as List<String>;
-                  return TDCellGroup(
+                  return TCellGroup(
                     cells: list
-                        .map((e) => TDCell(
+                        .map((e) => TCell(
                               title: e,
                             ))
                         .toList(),
@@ -168,28 +168,28 @@ Widget _buildOther(BuildContext context) {
 Widget _buildOther(BuildContext context) {
   final renderBox = navBarkey.currentContext?.findRenderObject() as RenderBox?;
   final indexList = _list.map((item) => item['index'] as String).toList();
-  return TDButton(
+  return TButton(
     text: '胶囊索引',
     isBlock: true,
-    size: TDButtonSize.large,
-    theme: TDButtonTheme.primary,
-    type: TDButtonType.outline,
+    size: TButtonSize.large,
+    theme: TButtonTheme.primary,
+    type: TButtonType.outline,
     onTap: () {
       Navigator.of(context).push(
-        TDSlidePopupRoute(
+        TSlidePopupRoute(
           slideTransitionFrom: SlideTransitionFrom.right,
           modalTop: renderBox?.size.height,
           builder: (context) {
             return Container(
               color: Colors.white,
-              child: TDIndexes(
+              child: TIndexes(
                 indexList: indexList,
                 capsuleTheme: true,
                 builderContent: (context, index) {
                   final list = _list.firstWhere((element) => element['index'] == index)['children'] as List<String>;
-                  return TDCellGroup(
+                  return TCellGroup(
                     cells: list
-                        .map((e) => TDCell(
+                        .map((e) => TCell(
                               title: e,
                             ))
                         .toList(),
@@ -209,7 +209,7 @@ Widget _buildOther(BuildContext context) {
 
 
 ## API
-### TDIndexes
+### TIndexes
 #### 简介
 索引
 #### 默认构造方法
@@ -232,7 +232,7 @@ Widget _buildOther(BuildContext context) {
 
 ```
 ```
- ### TDIndexesAnchor
+ ### TIndexesAnchor
 #### 简介
 索引锚点
 #### 默认构造方法
@@ -248,7 +248,7 @@ Widget _buildOther(BuildContext context) {
 
 ```
 ```
- ### TDIndexesList
+ ### TIndexesList
 #### 简介
 索引
 #### 默认构造方法

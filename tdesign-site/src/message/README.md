@@ -26,15 +26,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildPlainTextMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
       isBlock: true,
       text: '纯文字的通知',
-      size: TDButtonSize.large,
-      type: TDButtonType.outline,
+      size: TButtonSize.large,
+      type: TButtonType.outline,
       width: 450,
-      theme: TDButtonTheme.primary,
+      theme: TButtonTheme.primary,
       onTap: () {
-        TDMessage.showMessage(
+        TMessage.showMessage(
           context: context,
           content: _commonContent,
           visible: true,
@@ -58,15 +58,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildIconTextMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
         isBlock: true,
         text: '带图标的通知',
-        size: TDButtonSize.large,
-        type: TDButtonType.outline,
+        size: TButtonSize.large,
+        type: TButtonType.outline,
         width: 450,
-        theme: TDButtonTheme.primary,
+        theme: TButtonTheme.primary,
         onTap: () {
-          TDMessage.showMessage(
+          TMessage.showMessage(
             context: context,
             content: _commonContent,
             visible: true,
@@ -86,15 +86,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildMessageWithCloseButton(BuildContext context) {
-    return TDButton(
+    return TButton(
         isBlock: true,
         text: '带关闭的通知',
-        size: TDButtonSize.large,
-        type: TDButtonType.outline,
+        size: TButtonSize.large,
+        type: TButtonType.outline,
         width: 450,
-        theme: TDButtonTheme.primary,
+        theme: TButtonTheme.primary,
         onTap: () {
-          TDMessage.showMessage(
+          TMessage.showMessage(
             context: context,
             visible: true,
             icon: true,
@@ -119,15 +119,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildRollingMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
         isBlock: true,
         text: '可滚动的通知',
-        size: TDButtonSize.large,
-        type: TDButtonType.outline,
+        size: TButtonSize.large,
+        type: TButtonType.outline,
         width: 450,
-        theme: TDButtonTheme.primary,
+        theme: TButtonTheme.primary,
         onTap: () {
-          TDMessage.showMessage(
+          TMessage.showMessage(
               context: context,
               visible: true,
               icon: false,
@@ -150,15 +150,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildLinkMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
         isBlock: true,
         text: '带按钮的通知',
-        size: TDButtonSize.large,
-        type: TDButtonType.outline,
+        size: TButtonSize.large,
+        type: TButtonType.outline,
         width: 450,
-        theme: TDButtonTheme.primary,
+        theme: TButtonTheme.primary,
         onTap: () {
-          TDMessage.showMessage(
+          TMessage.showMessage(
               context: context,
               visible: true,
               icon: true,
@@ -186,15 +186,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildInfoMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
       isBlock: true,
       text: '普通通知',
-      size: TDButtonSize.large,
-      type: TDButtonType.outline,
+      size: TButtonSize.large,
+      type: TButtonType.outline,
       width: 450,
-      theme: TDButtonTheme.primary,
+      theme: TButtonTheme.primary,
       onTap: () {
-        TDMessage.showMessage(
+        TMessage.showMessage(
           context: context,
           visible: true,
           icon: true,
@@ -215,15 +215,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildSuccessMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
       isBlock: true,
       text: '成功通知',
-      size: TDButtonSize.large,
-      type: TDButtonType.outline,
+      size: TButtonSize.large,
+      type: TButtonType.outline,
       width: 450,
-      theme: TDButtonTheme.primary,
+      theme: TButtonTheme.primary,
       onTap: () {
-        TDMessage.showMessage(
+        TMessage.showMessage(
           context: context,
           visible: true,
           icon: true,
@@ -244,15 +244,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildWarningMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
         isBlock: true,
         text: '警示通知',
-        size: TDButtonSize.large,
-        type: TDButtonType.outline,
+        size: TButtonSize.large,
+        type: TButtonType.outline,
         width: 450,
-        theme: TDButtonTheme.primary,
+        theme: TButtonTheme.primary,
         onTap: () {
-          TDMessage.showMessage(
+          TMessage.showMessage(
             context: context,
             visible: true,
             icon: true,
@@ -272,15 +272,15 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
   <pre slot="Dart" lang="javascript">
   Widget _buildErrorMessage(BuildContext context) {
-    return TDButton(
+    return TButton(
         isBlock: true,
         text: '错误通知',
-        size: TDButtonSize.large,
-        type: TDButtonType.outline,
+        size: TButtonSize.large,
+        type: TButtonType.outline,
         width: 450,
-        theme: TDButtonTheme.primary,
+        theme: TButtonTheme.primary,
         onTap: () {
-          TDMessage.showMessage(
+          TMessage.showMessage(
             context: context,
             visible: true,
             icon: true,
@@ -318,7 +318,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 ```
 ```
- ### TDMessage
+ ### TMessage
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |

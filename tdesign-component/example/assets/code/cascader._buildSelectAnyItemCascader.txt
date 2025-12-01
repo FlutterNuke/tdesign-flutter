@@ -4,7 +4,7 @@
       onTap: () {
         var action = (List<MultiCascaderListModel> selectData) {
           if(selectData.isEmpty){
-            TDToast.showText('请选择数据', context: context);
+            TToast.showText('请选择数据', context: context);
             return;
           }
           setState(() {
@@ -17,12 +17,12 @@
             _selected_1 = result.join('/');
           });
         };
-        TDCascader.showMultiCascader(
+        TCascader.showMultiCascader(
           context,
           title: '选择地址',
           data: _data,
           initialData: _initData_6,
-          action: TDCascaderAction(onConfirm: action),
+          action: TCascaderAction(onConfirm: action),
           onChange: action,
         );
       },
