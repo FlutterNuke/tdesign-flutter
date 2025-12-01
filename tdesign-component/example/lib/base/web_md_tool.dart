@@ -23,7 +23,7 @@ class WebMdTool {
     required CodeWrapper? singleChild,
   }) async {
     if (needGenerateWebMd && model != null && !kIsWeb) {
-      var pageName = 'td_${model.pageName ?? model.name}_page';
+      var pageName = 't_${model.pageName ?? model.name}_page';
       var exampleCodeSb = StringBuffer();
       var count = 1;
       if (singleChild != null) {
@@ -257,7 +257,7 @@ import 'package:easy_refresh/easy_refresh.dart';''';
   }
 
   static _getPageCode(String pageName) {
-    if(pageName == 'td_side-bar_page'){
+    if(pageName == 't_side-bar_page'){
       return '''
 [t_sidebar_page.dart](https://github.com/Tencent/tdesign-flutter/blob/main/tdesign-component/example/lib/page/sidebar/t_sidebar_page.dart)
 
