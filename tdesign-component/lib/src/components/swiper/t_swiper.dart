@@ -5,7 +5,7 @@ import '../../../tdesign_flutter.dart';
 
 const _kAminatedDuration = 100;
 
-/// Tesign风格的Swiper指示器样式，与flutter_swiper的Swiper结合使用
+/// TDesign风格的Swiper指示器样式，与flutter_swiper的Swiper结合使用
 class TSwiperPagination extends SwiperPlugin {
   const TSwiperPagination({
     this.alignment,

@@ -1,4 +1,4 @@
-/// Tesign默认主题
+/// TDesign默认主题
 class TDefaultTheme {
   static String defaultThemeConfig = '''
   {

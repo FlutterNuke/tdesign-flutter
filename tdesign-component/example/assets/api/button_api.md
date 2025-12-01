@@ -1,28 +1,5 @@
 ## API
-### TButtonStyle
-#### 默认构造方法
-
-| 参数 | 类型 | 默认值 | 说明 |
-| --- | --- | --- | --- |
-| backgroundColor | Color? | - | 背景颜色 |
-| frameColor | Color? | - | 边框颜色 |
-| frameWidth | double? | - | 边框宽度 |
-| radius | BorderRadiusGeometry? | - | 自定义圆角 |
-| textColor | Color? | - | 文字颜色 |
-
-
-#### 工厂构造方法
-
-| 名称  | 说明 |
-| --- |  --- |
-| TButtonStyle.generateFillStyleByTheme  | 生成不同主题的填充按钮样式 |
-| TButtonStyle.generateGhostStyleByTheme  | 生成不同主题的幽灵按钮样式 |
-| TButtonStyle.generateOutlineStyleByTheme  | 生成不同主题的描边按钮样式 |
-| TButtonStyle.generateTextStyleByTheme  | 生成不同主题的文本按钮样式 |
-
-```
-```
- ### TButton
+### TButton
 #### 默认构造方法
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -32,6 +9,7 @@
 | disabled | bool | false | 禁止点击 |
 | disableStyle | TButtonStyle? | - | 自定义禁用样式，有则优先用它，没有则根据 type 和 theme 选取 |
 | disableTextStyle | TextStyle? | - | 自定义不可点击状态文本样式 |
+| gradient | Gradient? | - | 渐变背景色，优先级高于backgroundColor |
 | height | double? | - | 自定义高度 |
 | icon | IconData? | - | 图标icon |
 | iconPosition | TButtonIconPosition? | TButtonIconPosition.left | 图标位置 |
@@ -51,3 +29,27 @@
 | theme | TButtonTheme? | - | 主题 |
 | type | TButtonType | TButtonType.fill | 类型：填充，描边，文字 |
 | width | double? | - | 自定义宽度 |
+
+```
+```
+ ### TButtonStyle
+#### 默认构造方法
+
+| 参数 | 类型 | 默认值 | 说明 |
+| --- | --- | --- | --- |
+| backgroundColor | Color? | - | 背景颜色 |
+| frameColor | Color? | - | 边框颜色 |
+| frameWidth | double? | - | 边框宽度 |
+| gradient | Gradient? | - | 渐变背景色 |
+| radius | BorderRadiusGeometry? | - | 自定义圆角 |
+| textColor | Color? | - | 文字颜色 |
+
+
+#### 工厂构造方法
+
+| 名称  | 说明 |
+| --- |  --- |
+| TButtonStyle.generateFillStyleByTheme  | 生成不同主题的填充按钮样式 |
+| TButtonStyle.generateGhostStyleByTheme  | 生成不同主题的幽灵按钮样式 |
+| TButtonStyle.generateOutlineStyleByTheme  | 生成不同主题的描边按钮样式 |
+| TButtonStyle.generateTextStyleByTheme  | 生成不同主题的文本按钮样式 |

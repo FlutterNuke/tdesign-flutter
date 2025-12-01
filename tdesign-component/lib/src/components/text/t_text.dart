@@ -16,7 +16,7 @@ var kTextNeedGlobalFontFamily = true;
 
 /// 文本控件
 /// 设计原则：
-/// 1. 为了使用更方便，所以对系统组件进行的扩展，需兼容系统控件所有功能，不能让用户使用 Tesign 时，因不能满足系统功能而弃用。
+/// 1. 为了使用更方便，所以对系统组件进行的扩展，需兼容系统控件所有功能，不能让用户使用 TDesign 时，因不能满足系统功能而弃用。
 /// 2. 非系统已有属性，尽量添加注释
 ///
 /// 需求：把一部分在 TextStyle 中的属性扁平化，放到外层。
@@ -308,7 +308,7 @@ class TText extends StatelessWidget {
   }
 }
 
-/// TextSpan 的 Tesign 扩展，将部分 TextStyle 中的参数扁平化。
+/// TextSpan 的 TDesign 扩展，将部分 TextStyle 中的参数扁平化。
 class TTextSpan extends TextSpan {
   /// 构造参数，扩展参数释义可参考[TText]中字段注释
   TTextSpan({

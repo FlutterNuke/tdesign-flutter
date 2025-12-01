@@ -21,29 +21,29 @@ class TCalendarCell extends StatefulWidget {
     this.cellWidget,
   }) : super(key: key);
 
-  final Tate? tdate;
+  final TDate? tdate;
   final CalendarFormat? format;
   final CalendarType type;
   final void Function(
     int value,
     DateSelectType type,
-    Tate tdate,
+    TDate tdate,
   )? onCellClick;
   final void Function(
     int value,
     DateSelectType type,
-    Tate tdate,
+    TDate tdate,
   )? onCellLongPress;
   final void Function(List<int> value)? onChange;
   final double height;
-  final Map<DateTime, List<Tate?>> data;
+  final Map<DateTime, List<TDate?>> data;
   final double padding;
   final int rowIndex;
   final int colIndex;
-  final List<Tate?> dateList;
+  final List<TDate?> dateList;
   final Widget? Function(
     BuildContext context,
-    Tate tdate,
+    TDate tdate,
     DateSelectType selectType,
   )? cellWidget;
 
@@ -247,7 +247,7 @@ class _TDCalendarCellState extends State<TCalendarCell> {
     return null;
   }
 
-  Tate? _nextDay([int num = 1]) {
+  TDate? _nextDay([int num = 1]) {
     final index = widget.rowIndex * 7 + widget.colIndex + num;
     final date = widget.dateList.getOrNull(index);
     return date;
@@ -261,8 +261,8 @@ class _TDCalendarCellState extends State<TCalendarCell> {
 }
 
 /// 时间对象
-class Tate {
-  Tate({
+class TDate {
+  TDate({
     required this.date,
     required this.typeNotifier,
     this.prefix,

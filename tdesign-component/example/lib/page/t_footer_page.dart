@@ -31,7 +31,7 @@ class TFooterPage extends StatelessWidget {
   Widget _buildFooter(BuildContext context) {
     return const TFooter(
       TFooterType.text,
-      text: 'Copyright © 2019-2023 Tesign.All Rights Reserved.',
+      text: 'Copyright © 2019-2023 TDesign.All Rights Reserved.',
     );
   }
 
@@ -50,7 +50,7 @@ class TFooterPage extends StatelessWidget {
           },
         ),
       ],
-      text: 'Copyright © 2019-2023 Tesign.All Rights Reserved.',
+      text: 'Copyright © 2019-2023 TDesign.All Rights Reserved.',
     );
   }
 
@@ -76,7 +76,7 @@ class TFooterPage extends StatelessWidget {
           },
         ),
       ],
-      text: 'Copyright © 2019-2023 Tesign.All Rights Reserved.',
+      text: 'Copyright © 2019-2023 TDesign.All Rights Reserved.',
     );
   }
 

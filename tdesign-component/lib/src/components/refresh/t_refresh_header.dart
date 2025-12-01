@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../../../tdesign_flutter.dart';
 import '../../util/context_extension.dart';
 
-/// Tesign刷新头部
+/// TDesign刷新头部
 /// 结合EasyRefresh类实现下拉刷新,继承自Header类，字段含义与父类一致
 class TRefreshHeader extends Header {
   TRefreshHeader({

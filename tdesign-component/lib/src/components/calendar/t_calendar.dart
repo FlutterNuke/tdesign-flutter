@@ -9,7 +9,7 @@ export 't_calendar_header.dart';
 export 't_calendar_popup.dart';
 export 't_calendar_style.dart';
 
-typedef CalendarFormat = Tate? Function(Tate? day);
+typedef CalendarFormat = TDate? Function(TDate? day);
 
 enum CalendarType { single, multiple, range }
 
@@ -96,14 +96,14 @@ class TCalendar extends StatefulWidget {
   final void Function(
     int value,
     DateSelectType type,
-    Tate tdate,
+    TDate tdate,
   )? onCellClick;
 
   /// 长安日期时触发
   final void Function(
     int value,
     DateSelectType type,
-    Tate tdate,
+    TDate tdate,
   )? onCellLongPress;
 
   /// 点击周时触发
@@ -145,7 +145,7 @@ class TCalendar extends StatefulWidget {
   /// 自定义日期单元格组件
   final Widget? Function(
     BuildContext context,
-    Tate tdate,
+    TDate tdate,
     DateSelectType selectType,
   )? cellWidget;
 

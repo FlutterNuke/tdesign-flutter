@@ -208,7 +208,7 @@ class _TDTabBarState extends State<TTabBar> {
   }
 }
 
-/// Tesign自定义下标
+/// TDesign自定义下标
 class TTabBarIndicator extends Decoration {
   final BuildContext? context;
   final double? indicatorWidth;
@@ -262,7 +262,7 @@ class _TDTabBarIndicatorPainter extends BoxPainter {
       decoration.indicatorWidth ?? _defaultIndicatorWidth;
 }
 
-/// Tesign自定义下标 竖向
+/// TDesign自定义下标 竖向
 class TTabBarVerticalIndicator extends Decoration {
   final BuildContext? context;
   final double? indicatorWidth;
@@ -317,7 +317,7 @@ class _TDTabBarVerticalIndicatorPainter extends BoxPainter {
       decoration.indicatorWidth ?? _defaultIndicatorWidth;
 }
 
-/// Tesign不展示下标
+/// TDesign不展示下标
 class TNoneIndicator extends Decoration {
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) =>
