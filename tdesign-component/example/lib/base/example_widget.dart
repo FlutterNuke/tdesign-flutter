@@ -6,7 +6,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:tdesign_flutter/tdesign_flutter.dart';
 
-import '../page/td_theme_page.dart';
+import '../page/t_theme_page.dart';
 import 'syntax_highlighter.dart';
 import 'api_widget.dart';
 import 'example_base.dart';
