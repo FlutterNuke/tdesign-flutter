@@ -10,7 +10,6 @@
       indicator: true,
       layout: TTextareaLayout.vertical,
       bordered: true,
-      onChanged: (value) {
-      },
+      onChanged: (value) {},
     );
   }

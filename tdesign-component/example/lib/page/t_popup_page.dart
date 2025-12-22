@@ -344,7 +344,7 @@ class TPopupPage extends StatelessWidget {
                                   Navigator.maybePop(context);
                                 },
                                 child: SizedBox(
-                                  height: 340,
+                                  height: 348,
                                   child: Column(
                                     children: [
                                       TInput(

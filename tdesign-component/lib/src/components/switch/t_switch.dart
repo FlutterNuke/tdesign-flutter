@@ -96,11 +96,11 @@ class TSwitchState extends State<TSwitch> {
     final theme = TTheme.of(context);
     final switchEnable = widget.enable && widget.type != TSwitchType.loading;
     final trackOnColor = widget.trackOnColor ?? theme.brandNormalColor;
-    final trackOffColor = widget.trackOffColor ?? theme.textColorDisabled;
+    final trackOffColor = widget.trackOffColor ?? theme.textDisabledColor;
     final thumbContentOnColor =
         widget.thumbContentOnColor ?? theme.brandNormalColor;
     final thumbContentOffColor =
-        widget.thumbContentOffColor ?? theme.textColorDisabled;
+        widget.thumbContentOffColor ?? theme.textDisabledColor;
     final thumbContentOnFont =
         widget.thumbContentOnFont ?? const TextStyle(fontSize: 14);
     final thumbContentOffFont =
