@@ -66,11 +66,11 @@ class TDTagStyle {
   double border = 0;
 
   /// 字体颜色，与属性不同名，方便子类自定义处理
-  Color get getTextColor => textColor ?? TDTheme.of(context).fontWhColor1;
+  Color get getTextColor => textColor ?? TTheme.of(context).fontWhColor1;
 
   /// 背景颜色，与属性不同名，方便子类自定义处理
   Color get getBackgroundColor =>
-      backgroundColor ?? TDTheme.of(context).brandNormalColor;
+      backgroundColor ?? TTheme.of(context).brandNormalColor;
 
   /// 线框颜色，与属性不同名，方便子类自定义处理
   Color get getBorderColor => borderColor ?? Colors.transparent;
@@ -90,54 +90,54 @@ class TDTagStyle {
     switch (theme) {
       case TDTagTheme.primary:
         textColor = light
-            ? TDTheme.of(context).brandNormalColor
-            : TDTheme.of(context).textColorAnti;
+            ? TTheme.of(context).brandNormalColor
+            : TTheme.of(context).textColorAnti;
         backgroundColor = light
-            ? TDTheme.of(context).brandLightColor
-            : TDTheme.of(context).brandNormalColor;
+            ? TTheme.of(context).brandLightColor
+            : TTheme.of(context).brandNormalColor;
         break;
       case TDTagTheme.warning:
         textColor = light
-            ? TDTheme.of(context).warningNormalColor
-            : TDTheme.of(context).textColorAnti;
+            ? TTheme.of(context).warningNormalColor
+            : TTheme.of(context).textColorAnti;
         backgroundColor = light
-            ? TDTheme.of(context).warningLightColor
-            : TDTheme.of(context).warningNormalColor;
+            ? TTheme.of(context).warningLightColor
+            : TTheme.of(context).warningNormalColor;
         break;
       case TDTagTheme.danger:
         textColor = light
-            ? TDTheme.of(context).errorNormalColor
-            : TDTheme.of(context).textColorAnti;
+            ? TTheme.of(context).errorNormalColor
+            : TTheme.of(context).textColorAnti;
         backgroundColor = light
-            ? TDTheme.of(context).errorLightColor
-            : TDTheme.of(context).errorNormalColor;
+            ? TTheme.of(context).errorLightColor
+            : TTheme.of(context).errorNormalColor;
         break;
       case TDTagTheme.success:
         textColor = light
-            ? TDTheme.of(context).successNormalColor
-            : TDTheme.of(context).textColorAnti;
+            ? TTheme.of(context).successNormalColor
+            : TTheme.of(context).textColorAnti;
         backgroundColor = light
-            ? TDTheme.of(context).successLightColor
-            : TDTheme.of(context).successNormalColor;
+            ? TTheme.of(context).successLightColor
+            : TTheme.of(context).successNormalColor;
         break;
       case TDTagTheme.defaultTheme:
       default:
-        textColor = TDTheme.of(context).textColorPrimary;
+        textColor = TTheme.of(context).textColorPrimary;
         backgroundColor = light
-            ? TDTheme.of(context).bgColorSecondaryContainer
-            : TDTheme.of(context).bgColorComponent;
+            ? TTheme.of(context).bgColorSecondaryContainer
+            : TTheme.of(context).bgColorComponent;
     }
     switch (shape) {
       case TDTagShape.square:
-        borderRadius = BorderRadius.circular(TDTheme.of(context).radiusSmall);
+        borderRadius = BorderRadius.circular(TTheme.of(context).radiusSmall);
         break;
       case TDTagShape.round:
-        borderRadius = BorderRadius.circular(TDTheme.of(context).radiusRound);
+        borderRadius = BorderRadius.circular(TTheme.of(context).radiusRound);
         break;
       case TDTagShape.mark:
         borderRadius = BorderRadius.only(
-          topRight: Radius.circular(TDTheme.of(context).radiusRound),
-          bottomRight: Radius.circular(TDTheme.of(context).radiusRound),
+          topRight: Radius.circular(TTheme.of(context).radiusRound),
+          bottomRight: Radius.circular(TTheme.of(context).radiusRound),
         );
         break;
     }
@@ -155,48 +155,48 @@ class TDTagStyle {
     this.context = context;
     switch (theme) {
       case TDTagTheme.primary:
-        borderColor = TDTheme.of(context).brandNormalColor;
-        textColor = TDTheme.of(context).brandNormalColor;
+        borderColor = TTheme.of(context).brandNormalColor;
+        textColor = TTheme.of(context).brandNormalColor;
         backgroundColor =
-            light ? TDTheme.of(context).brandLightColor : Colors.transparent;
+            light ? TTheme.of(context).brandLightColor : Colors.transparent;
         break;
       case TDTagTheme.warning:
-        borderColor = TDTheme.of(context).warningNormalColor;
-        textColor = TDTheme.of(context).warningNormalColor;
+        borderColor = TTheme.of(context).warningNormalColor;
+        textColor = TTheme.of(context).warningNormalColor;
         backgroundColor =
-            light ? TDTheme.of(context).warningLightColor : Colors.transparent;
+            light ? TTheme.of(context).warningLightColor : Colors.transparent;
         break;
       case TDTagTheme.danger:
-        borderColor = TDTheme.of(context).errorNormalColor;
-        textColor = TDTheme.of(context).errorNormalColor;
+        borderColor = TTheme.of(context).errorNormalColor;
+        textColor = TTheme.of(context).errorNormalColor;
         backgroundColor =
-            light ? TDTheme.of(context).errorLightColor : Colors.transparent;
+            light ? TTheme.of(context).errorLightColor : Colors.transparent;
         break;
       case TDTagTheme.success:
-        borderColor = TDTheme.of(context).successNormalColor;
-        textColor = TDTheme.of(context).successNormalColor;
+        borderColor = TTheme.of(context).successNormalColor;
+        textColor = TTheme.of(context).successNormalColor;
         backgroundColor =
-            light ? TDTheme.of(context).successLightColor : Colors.transparent;
+            light ? TTheme.of(context).successLightColor : Colors.transparent;
         break;
       case TDTagTheme.defaultTheme:
       default:
-        borderColor = TDTheme.of(context).componentBorderColor;
-        textColor = TDTheme.of(context).textColorPrimary;
+        borderColor = TTheme.of(context).componentBorderColor;
+        textColor = TTheme.of(context).textColorPrimary;
         backgroundColor = light
-            ? TDTheme.of(context).bgColorSecondaryContainer
+            ? TTheme.of(context).bgColorSecondaryContainer
             : Colors.transparent;
     }
     switch (shape) {
       case TDTagShape.square:
-        borderRadius = BorderRadius.circular(TDTheme.of(context).radiusSmall);
+        borderRadius = BorderRadius.circular(TTheme.of(context).radiusSmall);
         break;
       case TDTagShape.round:
-        borderRadius = BorderRadius.circular(TDTheme.of(context).radiusRound);
+        borderRadius = BorderRadius.circular(TTheme.of(context).radiusRound);
         break;
       case TDTagShape.mark:
         borderRadius = BorderRadius.only(
-            topRight: Radius.circular(TDTheme.of(context).radiusRound),
-            bottomRight: Radius.circular(TDTheme.of(context).radiusRound));
+            topRight: Radius.circular(TTheme.of(context).radiusRound),
+            bottomRight: Radius.circular(TTheme.of(context).radiusRound));
         break;
     }
     border = 1;
@@ -210,22 +210,22 @@ class TDTagStyle {
     bool isOutline,
     TDTagShape shape,
   ) {
-    borderColor = TDTheme.of(context).componentBorderColor;
-    textColor = TDTheme.of(context).textDisabledColor;
+    borderColor = TTheme.of(context).componentBorderColor;
+    textColor = TTheme.of(context).textDisabledColor;
     backgroundColor = isOutline && !isLight
         ? Colors.transparent
-        : TDTheme.of(context).bgColorComponentDisabled;
+        : TTheme.of(context).bgColorComponentDisabled;
     switch (shape) {
       case TDTagShape.square:
-        borderRadius = BorderRadius.circular(TDTheme.of(context).radiusSmall);
+        borderRadius = BorderRadius.circular(TTheme.of(context).radiusSmall);
         break;
       case TDTagShape.round:
-        borderRadius = BorderRadius.circular(TDTheme.of(context).radiusRound);
+        borderRadius = BorderRadius.circular(TTheme.of(context).radiusRound);
         break;
       case TDTagShape.mark:
         borderRadius = BorderRadius.only(
-            topRight: Radius.circular(TDTheme.of(context).radiusRound),
-            bottomRight: Radius.circular(TDTheme.of(context).radiusRound));
+            topRight: Radius.circular(TTheme.of(context).radiusRound),
+            bottomRight: Radius.circular(TTheme.of(context).radiusRound));
         break;
     }
     border = isOutline ? 1 : 0;

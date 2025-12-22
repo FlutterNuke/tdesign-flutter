@@ -9,7 +9,7 @@
             theme: TDStepperTheme.filled,
             controller: controller,
           ),
-          TDButton(
+          TButton(
             text: 'value * 2',
             onTap: () {
               controller.value *= 2;

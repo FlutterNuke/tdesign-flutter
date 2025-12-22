@@ -109,7 +109,7 @@ class ItemDistanceCalculator {
     if (distance < 0.5) {
       return TTheme.of(context).textColorPrimary;
     } else {
-      return TTheme.of(context).textColorDisabled;
+      return TTheme.of(context).textDisabledColor;
     }
   }
 

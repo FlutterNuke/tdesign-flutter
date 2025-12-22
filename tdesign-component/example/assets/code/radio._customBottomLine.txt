@@ -8,7 +8,7 @@
         height: 20,
         color: Colors.red,
       ),
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: '0',
           title: '单选标题',

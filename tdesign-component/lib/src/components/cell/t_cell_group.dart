@@ -54,10 +54,10 @@ class TCellGroup extends StatefulWidget {
   final bool? isShowLastBordered;
 
   @override
-  _TDCellGroupState createState() => _TDCellGroupState();
+  _TCellGroupState createState() => _TCellGroupState();
 }
 
-class _TDCellGroupState extends State<TCellGroup> {
+class _TCellGroupState extends State<TCellGroup> {
   @override
   Widget build(BuildContext context) {
     var style = widget.style ?? TCellStyle.cellStyle(context);

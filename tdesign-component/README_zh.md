@@ -22,7 +22,7 @@
 ```
 
 - 在文件头部引入：`import 'package:tdesign_flutter/tdesign_flutter.dart'; // 组件库相关的，只需要引入这个文件，里面暴露td前缀所有需要的类`
-- 可通过json文件配置颜色/字体尺寸/字体样式/圆角/阴影等主题样式。通过TDTheme.of(context)或者TDTheme.defaultData()获取主题数据。建议组件都使用TDTheme.of(context)的，不需要跟随局部主题的组件，才可以使用TDTheme.defaultData()。
+- 可通过json文件配置颜色/字体尺寸/字体样式/圆角/阴影等主题样式。通过TTheme.of(context)或者TTheme.defaultData()获取主题数据。建议组件都使用TTheme.of(context)的，不需要跟随局部主题的组件，才可以使用TTheme.defaultData()。
     
     颜色，字体，圆角等使用示例：
 ```
@@ -79,7 +79,7 @@
 2.此时你得到是一个theme.css文件,可以将该文件放到tdesign-component/example/shell/theme/文件夹下,把该文件夹下的css2JsonTheme.dart修改为你自己的文件名、主题名和输出路径,即可得到一个theme.json文件
 ![img.png](../tdesign-site/site/public/assets/dart_modify.png)
 
-3.将主题json加载进TDTheme,美观的自定义主题就设置完成了.
+3.将主题json加载进TTheme,美观的自定义主题就设置完成了.
 ```
     var jsonString = await rootBundle.loadString('assets/theme.json');
     var _themeData = TThemeData.fromJson('green', jsonString);
@@ -153,11 +153,11 @@ class IntlResourceDelegate extends TResourceDelegate {
 
 # 共建流程
 - 拉取开发分支：建议将项目fork到自己github,每个组件从main分支拉取对应开发分支，命名为feature/组件名小写_下划线
-- 实现组件：组件中的属性请尽量使用TDTheme提供的公共属性，使用方法参考'主题-颜色'页面
+- 实现组件：组件中的属性请尽量使用TTheme提供的公共属性，使用方法参考'主题-颜色'页面
 - 编写示例页：示例页请尽量使用ExamplePage+ExampleModule+ExampleItem组合，参考示例稿布局实现。
 - 演示代码：每个组件示例，尽量将原子性代码提取成独立方法，并添加@Demo注解，方便生成演示代码。其中，@Demo注解的'group'参数需与ExamplePage的'exampleCodeGroup'参数一致。写法请参考'圆角-基础'页。
 - flutterAOP: 如果可以，建议切换到flutter 3.10.0分支，并添加AOP补丁，生成演示代码。
-- API文档：API文档由工具统一生成，请尽量添加字段的详细注释，并将构造方法作为类名下的第一个方法，字段放在构造方法之下，具体写法请参考TDText。
+- API文档：API文档由工具统一生成，请尽量添加字段的详细注释，并将构造方法作为类名下的第一个方法，字段放在构造方法之下，具体写法请参考TText。
 - 代码规范：开发完成后，请检查'Dart Analysis'下的提示，尽量符合代码规范。
 - 单元测试：添加未在示例稿中体现，但有必要验证的组件样式，请添加到ExamplePage的'test'参数中。
 - 合并代码: 上述检查完成后，请发起pr，合并到dev分支，并同步项目组验收。
@@ -167,10 +167,10 @@ class IntlResourceDelegate extends TResourceDelegate {
 - 文本居中:
  > 0.1.4版本:Flutter 3.16之后,修改了渲染引擎,导致启用forceVerticalCenter参数的组件字体偏移更多,不再居中.可以通过设置kTextForceVerticalCenterEnable=false来禁用字体居中功能,让组件显示与官方Text一致
  > 
- > 0.1.5版本:适配了Android和iOS双端基础系统字体的中文居中,其他语言的字体,可以通过重写TDTextPaddingConfig的paddingRate和paddingExtraRate进行自定义适配,TTextPaddingConfig使用方法可参考TDTextPage.
+ > 0.1.5版本:适配了Android和iOS双端基础系统字体的中文居中,其他语言的字体,可以通过重写TTextPaddingConfig的paddingRate和paddingExtraRate进行自定义适配,TTextPaddingConfig使用方法可参考TTextPage.
 
 - 修改全局字体:
-> 设置kTextNeedGlobalFontFamily=true,然后设置TDTextConfiguration的globalFontFamily参数.(0.1.6版本开始支持)
+> 设置kTextNeedGlobalFontFamily=true,然后设置TTextConfiguration的globalFontFamily参数.(0.1.6版本开始支持)
 
 # SDK依赖版本
 dart: ">=2.19.0 <4.0.0"

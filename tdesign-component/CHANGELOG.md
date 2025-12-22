@@ -2,7 +2,7 @@
 ## 🌈 0.2.6 `2025-11-14`
 ### 🚀 Features
 - `TDNoticeBar`: Added `content` property, deprecated and compatible with the original context property @runoob-coder ([#744](https://github.com/Tencent/tdesign-flutter/pull/744))
-- `TDButton`: Added gradient color background @jflin19990707 ([#773](https://github.com/Tencent/tdesign-flutter/pull/773))
+- `TButton`: Added gradient color background @jflin19990707 ([#773](https://github.com/Tencent/tdesign-flutter/pull/773))
 - `TDToast`: TDToast supports displaying multiple toasts @jflin19990707 ([#780](https://github.com/Tencent/tdesign-flutter/pull/780))
 - `TDUpload`: Added custom upload listener @leenc123 ([#775](https://github.com/Tencent/tdesign-flutter/pull/775))
 - `TDTable`: Added custom footer property @leenc123 ([#776](https://github.com/Tencent/tdesign-flutter/pull/776))
@@ -11,8 +11,8 @@
 - `TDMultiCascader`: Fixed initialIndexes parameter not taking effect @epoll-j ([#752](https://github.com/Tencent/tdesign-flutter/pull/752))
 - `TDDialog`: Fixed button text overflow issue @jflin19990707 ([#772](https://github.com/Tencent/tdesign-flutter/pull/772))
 - `TDDateTimePicker`: Changed English configuration for date, hour, minute, second to abbreviations @jflin19990707 ([#770](https://github.com/Tencent/tdesign-flutter/pull/770))
-- `TDCell`: Fixed overflow issue when note is too long @jflin19990707 ([#769](https://github.com/Tencent/tdesign-flutter/pull/769))
-- `TDCell`: Fixed alignment issue between icon and text in the cell @runoob-coder ([#789](https://github.com/Tencent/tdesign-flutter/pull/789))
+- `TCell`: Fixed overflow issue when note is too long @jflin19990707 ([#769](https://github.com/Tencent/tdesign-flutter/pull/769))
+- `TCell`: Fixed alignment issue between icon and text in the cell @runoob-coder ([#789](https://github.com/Tencent/tdesign-flutter/pull/789))
 - `TDProgress`: Fixed style issue when progress bar changes @runoob-coder ([#744](https://github.com/Tencent/tdesign-flutter/pull/744))
 
 ### 📝 Documentation
@@ -228,7 +228,7 @@
 - `Input`: Added onTapOutside callback @epoll-j ([#280](https://github.com/Tencent/tdesign-flutter/pull/280))
 - `Picker`: Added custom leftText, rightText @epoll-j ([#301](https://github.com/Tencent/tdesign-flutter/pull/301))
 - `Slider`: Feature/tdslider added text wrapping function @shizhe2018 ([#329](https://github.com/Tencent/tdesign-flutter/pull/329))
-- `Radio`: Feature/tdRadioGroup added built-in line wrapping, set number of rows and columns @shizhe2018 ([#331](https://github.com/Tencent/tdesign-flutter/pull/331))
+- `Radio`: Feature/TRadioGroup added built-in line wrapping, set number of rows and columns @shizhe2018 ([#331](https://github.com/Tencent/tdesign-flutter/pull/331))
 - `Dialog`: Added custom input box @shizhe2018 ([#333](https://github.com/Tencent/tdesign-flutter/pull/333))
 - `TNavBar`: Added flexibleSpace parameter @Luozf12345 ([#341](https://github.com/Tencent/tdesign-flutter/pull/341))
 - `TSearch`: Added search box focus acquisition and clear events @Luozf12345 ([#342](https://github.com/Tencent/tdesign-flutter/pull/342))

@@ -216,7 +216,7 @@ String convertToCamelCase(String input) {
   } else if(resultString.startsWith('component')){
     resultString = '${resultString}Color';
   } else if(resultString == 'textDisabledColor'){
-    resultString = 'textColorDisabled';
+    resultString = 'textDisabledColor';
   } else if(resultString.startsWith('fontWhite')){
     resultString = resultString.replaceAll('fontWhite', 'fontWhColor');
   } else if(resultString.startsWith('fontGray')){

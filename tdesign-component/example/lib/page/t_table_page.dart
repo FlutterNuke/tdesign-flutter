@@ -419,9 +419,9 @@ class _ShowFooterTableState extends State<ShowFooterTable> {
 
   @Demo(group: 'table')
   Widget _showFooterTable(BuildContext context) {
-    return TDTable(
+    return TTable(
       height: 100,
-      footerWidget: _hasMore ? TDText('加载更多...') : TDText('没有更多数据了'),
+      footerWidget: _hasMore ? TText('加载更多...') : TText('没有更多数据了'),
       onScroll: (controller) {
         if (controller.position.pixels == controller.position.maxScrollExtent &&
             _hasMore) {
@@ -431,10 +431,10 @@ class _ShowFooterTableState extends State<ShowFooterTable> {
       },
       data: _data,
       columns: [
-        TDTableCol(title: '标题', colKey: 'title1'),
-        TDTableCol(title: '标题', colKey: 'title2'),
-        TDTableCol(title: '标题', colKey: 'title3'),
-        TDTableCol(title: '标题', colKey: 'title4')
+        TTableCol(title: '标题', colKey: 'title1'),
+        TTableCol(title: '标题', colKey: 'title2'),
+        TTableCol(title: '标题', colKey: 'title3'),
+        TTableCol(title: '标题', colKey: 'title4')
       ],
     );
   }

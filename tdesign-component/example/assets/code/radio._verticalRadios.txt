@@ -7,7 +7,7 @@
       descriptionWidget: TRadioGroup(
         selectId: '0',
         direction: Axis.horizontal,
-        directionalTdRadios: const [TRadio(
+        directionalTRadios: const [TRadio(
           id: '0',
           title: '单选标题0',
           showDivider: false,

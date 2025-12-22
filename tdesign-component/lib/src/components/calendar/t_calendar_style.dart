@@ -113,12 +113,12 @@ class TCalendarStyle {
         break;
       case DateSelectType.disabled:
         cellStyle =
-            defStyle.copyWith(color: TTheme.of(context).textColorDisabled);
+            defStyle.copyWith(color: TTheme.of(context).textDisabledColor);
         todayStyle = defStyle.copyWith(color: TTheme.of(context).brandDisabledColor);
         cellPrefixStyle =
             prefixStyle.copyWith(color: TTheme.of(context).errorDisabledColor);
         cellSuffixStyle =
-            prefixStyle.copyWith(color: TTheme.of(context).textColorDisabled);
+            prefixStyle.copyWith(color: TTheme.of(context).textDisabledColor);
         cellDecoration = null;
         break;
       case DateSelectType.selected:

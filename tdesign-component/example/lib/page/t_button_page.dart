@@ -7,10 +7,10 @@ class TButtonPage extends StatefulWidget {
   const TButtonPage({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _TDButtonPageState();
+  State<StatefulWidget> createState() => _TButtonPageState();
 }
 
-class _TDButtonPageState extends State<TButtonPage> {
+class _TButtonPageState extends State<TButtonPage> {
   void onTap() {
     TToast.showText('点击了按钮', context: context);
   }

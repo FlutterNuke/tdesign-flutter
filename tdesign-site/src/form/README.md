@@ -120,7 +120,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
               spacing: 0,
               direction: Axis.horizontal,
               controller: _genderCheckboxGroupController,
-              directionalTdRadios: _radios.entries.map((entry) {
+              directionalTRadios: _radios.entries.map((entry) {
                 return TRadio(
                   id: entry.key,
                   title: entry.value,
@@ -456,7 +456,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
               spacing: 0,
               direction: Axis.horizontal,
               controller: _genderCheckboxGroupController,
-              directionalTdRadios: _radios.entries.map((entry) {
+              directionalTRadios: _radios.entries.map((entry) {
                 return TRadio(
                   id: entry.key,
                   title: entry.value,

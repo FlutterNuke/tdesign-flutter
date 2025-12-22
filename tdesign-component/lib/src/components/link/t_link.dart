@@ -153,7 +153,7 @@ class TLink extends StatelessWidget {
         TLinkStyle.danger: theme.errorDisabledColor,
         TLinkStyle.warning: theme.warningDisabledColor,
         TLinkStyle.success: theme.successDisabledColor,
-        TLinkStyle.defaultStyle: theme.textColorDisabled,
+        TLinkStyle.defaultStyle: theme.textDisabledColor,
       },
     };
 

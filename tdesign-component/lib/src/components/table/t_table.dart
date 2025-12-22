@@ -21,6 +21,7 @@ class TTable extends StatefulWidget {
     this.loading = false,
     this.loadingWidget,
     this.showHeader = true,
+    this.footerWidget,
     this.stripe = false,
     this.backgroundColor,
     this.width,
@@ -57,6 +58,9 @@ class TTable extends StatefulWidget {
 
   /// 是否显示表头
   final bool? showHeader;
+
+  /// 自定义表尾
+  final Widget? footerWidget;
 
   /// 斑马纹
   final bool? stripe;
@@ -667,7 +671,7 @@ class TTableState extends State<TTable> {
         size: 16,
         color: (checked || halfSelected)
             ? TTheme.of(context).brandNormalColor
-            : TTheme.of(context).textColorDisabled);
+            : TTheme.of(context).textDisabledColor);
   }
 
   @override

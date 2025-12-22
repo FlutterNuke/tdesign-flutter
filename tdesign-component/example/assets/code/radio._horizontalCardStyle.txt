@@ -5,7 +5,7 @@
       cardMode: true,
       direction: Axis.horizontal,
       rowCount: 2,
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: 'index:0',
           title: '单选',

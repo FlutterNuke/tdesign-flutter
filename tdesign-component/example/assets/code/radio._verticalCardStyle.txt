@@ -4,7 +4,7 @@
       selectId: 'index:1',
       cardMode: true,
       direction: Axis.vertical,
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: 'index:0',
           title: '单选',

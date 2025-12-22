@@ -190,7 +190,7 @@ class TButtonStyle {
       case TButtonStatus.active:
         return TTheme.of(context).textColorPrimary;
       case TButtonStatus.disable:
-        return TTheme.of(context).textColorDisabled;
+        return TTheme.of(context).textDisabledColor;
     }
   }
 

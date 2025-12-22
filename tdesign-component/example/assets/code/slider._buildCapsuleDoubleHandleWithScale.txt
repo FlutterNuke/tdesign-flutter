@@ -9,8 +9,8 @@
         max: 100,
         scaleFormatter: (value) => value.toInt().toString(),
       )..updateSliderThemeData((data) => data.copyWith(
-          // activeTickMarkColor: TDTheme.of(context).bgColorComponent,
-          // inactiveTickMarkColor: TDTheme.of(context).bgColorComponent,
+          // activeTickMarkColor: TTheme.of(context).bgColorComponent,
+          // inactiveTickMarkColor: TTheme.of(context).bgColorComponent,
           )),
       value: const RangeValues(20, 60),
       onChanged: (value) {},

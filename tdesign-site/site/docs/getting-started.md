@@ -24,7 +24,7 @@ iOS请运行项目预览 ↓
 ```
     
 - 在文件头部引入：`import 'package:tdesign_flutter/tdesign_flutter.dart'; // 组件库相关的，只需要引入这个文件，里面暴露td前缀所有需要的类`
-- 可通过json文件配置颜色/字体尺寸/字体样式/圆角/阴影等主题样式。通过`TTheme.of(context)或者TDTheme.defaultData()`获取主题数据。建议组件都使用`TTheme.of(context)`的，不需要跟随局部主题的组件，才可以使用`TTheme.defaultData()`。
+- 可通过json文件配置颜色/字体尺寸/字体样式/圆角/阴影等主题样式。通过`TTheme.of(context)或者TTheme.defaultData()`获取主题数据。建议组件都使用`TTheme.of(context)`的，不需要跟随局部主题的组件，才可以使用`TTheme.defaultData()`。
     
     颜色，字体，圆角等使用示例：
 ```dart
@@ -83,7 +83,7 @@ iOS请运行项目预览 ↓
 
 ![img.png](/flutter/assets/dart_modify.png)
 
-3.将主题json加载进TDTheme,美观的自定义主题就设置完成了.
+3.将主题json加载进TTheme,美观的自定义主题就设置完成了.
 ```
     // 开启多套主题功能
     TTheme.needMultiTheme();
@@ -157,7 +157,7 @@ class IntlResourceDelegate extends TResourceDelegate {
 - 文本居中:
 > 0.1.4版本:Flutter 3.16之后,修改了渲染引擎,导致启用forceVerticalCenter参数的组件字体偏移更多,不再居中.可以通过设置kTextForceVerticalCenterEnable=false来禁用字体居中功能,让组件显示与官方Text一致
 >
-> 0.1.5版本:适配了Android和iOS双端基础系统字体的中文居中,其他语言的字体,可以通过重写TDTextPaddingConfig的paddingRate和paddingExtraRate进行自定义适配,TTextPaddingConfig使用方法可参考TDTextPage.
+> 0.1.5版本:适配了Android和iOS双端基础系统字体的中文居中,其他语言的字体,可以通过重写TTextPaddingConfig的paddingRate和paddingExtraRate进行自定义适配,TTextPaddingConfig使用方法可参考TTextPage.
 
 ## 组件规划
 

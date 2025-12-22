@@ -8,10 +8,10 @@ class TTextareaPage extends StatefulWidget {
   const TTextareaPage({Key? key}) : super(key: key);
 
   @override
-  _TDTextareaPageState createState() => _TDTextareaPageState();
+  _TTextareaPageState createState() => _TTextareaPageState();
 }
 
-class _TDTextareaPageState extends State<TTextareaPage> {
+class _TTextareaPageState extends State<TTextareaPage> {
   var controller = <TextEditingController>[];
 
   @override

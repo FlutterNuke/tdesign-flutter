@@ -3,7 +3,7 @@
     return TRadioGroup(
       selectId: 'index:1',
       direction: Axis.horizontal,
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: '0',
           title: '单选标题',

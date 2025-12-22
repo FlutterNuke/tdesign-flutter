@@ -97,7 +97,7 @@ class TCheckboxPageState extends State<TCheckboxPage> {
     return TCheckboxGroupContainer(
       selectIds: const ['1'],
       direction: Axis.horizontal,
-      directionalTdCheckboxes: const [
+      directionalTCheckboxes: const [
         TCheckbox(
           id: '0',
           title: '多选标题',
@@ -291,7 +291,7 @@ class TCheckboxPageState extends State<TCheckboxPage> {
       selectIds: const ['index:1'],
       cardMode: true,
       direction: Axis.vertical,
-      directionalTdCheckboxes: const [
+      directionalTCheckboxes: const [
         TCheckbox(
           id: 'index:0',
           title: '多选',
@@ -334,7 +334,7 @@ class TCheckboxPageState extends State<TCheckboxPage> {
       selectIds: const ['index:1'],
       cardMode: true,
       direction: Axis.horizontal,
-      directionalTdCheckboxes: const [
+      directionalTCheckboxes: const [
         TCheckbox(
           id: 'index:0',
           title: '多选',
@@ -360,7 +360,7 @@ class TCheckboxPageState extends State<TCheckboxPage> {
       selectIds: const ['index:1'],
       cardMode: true,
       direction: Axis.vertical,
-      directionalTdCheckboxes: [
+      directionalTCheckboxes: [
         TCheckbox(
           id: 'index:0',
           title: '多选',

@@ -185,10 +185,10 @@ class TTextarea extends StatefulWidget {
   final bool? showBottomDivider;
 
   @override
-  _TDTextareaState createState() => _TDTextareaState();
+  _TTextareaState createState() => _TTextareaState();
 }
 
-class _TDTextareaState extends State<TTextarea> {
+class _TTextareaState extends State<TTextarea> {
   final _hasFocus = ValueNotifier<bool>(false);
   late FocusNode _focusNode;
 
@@ -332,7 +332,7 @@ class _TDTextareaState extends State<TTextarea> {
           hintTextStyle: widget.hintTextStyle ??
               TextStyle(
                   color: widget.readOnly == true
-                      ? TTheme.of(context).textColorDisabled
+                      ? TTheme.of(context).textDisabledColor
                       : TTheme.of(context).textColorPlaceholder),
           cursorColor: widget.cursorColor,
           textInputBackgroundColor: widget.textInputBackgroundColor,

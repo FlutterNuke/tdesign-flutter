@@ -65,7 +65,7 @@ class TRadioPageState extends State<TRadioPage> {
       descriptionWidget: TRadioGroup(
         selectId: '0',
         direction: Axis.horizontal,
-        directionalTdRadios: const [
+        directionalTRadios: const [
           TRadio(
             id: '0',
             title: '单选标题0',
@@ -86,7 +86,7 @@ class TRadioPageState extends State<TRadioPage> {
     return TRadioGroup(
       selectId: 'index:1',
       direction: Axis.horizontal,
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: '0',
           title: '单选标题',
@@ -213,7 +213,7 @@ class TRadioPageState extends State<TRadioPage> {
       selectId: 'index:1',
       cardMode: true,
       direction: Axis.vertical,
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: 'index:0',
           title: '单选',
@@ -257,7 +257,7 @@ class TRadioPageState extends State<TRadioPage> {
       cardMode: true,
       direction: Axis.horizontal,
       rowCount: 2,
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: 'index:0',
           title: '单选',
@@ -288,7 +288,7 @@ class TRadioPageState extends State<TRadioPage> {
       selectId: 'index:1',
       direction: Axis.horizontal,
       showDivider: true,
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: '0',
           title: '单选标题',
@@ -321,7 +321,7 @@ class TRadioPageState extends State<TRadioPage> {
         height: 20,
         color: Colors.red,
       ),
-      directionalTdRadios: const [
+      directionalTRadios: const [
         TRadio(
           id: '0',
           title: '单选标题',

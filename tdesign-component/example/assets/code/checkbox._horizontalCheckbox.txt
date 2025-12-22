@@ -3,7 +3,7 @@
     return TCheckboxGroupContainer(
       selectIds: const ['1'],
       direction: Axis.horizontal,
-      directionalTdCheckboxes: const [
+      directionalTCheckboxes: const [
         TCheckbox(
           id: '0',
           title: '多选标题',

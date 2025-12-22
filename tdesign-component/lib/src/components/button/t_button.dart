@@ -119,10 +119,10 @@ class TButton extends StatefulWidget {
   final Gradient? gradient;
 
   @override
-  State<StatefulWidget> createState() => _TDButtonState();
+  State<StatefulWidget> createState() => _TButtonState();
 }
 
-class _TDButtonState extends State<TButton> {
+class _TButtonState extends State<TButton> {
   TButtonStatus _buttonStatus = TButtonStatus.defaultState;
   TButtonStyle? _innerDefaultStyle;
   TButtonStyle? _innerActiveStyle;

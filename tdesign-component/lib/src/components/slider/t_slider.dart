@@ -86,7 +86,7 @@ class TSliderState extends State<TSlider> {
       fontSize: 16,
       color: _enabled
           ? TTheme.of(context).textColorPrimary
-          : TTheme.of(context).textColorDisabled);
+          : TTheme.of(context).textDisabledColor);
 
   Widget get leftLabel => widget.leftLabel?.isNotEmpty == true
       ? Padding(
@@ -269,7 +269,7 @@ class _TDRangeSliderState extends State<TRangeSlider> {
       fontSize: 16,
       color: _enabled
           ? TTheme.of(context).textColorPrimary
-          : TTheme.of(context).textColorDisabled);
+          : TTheme.of(context).textDisabledColor);
 
   Widget get leftLabel => widget.leftLabel?.isNotEmpty == true
       ? Padding(

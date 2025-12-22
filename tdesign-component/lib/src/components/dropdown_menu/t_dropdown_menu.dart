@@ -201,7 +201,7 @@ class _TDropdownMenuState extends State<TDropdownMenu>
 
   Widget _tabBarContent(int index) {
     final color = _disabled(index)
-        ? TTheme.of(context).textColorDisabled
+        ? TTheme.of(context).textDisabledColor
         : _isOpened[index]
             ? TTheme.of(context).brandNormalColor
             : TTheme.of(context).textColorPrimary;

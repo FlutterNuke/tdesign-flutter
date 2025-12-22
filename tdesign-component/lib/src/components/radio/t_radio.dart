@@ -10,7 +10,7 @@ enum TRadioStyle {
   hollowCircle, // 镂空圆点样式
 }
 
-/// 单选框按钮,继承自TDCheckbox，字段含义与父类一致
+/// 单选框按钮,继承自TCheckbox，字段含义与父类一致
 class TRadio extends TCheckbox {
   /// 单选框按钮样式
   final TRadioStyle radioStyle;
@@ -172,11 +172,11 @@ class HollowCircle extends CustomPainter {
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
-/// RadioGroup分组对象，继承自TDCheckboxGroup，字段含义与父类一致
+/// RadioGroup分组对象，继承自TCheckboxGroup，字段含义与父类一致
 /// RadioGroup应该嵌套在RadioGroup内，所有在RadioGroup的RadioButton只能有一个被选中
 ///
-/// cardMode: 使用卡片样式，需要配合direction 和 directionalTdRadios 使用，
-/// 组合为横向、纵向卡片，同时需要在每个TDRadio上设置cardMode参数。
+/// cardMode: 使用卡片样式，需要配合direction 和 directionalTRadios 使用，
+/// 组合为横向、纵向卡片，同时需要在每个TRadio上设置cardMode参数。
 class TRadioGroup extends TCheckboxGroup {
   /// 严格模式下，用户不能取消勾选，只能切换选择项，
   final bool strictMode;
@@ -196,8 +196,8 @@ class TRadioGroup extends TCheckboxGroup {
   TRadioGroup(
       {Key? key,
       Widget? child, // 使用child 则请勿设置direction
-      Axis? direction, // direction 对 directionalTdRadios 起作用
-      List<TRadio>? directionalTdRadios,
+      Axis? direction, // direction 对 directionalTRadios 起作用
+      List<TRadio>? directionalTRadios,
       String? selectId, // 默认选择项的id
       bool? passThrough, // 非通栏单选样式 用于使用child 或 direction == Axis.vertical 场景
       bool cardMode = false,
@@ -216,10 +216,10 @@ class TRadioGroup extends TCheckboxGroup {
       /// 可以通过控制器操作勾选状态
       TCheckboxGroupController? controller})
       : assert(() {
-          // 使用direction属性则必须配合directionalTdRadios，child字段无效
-          if (direction != null && directionalTdRadios == null) {
+          // 使用direction属性则必须配合directionalTRadios，child字段无效
+          if (direction != null && directionalTRadios == null) {
             throw FlutterError(
-                '[TRadioGroup] direction and directionalTdRadios must set at the same time');
+                '[TRadioGroup] direction and directionalTRadios must set at the same time');
           }
           // 未使用direction则必须设置child
           if (direction == null && child == null) {
@@ -227,8 +227,8 @@ class TRadioGroup extends TCheckboxGroup {
                 '[TRadioGroup] direction means use child as the exact one, but child is null');
           }
           // 横向单选框 每个选项有字数限制
-          if (direction == Axis.horizontal && directionalTdRadios != null) {
-            directionalTdRadios.forEach((element) {
+          if (direction == Axis.horizontal && directionalTRadios != null) {
+            directionalTRadios.forEach((element) {
               if (element.subTitle != null) {
                 throw FlutterError(
                     'horizontal radios style should not have subTilte, '
@@ -241,25 +241,25 @@ class TRadioGroup extends TCheckboxGroup {
                 '2tabs: 7words maximum\n'
                 '3tabs: 4words maximum\n'
                 '4tabs: 2words maximum';
-            if (directionalTdRadios.length == 2) {
+            if (directionalTRadios.length == 2) {
               maxWordCount = 7;
             }
-            if (directionalTdRadios.length == 3) {
+            if (directionalTRadios.length == 3) {
               maxWordCount = 4;
             }
-            if (directionalTdRadios.length == 4) {
+            if (directionalTRadios.length == 4) {
               maxWordCount = 2;
             }
-            directionalTdRadios.forEach((radio) {
+            directionalTRadios.forEach((radio) {
               if ((radio.title?.length ?? 0) > maxWordCount) {
                 throw FlutterError(tips);
               }
             });
           }
-          // 卡片模式要求每个TDRadio必须设置cardMode属性为true，且不能有子标题（空间不够）
+          // 卡片模式要求每个TRadio必须设置cardMode属性为true，且不能有子标题（空间不够）
           if (cardMode == true) {
-            assert(direction != null && directionalTdRadios != null);
-            directionalTdRadios!.forEach((element) {
+            assert(direction != null && directionalTRadios != null);
+            directionalTRadios!.forEach((element) {
               // if use cardMode at TRadioGroup, then every TRadio should
               // set it's own carMode to true.
               if (element.cardMode == false) {
@@ -300,10 +300,10 @@ class TRadioGroup extends TCheckboxGroup {
                                 ? const EdgeInsets.symmetric(horizontal: 16)
                                 : null,
                             height: cardMode ? 82 : null,
-                            child: directionalTdRadios[index],
+                            child: directionalTRadios[index],
                           );
                         },
-                        itemCount: directionalTdRadios!.length,
+                        itemCount: directionalTRadios!.length,
                         separatorBuilder: (BuildContext context, int index) {
                           if (cardMode) {
                             return const SizedBox(
@@ -318,13 +318,13 @@ class TRadioGroup extends TCheckboxGroup {
                             ? const EdgeInsets.symmetric(horizontal: 16)
                             : null,
                         height: cardMode
-                            ? (directionalTdRadios!.length / rowCount).ceil() *
+                            ? (directionalTRadios!.length / rowCount).ceil() *
                                 (56 + 10)
                             : null,
                         alignment: cardMode ? Alignment.topLeft : null,
                         child: cardMode && rowCount != null
                             ? GridView.builder(
-                                itemCount: directionalTdRadios!.length,
+                                itemCount: directionalTRadios!.length,
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisSpacing: 10.0,
@@ -336,7 +336,7 @@ class TRadioGroup extends TCheckboxGroup {
                                   return SizedBox(
                                     width: 160.scale,
                                     height: 56,
-                                    child: directionalTdRadios[index],
+                                    child: directionalTRadios[index],
                                   );
                                 })
                             : Column(
@@ -345,7 +345,7 @@ class TRadioGroup extends TCheckboxGroup {
                                     mainAxisSize: MainAxisSize.min,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: directionalTdRadios!
+                                    children: directionalTRadios!
                                         .map((e) => Expanded(child: e))
                                         .toList(),
                                   ),

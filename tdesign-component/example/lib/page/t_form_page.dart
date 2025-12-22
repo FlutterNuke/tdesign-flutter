@@ -363,7 +363,7 @@ class _TDFormPageState extends State<TFormPage> {
               spacing: 0,
               direction: Axis.horizontal,
               controller: _genderCheckboxGroupController,
-              directionalTdRadios: _radios.entries.map((entry) {
+              directionalTRadios: _radios.entries.map((entry) {
                 return TRadio(
                   id: entry.key,
                   title: entry.value,
@@ -699,7 +699,7 @@ class _TDFormPageState extends State<TFormPage> {
               spacing: 0,
               direction: Axis.horizontal,
               controller: _genderCheckboxGroupController,
-              directionalTdRadios: _radios.entries.map((entry) {
+              directionalTRadios: _radios.entries.map((entry) {
                 return TRadio(
                   id: entry.key,
                   title: entry.value,

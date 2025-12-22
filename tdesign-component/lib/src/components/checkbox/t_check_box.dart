@@ -309,7 +309,7 @@ class TCheckboxState extends State<TCheckbox> {
                               textColor: widget.enable
                                   ? (widget.subTitleColor ??
                                       TTheme.of(context).textColorPlaceholder)
-                                  : TTheme.of(context).textColorDisabled,
+                                  : TTheme.of(context).textDisabledColor,
                               font: TTheme.of(context).fontBodyMedium),
                         ),
                       )
@@ -367,7 +367,7 @@ class TCheckboxState extends State<TCheckbox> {
                               textColor: widget.enable
                                   ? (widget.subTitleColor ??
                                       TTheme.of(context).textColorPlaceholder)
-                                  : TTheme.of(context).textColorDisabled,
+                                  : TTheme.of(context).textDisabledColor,
                               font: widget.subTitleFont ??
                                   TTheme.of(context).fontBodyMedium),
                         ),
@@ -495,7 +495,7 @@ class TCheckboxState extends State<TCheckbox> {
             overflow: TextOverflow.ellipsis,
             textColor: widget.enable
                 ? (widget.titleColor ?? TTheme.of(context).textColorPrimary)
-                : TTheme.of(context).textColorDisabled,
+                : TTheme.of(context).textDisabledColor,
             font: widget.titleFont ??
                 TTheme.of(context)
                     .fontBodyLarge); // TODO custom fontSize https://github.com/Tencent/tdesign-flutter/issues/66

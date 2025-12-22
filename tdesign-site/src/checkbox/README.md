@@ -66,7 +66,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
     return TCheckboxGroupContainer(
       selectIds: const ['1'],
       direction: Axis.horizontal,
-      directionalTdCheckboxes: const [
+      directionalTCheckboxes: const [
         TCheckbox(
           id: '0',
           title: '多选标题',
@@ -305,7 +305,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
       selectIds: const ['index:1'],
       cardMode: true,
       direction: Axis.vertical,
-      directionalTdCheckboxes: const [
+      directionalTCheckboxes: const [
         TCheckbox(
           id: 'index:0',
           title: '多选',
@@ -355,7 +355,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
       selectIds: const ['index:1'],
       cardMode: true,
       direction: Axis.horizontal,
-      directionalTdCheckboxes: const [
+      directionalTCheckboxes: const [
         TCheckbox(
           id: 'index:0',
           title: '多选',

@@ -211,7 +211,7 @@ class TTagStyle {
     TTagShape shape,
   ) {
     borderColor = TTheme.of(context).componentBorderColor;
-    textColor = TTheme.of(context).textColorDisabled;
+    textColor = TTheme.of(context).textDisabledColor;
     backgroundColor = isOutline && !isLight
         ? Colors.transparent
         : TTheme.of(context).bgColorComponentDisabled;

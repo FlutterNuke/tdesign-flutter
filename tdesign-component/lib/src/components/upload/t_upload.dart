@@ -415,10 +415,10 @@ class _TDUploadState extends State<TUpload> {
                       decoration: widget.type == TUploadBoxType.circle
                           ? BoxDecoration(
                               shape: BoxShape.circle,
-                              color: TTheme.of(context).textColorDisabled,
+                              color: TTheme.of(context).textDisabledColor,
                             )
                           : BoxDecoration(
-                              color: TTheme.of(context).textColorDisabled,
+                              color: TTheme.of(context).textDisabledColor,
                               borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(
                                       TTheme.of(context).radiusDefault),

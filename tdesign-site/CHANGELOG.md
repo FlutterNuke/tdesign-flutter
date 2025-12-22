@@ -213,7 +213,7 @@ docClass: timeline
 - `Input`: 增加onTapOutside回调 @epoll-j ([#280](https://github.com/Tencent/tdesign-flutter/pull/280))
 - `Picker`: 增加自定义leftText、rightText @epoll-j ([#301](https://github.com/Tencent/tdesign-flutter/pull/301))
 - `Slider`:Feature/tdslider 新增文本换行功能 @shizhe2018 ([#329](https://github.com/Tencent/tdesign-flutter/pull/329))
-- `Radio`:Feature/tdRadioGroup 新增自带换行，设置行列数 @shizhe2018 ([#331](https://github.com/Tencent/tdesign-flutter/pull/331))
+- `Radio`:Feature/TRadioGroup 新增自带换行，设置行列数 @shizhe2018 ([#331](https://github.com/Tencent/tdesign-flutter/pull/331))
 - `Dialog`:新增自定义输入框 @shizhe2018 ([#333](https://github.com/Tencent/tdesign-flutter/pull/333))
 - `TNavBar`:添加flexibleSpace参数 @Luozf12345 ([#341](https://github.com/Tencent/tdesign-flutter/pull/341))
 - `TSearch`:添加搜索框焦点获取及清除事件 @Luozf12345 ([#342](https://github.com/Tencent/tdesign-flutter/pull/342))
@@ -315,7 +315,7 @@ docClass: timeline
 
 ### 🚧 Others
 - 增加国际化语言适配功能
-- 适配3.16后文本居中,增加TDTextConfig使用文档
+- 适配3.16后文本居中,增加TTextConfig使用文档
 
 
 ## 🌈 0.1.4 `2024-04-08`
@@ -327,12 +327,12 @@ docClass: timeline
   - add: 修改主题实现方式,支持ref属性进行自定义映射
   - add: 添加默认数字字体 numberFontFamily
 - `TText`:
-  - add: 添加TDText强制居中开关 kTextForceVerticalCenterEnable,可以全局禁用强制居中,防止flutter 3.16版本之后文字偏移太多([#35](https://github.com/Tencent/tdesign-flutter/issues/35))
+  - add: 添加TText强制居中开关 kTextForceVerticalCenterEnable,可以全局禁用强制居中,防止flutter 3.16版本之后文字偏移太多([#35](https://github.com/Tencent/tdesign-flutter/issues/35))
 - `TBottomTabBar`:
   - add: 添加自定义背景颜色功能([#55](https://github.com/Tencent/tdesign-flutter/issues/55))
 - `TCheckbox`:
-  - add: TCheckbox和TDRadio支持自定义颜色([#57](https://github.com/Tencent/tdesign-flutter/issues/57))
-  - add: TCheckbox和TDRadio支持自定义字体大小([#66](https://github.com/Tencent/tdesign-flutter/issues/66))
+  - add: TCheckbox和TRadio支持自定义颜色([#57](https://github.com/Tencent/tdesign-flutter/issues/57))
+  - add: TCheckbox和TRadio支持自定义字体大小([#66](https://github.com/Tencent/tdesign-flutter/issues/66))
 - `TTabBar`:
   - add: TTabBar添加分割线的颜色和高度的自定义设置([#71](https://github.com/Tencent/tdesign-flutter/issues/71))
 - `TSwitch`:
@@ -345,7 +345,7 @@ docClass: timeline
 - `TSlider`:
   - fix: 修复TDSlider单游标模式下设置showThumbValue不起作用的问题。
 - `TButton`:
-  - fix: 修复TDButton外部设置主题颜色不生效的问题 ([#54](https://github.com/Tencent/tdesign-flutter/issues/54))
+  - fix: 修复TButton外部设置主题颜色不生效的问题 ([#54](https://github.com/Tencent/tdesign-flutter/issues/54))
 - `TInput`:
   - fix: 修复TDInput的showBottomDivider不生效的问题  ([#70](https://github.com/Tencent/tdesign-flutter/issues/70))
   - fix: TInput去掉无效的height API,使用SizedBox来修改高度  ([#70](https://github.com/Tencent/tdesign-flutter/issues/70))
@@ -358,7 +358,7 @@ docClass: timeline
 
 ### 🚀 Features
 - `TButton`:
-  - add:支持通过TDButtonStyle.radius自定义圆角大小
+  - add:支持通过TButtonStyle.radius自定义圆角大小
 - `TPicker`:
   - add: picker组件滚动PC支持鼠标拖拽
   - add: TPicker和TDDatePicker组件,onConfirm内部不在默认pop弹窗组件,允许外部自定义处理;OnCancel不为空时不再自动pop组件
@@ -386,7 +386,7 @@ docClass: timeline
   - fix: indicatorColor不生效问题 ([#31](https://github.com/Tencent/tdesign-flutter/issues/31))
 
 ### 🚧 Others
-- 优化了TDButton,TText,TTheme等常用组件的性能
+- 优化了TButton,TText,TTheme等常用组件的性能
 
 
 
@@ -450,7 +450,7 @@ docClass: timeline
 
 ## 0.0.3
 
-* 删除TDText中相关package的默认值，允许package传null
+* 删除TText中相关package的默认值，允许package传null
 
 ## 0.0.2
 
@@ -458,4 +458,4 @@ docClass: timeline
 
 ## 0.0.1
 
-* 正式发布，包含TDButton等29个组件,提供TDTheme、TIcon等基础属性
+* 正式发布，包含TButton等29个组件,提供TTheme、TIcon等基础属性
